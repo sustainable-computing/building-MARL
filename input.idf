@@ -2084,6 +2084,81 @@ Schedule:Compact,
     Until: 24:00,             !- Field 22
     0.0;                      !- Field 23
 
+SCHEDULE:CONSTANT,
+    Core_top VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Core_mid VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Core_bottom VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_top_ZN_3 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_top_ZN_2 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_top_ZN_1 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_top_ZN_4 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_bot_ZN_3 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_bot_ZN_2 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_bot_ZN_1 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_bot_ZN_4 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_mid_ZN_3 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_mid_ZN_2 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_mid_ZN_1 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
+SCHEDULE:CONSTANT,
+    Perimeter_mid_ZN_4 VAV Customized Schedule,    !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    0;                        !- Hourly Value
+
 Material,
     Std Wood 6inch,           !- Name
     MediumSmooth,             !- Roughness
@@ -9238,10 +9313,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Core_bottom VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Core_bottom VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Core_bottom VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Core_bottom VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9258,10 +9333,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Core_mid VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Core_mid VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.307432099778152,        !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Core_mid VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Core_mid VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9278,10 +9353,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Core_top VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Core_top VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Core_top VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Core_top VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9298,10 +9373,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_top_ZN_3 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_top_ZN_3 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_top_ZN_3 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_top_ZN_3 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9318,10 +9393,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_top_ZN_2 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_top_ZN_2 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_top_ZN_2 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_top_ZN_2 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9338,10 +9413,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_top_ZN_1 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_top_ZN_1 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_top_ZN_1 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_top_ZN_1 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9358,10 +9433,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_top_ZN_4 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_top_ZN_4 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_top_ZN_4 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_top_ZN_4 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9378,10 +9453,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_bot_ZN_3 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_bot_ZN_3 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.305230058147285,        !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_bot_ZN_3 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_bot_ZN_3 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9398,10 +9473,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_bot_ZN_2 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_bot_ZN_2 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_bot_ZN_2 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_bot_ZN_2 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9418,10 +9493,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_bot_ZN_1 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_bot_ZN_1 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_bot_ZN_1 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_bot_ZN_1 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9438,10 +9513,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_bot_ZN_4 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_bot_ZN_4 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_bot_ZN_4 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_bot_ZN_4 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9458,10 +9533,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_mid_ZN_3 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_mid_ZN_3 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_mid_ZN_3 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_mid_ZN_3 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9478,10 +9553,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_mid_ZN_2 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_mid_ZN_2 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_mid_ZN_2 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_mid_ZN_2 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9498,10 +9573,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_mid_ZN_1 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_mid_ZN_1 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_mid_ZN_1 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_mid_ZN_1 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
@@ -9518,10 +9593,10 @@ AirTerminal:SingleDuct:VAV:Reheat,
     Perimeter_mid_ZN_4 VAV Box Damper Node,    !- Damper Air Outlet Node Name
     Perimeter_mid_ZN_4 VAV Box Inlet Node,    !- Air Inlet Node Name
     AUTOSIZE,                 !- Maximum Air Flow Rate
-    Constant,                 !- Zone Minimum Air Flow Input Method
+    Scheduled,                !- Zone Minimum Air Flow Input Method
     0.3,                      !- Constant Minimum Air Flow Fraction
     ,                         !- Fixed Minimum Air Flow Rate
-    ,                         !- Minimum Air Flow Fraction Schedule Name
+    Perimeter_mid_ZN_4 VAV Customized Schedule,    !- Minimum Air Flow Fraction Schedule Name
     Coil:Heating:Electric,    !- Reheat Coil Object Type
     Perimeter_mid_ZN_4 VAV Box Reheat Coil,    !- Reheat Coil Name
     AUTOSIZE,                 !- Maximum Hot Water or Steam Flow Rate
