@@ -568,717 +568,717 @@
   OnMeter=Cogeneration:ElectricityNet [J]
   OnMeter=General:Cogeneration:ElectricityNet [J]
 
- Meters for 1994,CORE_BOTTOM VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 1996,CORE_BOTTOM VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2019,CORE_BOTTOM VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2021,CORE_BOTTOM VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2044,CORE_MID VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2046,CORE_MID VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2045,CORE_MID VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2047,CORE_MID VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2046,CORE_TOP VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2048,CORE_TOP VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2047,CORE_TOP VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2049,CORE_TOP VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2048,PERIMETER_TOP_ZN_3 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2050,PERIMETER_TOP_ZN_3 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2049,PERIMETER_TOP_ZN_3 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2051,PERIMETER_TOP_ZN_3 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2050,PERIMETER_TOP_ZN_2 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2052,PERIMETER_TOP_ZN_2 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2051,PERIMETER_TOP_ZN_2 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2053,PERIMETER_TOP_ZN_2 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2052,PERIMETER_TOP_ZN_1 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2054,PERIMETER_TOP_ZN_1 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2053,PERIMETER_TOP_ZN_1 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2055,PERIMETER_TOP_ZN_1 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2054,PERIMETER_TOP_ZN_4 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2056,PERIMETER_TOP_ZN_4 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2055,PERIMETER_TOP_ZN_4 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2057,PERIMETER_TOP_ZN_4 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2056,PERIMETER_BOT_ZN_3 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2058,PERIMETER_BOT_ZN_3 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2057,PERIMETER_BOT_ZN_3 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2059,PERIMETER_BOT_ZN_3 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2058,PERIMETER_BOT_ZN_2 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2060,PERIMETER_BOT_ZN_2 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2059,PERIMETER_BOT_ZN_2 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2061,PERIMETER_BOT_ZN_2 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2060,PERIMETER_BOT_ZN_1 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2062,PERIMETER_BOT_ZN_1 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2061,PERIMETER_BOT_ZN_1 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2063,PERIMETER_BOT_ZN_1 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2062,PERIMETER_BOT_ZN_4 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2064,PERIMETER_BOT_ZN_4 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2063,PERIMETER_BOT_ZN_4 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2065,PERIMETER_BOT_ZN_4 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2064,PERIMETER_MID_ZN_3 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2066,PERIMETER_MID_ZN_3 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2065,PERIMETER_MID_ZN_3 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2067,PERIMETER_MID_ZN_3 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2066,PERIMETER_MID_ZN_2 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2068,PERIMETER_MID_ZN_2 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2067,PERIMETER_MID_ZN_2 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2069,PERIMETER_MID_ZN_2 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2068,PERIMETER_MID_ZN_1 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2070,PERIMETER_MID_ZN_1 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2069,PERIMETER_MID_ZN_1 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2071,PERIMETER_MID_ZN_1 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2070,PERIMETER_MID_ZN_4 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
+ Meters for 2072,PERIMETER_MID_ZN_4 VAV BOX REHEAT COIL:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2071,PERIMETER_MID_ZN_4 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
+ Meters for 2073,PERIMETER_MID_ZN_4 VAV BOX REHEAT COIL:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2072,PACU_VAV_BOT_HEATC:Heating Coil Heating Energy [J]
+ Meters for 2074,PACU_VAV_BOT_HEATC:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2073,PACU_VAV_BOT_HEATC:Heating Coil Gas Energy [J]
+ Meters for 2075,PACU_VAV_BOT_HEATC:Heating Coil Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:HVAC [J]
   OnMeter=Heating:Gas [J]
   OnMeter=General:Heating:Gas [J]
 
- Meters for 2122,PACU_VAV_BOT_HEATC:Heating Coil Electric Energy [J]
+ Meters for 2124,PACU_VAV_BOT_HEATC:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2123,PACU_VAV_BOT_HEATC:Heating Coil Ancillary Gas Energy [J]
+ Meters for 2125,PACU_VAV_BOT_HEATC:Heating Coil Ancillary Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:HVAC [J]
   OnMeter=Heating:Gas [J]
   OnMeter=General:Heating:Gas [J]
 
- Meters for 2124,PACU_VAV_MID_HEATC:Heating Coil Heating Energy [J]
+ Meters for 2126,PACU_VAV_MID_HEATC:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2125,PACU_VAV_MID_HEATC:Heating Coil Gas Energy [J]
+ Meters for 2127,PACU_VAV_MID_HEATC:Heating Coil Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:HVAC [J]
   OnMeter=Heating:Gas [J]
   OnMeter=General:Heating:Gas [J]
 
- Meters for 2126,PACU_VAV_MID_HEATC:Heating Coil Electric Energy [J]
+ Meters for 2128,PACU_VAV_MID_HEATC:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2127,PACU_VAV_MID_HEATC:Heating Coil Ancillary Gas Energy [J]
+ Meters for 2129,PACU_VAV_MID_HEATC:Heating Coil Ancillary Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:HVAC [J]
   OnMeter=Heating:Gas [J]
   OnMeter=General:Heating:Gas [J]
 
- Meters for 2128,PACU_VAV_TOP_HEATC:Heating Coil Heating Energy [J]
+ Meters for 2130,PACU_VAV_TOP_HEATC:Heating Coil Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=HeatingCoils:EnergyTransfer [J]
 
- Meters for 2129,PACU_VAV_TOP_HEATC:Heating Coil Gas Energy [J]
+ Meters for 2131,PACU_VAV_TOP_HEATC:Heating Coil Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:HVAC [J]
   OnMeter=Heating:Gas [J]
   OnMeter=General:Heating:Gas [J]
 
- Meters for 2130,PACU_VAV_TOP_HEATC:Heating Coil Electric Energy [J]
+ Meters for 2132,PACU_VAV_TOP_HEATC:Heating Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=General:Heating:Electricity [J]
 
- Meters for 2131,PACU_VAV_TOP_HEATC:Heating Coil Ancillary Gas Energy [J]
+ Meters for 2133,PACU_VAV_TOP_HEATC:Heating Coil Ancillary Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:HVAC [J]
   OnMeter=Heating:Gas [J]
   OnMeter=General:Heating:Gas [J]
 
- Meters for 2132,PACU_VAV_BOT FAN:Fan Electric Energy [J]
+ Meters for 2134,PACU_VAV_BOT FAN:Fan Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Fans:Electricity [J]
   OnMeter=General:Fans:Electricity [J]
 
- Meters for 2157,PACU_VAV_MID FAN:Fan Electric Energy [J]
+ Meters for 2159,PACU_VAV_MID FAN:Fan Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Fans:Electricity [J]
   OnMeter=General:Fans:Electricity [J]
 
- Meters for 2158,PACU_VAV_TOP FAN:Fan Electric Energy [J]
+ Meters for 2160,PACU_VAV_TOP FAN:Fan Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Fans:Electricity [J]
   OnMeter=General:Fans:Electricity [J]
 
- Meters for 2159,EXTERIOR_LIGHTS_A:Exterior Lights Electric Energy [J]
+ Meters for 2161,EXTERIOR_LIGHTS_A:Exterior Lights Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=ExteriorLights:Electricity [J]
   OnMeter=General:ExteriorLights:Electricity [J]
 
- Meters for 2184,EXTERIOR_LIGHTS_B:Exterior Lights Electric Energy [J]
+ Meters for 2186,EXTERIOR_LIGHTS_B:Exterior Lights Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=ExteriorLights:Electricity [J]
   OnMeter=General:ExteriorLights:Electricity [J]
 
- Meters for 2185,EXTERIOR_LIGHTS_C:Exterior Lights Electric Energy [J]
+ Meters for 2187,EXTERIOR_LIGHTS_C:Exterior Lights Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=ExteriorLights:Electricity [J]
   OnMeter=General:ExteriorLights:Electricity [J]
 
- Meters for 2186,PACU_VAV_BOT_COOLC DXCOIL:Cooling Coil Total Cooling Energy [J]
+ Meters for 2188,PACU_VAV_BOT_COOLC DXCOIL:Cooling Coil Total Cooling Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=CoolingCoils:EnergyTransfer [J]
 
- Meters for 2199,PACU_VAV_BOT_COOLC DXCOIL:Cooling Coil Electric Energy [J]
+ Meters for 2201,PACU_VAV_BOT_COOLC DXCOIL:Cooling Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Cooling:Electricity [J]
   OnMeter=General:Cooling:Electricity [J]
 
- Meters for 2224,PACU_VAV_MID_COOLC DXCOIL:Cooling Coil Total Cooling Energy [J]
+ Meters for 2226,PACU_VAV_MID_COOLC DXCOIL:Cooling Coil Total Cooling Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=CoolingCoils:EnergyTransfer [J]
 
- Meters for 2225,PACU_VAV_MID_COOLC DXCOIL:Cooling Coil Electric Energy [J]
+ Meters for 2227,PACU_VAV_MID_COOLC DXCOIL:Cooling Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Cooling:Electricity [J]
   OnMeter=General:Cooling:Electricity [J]
 
- Meters for 2226,PACU_VAV_TOP_COOLC DXCOIL:Cooling Coil Total Cooling Energy [J]
+ Meters for 2228,PACU_VAV_TOP_COOLC DXCOIL:Cooling Coil Total Cooling Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:HVAC [J]
   OnMeter=CoolingCoils:EnergyTransfer [J]
 
- Meters for 2227,PACU_VAV_TOP_COOLC DXCOIL:Cooling Coil Electric Energy [J]
+ Meters for 2229,PACU_VAV_TOP_COOLC DXCOIL:Cooling Coil Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:HVAC [J]
   OnMeter=Cooling:Electricity [J]
   OnMeter=General:Cooling:Electricity [J]
 
- Meters for 2228,SHWSYS1 PUMP:Pump Electric Energy [J]
+ Meters for 2230,SHWSYS1 PUMP:Pump Electric Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Plant [J]
   OnMeter=Pumps:Electricity [J]
   OnMeter=General:Pumps:Electricity [J]
 
- Meters for 2265,CORE_BOTTOM SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2267,CORE_BOTTOM SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2314,CORE_BOTTOM SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2316,CORE_BOTTOM SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2363,CORE_BOTTOM SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2365,CORE_BOTTOM SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2400,CORE_MID SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2402,CORE_MID SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2401,CORE_MID SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2403,CORE_MID SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2402,CORE_MID SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2404,CORE_MID SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2403,CORE_TOP SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2405,CORE_TOP SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2404,CORE_TOP SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2406,CORE_TOP SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2405,CORE_TOP SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2407,CORE_TOP SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2406,PERIMETER_TOP_ZN_3 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2408,PERIMETER_TOP_ZN_3 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2407,PERIMETER_TOP_ZN_3 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2409,PERIMETER_TOP_ZN_3 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2408,PERIMETER_TOP_ZN_3 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2410,PERIMETER_TOP_ZN_3 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2409,PERIMETER_TOP_ZN_2 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2411,PERIMETER_TOP_ZN_2 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2410,PERIMETER_TOP_ZN_2 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2412,PERIMETER_TOP_ZN_2 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2411,PERIMETER_TOP_ZN_2 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2413,PERIMETER_TOP_ZN_2 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2412,PERIMETER_TOP_ZN_1 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2414,PERIMETER_TOP_ZN_1 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2413,PERIMETER_TOP_ZN_1 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2415,PERIMETER_TOP_ZN_1 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2414,PERIMETER_TOP_ZN_1 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2416,PERIMETER_TOP_ZN_1 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2415,PERIMETER_TOP_ZN_4 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2417,PERIMETER_TOP_ZN_4 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2416,PERIMETER_TOP_ZN_4 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2418,PERIMETER_TOP_ZN_4 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2417,PERIMETER_TOP_ZN_4 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2419,PERIMETER_TOP_ZN_4 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2418,PERIMETER_BOT_ZN_3 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2420,PERIMETER_BOT_ZN_3 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2419,PERIMETER_BOT_ZN_3 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2421,PERIMETER_BOT_ZN_3 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2420,PERIMETER_BOT_ZN_3 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2422,PERIMETER_BOT_ZN_3 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2421,PERIMETER_BOT_ZN_2 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2423,PERIMETER_BOT_ZN_2 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2422,PERIMETER_BOT_ZN_2 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2424,PERIMETER_BOT_ZN_2 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2423,PERIMETER_BOT_ZN_2 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2425,PERIMETER_BOT_ZN_2 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2424,PERIMETER_BOT_ZN_1 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2426,PERIMETER_BOT_ZN_1 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2425,PERIMETER_BOT_ZN_1 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2427,PERIMETER_BOT_ZN_1 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2426,PERIMETER_BOT_ZN_1 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2428,PERIMETER_BOT_ZN_1 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2427,PERIMETER_BOT_ZN_4 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2429,PERIMETER_BOT_ZN_4 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2428,PERIMETER_BOT_ZN_4 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2430,PERIMETER_BOT_ZN_4 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2429,PERIMETER_BOT_ZN_4 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2431,PERIMETER_BOT_ZN_4 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2430,PERIMETER_MID_ZN_3 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2432,PERIMETER_MID_ZN_3 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2431,PERIMETER_MID_ZN_3 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2433,PERIMETER_MID_ZN_3 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2432,PERIMETER_MID_ZN_3 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2434,PERIMETER_MID_ZN_3 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2433,PERIMETER_MID_ZN_2 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2435,PERIMETER_MID_ZN_2 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2434,PERIMETER_MID_ZN_2 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2436,PERIMETER_MID_ZN_2 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2435,PERIMETER_MID_ZN_2 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2437,PERIMETER_MID_ZN_2 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2436,PERIMETER_MID_ZN_1 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2438,PERIMETER_MID_ZN_1 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2437,PERIMETER_MID_ZN_1 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2439,PERIMETER_MID_ZN_1 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2438,PERIMETER_MID_ZN_1 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2440,PERIMETER_MID_ZN_1 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2439,PERIMETER_MID_ZN_4 SUB CAT:Water Use Equipment Total Volume [m3]
+ Meters for 2441,PERIMETER_MID_ZN_4 SUB CAT:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=sub cat:WaterSystems:Water [m3]
 
- Meters for 2440,PERIMETER_MID_ZN_4 SUB CAT:Water Use Equipment Mains Water Volume [m3]
+ Meters for 2442,PERIMETER_MID_ZN_4 SUB CAT:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=sub cat:WaterSystems:MainsWater [m3]
 
- Meters for 2441,PERIMETER_MID_ZN_4 SUB CAT:Water Use Equipment Heating Energy [J]
+ Meters for 2443,PERIMETER_MID_ZN_4 SUB CAT:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=sub cat:WaterSystems:EnergyTransfer [J]
 
- Meters for 2442,CORE_BOTTOM SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2444,CORE_BOTTOM SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2491,CORE_MID SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2493,CORE_MID SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2492,CORE_TOP SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2494,CORE_TOP SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2493,PERIMETER_TOP_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2495,PERIMETER_TOP_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2494,PERIMETER_TOP_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2496,PERIMETER_TOP_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2495,PERIMETER_TOP_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2497,PERIMETER_TOP_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2496,PERIMETER_TOP_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2498,PERIMETER_TOP_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2497,PERIMETER_BOT_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2499,PERIMETER_BOT_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2498,PERIMETER_BOT_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2500,PERIMETER_BOT_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2499,PERIMETER_BOT_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2501,PERIMETER_BOT_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2500,PERIMETER_BOT_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2502,PERIMETER_BOT_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2501,PERIMETER_MID_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2503,PERIMETER_MID_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2502,PERIMETER_MID_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2504,PERIMETER_MID_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2503,PERIMETER_MID_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2505,PERIMETER_MID_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2504,PERIMETER_MID_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
+ Meters for 2506,PERIMETER_MID_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2505,SHWSYS1 WATER HEATER:Water Heater Source Side Heat Transfer Energy [J]
+ Meters for 2507,SHWSYS1 WATER HEATER:Water Heater Source Side Heat Transfer Energy [J]
   OnMeter=PlantLoopHeatingDemand:Facility [J]
   OnMeter=PlantLoopHeatingDemand:Plant [J]
   OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
   OnMeter=Water Heater:WaterSystems:PlantLoopHeatingDemand [J]
 
- Meters for 2518,SHWSYS1 WATER HEATER:Water Heater Gas Energy [J]
+ Meters for 2520,SHWSYS1 WATER HEATER:Water Heater Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:Plant [J]
   OnMeter=WaterSystems:Gas [J]
   OnMeter=Water Heater:WaterSystems:Gas [J]
 
- Meters for 2555,SHWSYS1 WATER HEATER:Water Heater Off Cycle Parasitic Gas Energy [J]
+ Meters for 2557,SHWSYS1 WATER HEATER:Water Heater Off Cycle Parasitic Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:Plant [J]
   OnMeter=WaterSystems:Gas [J]
   OnMeter=Water Heater:WaterSystems:Gas [J]
 
- Meters for 2556,SHWSYS1 WATER HEATER:Water Heater On Cycle Parasitic Gas Energy [J]
+ Meters for 2558,SHWSYS1 WATER HEATER:Water Heater On Cycle Parasitic Gas Energy [J]
   OnMeter=Gas:Facility [J]
   OnMeter=Gas:Plant [J]
   OnMeter=WaterSystems:Gas [J]
   OnMeter=Water Heater:WaterSystems:Gas [J]
 
- Meters for 2557,SHWSYS1 WATER HEATER:Water Heater Water Volume [m3]
+ Meters for 2559,SHWSYS1 WATER HEATER:Water Heater Water Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=Water Heater:WaterSystems:Water [m3]
 
- Meters for 2570,SHWSYS1 WATER HEATER:Water Heater Mains Water Volume [m3]
+ Meters for 2572,SHWSYS1 WATER HEATER:Water Heater Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=Water Heater:WaterSystems:MainsWater [m3]
 
- Meters for 2583,Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass [kg]
+ Meters for 2585,Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass [kg]
   OnMeter=Carbon Equivalent:Facility [kg]
   OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
 
- Meters for 2608,Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass [kg]
+ Meters for 2610,Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass [kg]
   OnMeter=Carbon Equivalent:Facility [kg]
   OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
 
- Meters for 2609,Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass [kg]
+ Meters for 2611,Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass [kg]
   OnMeter=Carbon Equivalent:Facility [kg]
   OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
 
@@ -2450,3 +2450,68 @@
   PERIMETER_TOP_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy
   PERIMETER_BOT_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy
   PERIMETER_BOT_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_BOT_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_BOT_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_MID_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_MID_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_MID_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_MID_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy
+  SHWSYS1 WATER HEATER:Water Heater Source Side Heat Transfer Energy
+
+ For Meter=General:WaterSystems:PlantLoopHeatingDemand [J], ResourceType=PlantLoopHeatingDemand, EndUse=WaterSystems, contents are:
+  CORE_BOTTOM SUB CAT:Water Use Connections Plant Hot Water Energy
+  CORE_MID SUB CAT:Water Use Connections Plant Hot Water Energy
+  CORE_TOP SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_TOP_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_TOP_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_TOP_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_TOP_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_BOT_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_BOT_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_BOT_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_BOT_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_MID_ZN_3 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_MID_ZN_2 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_MID_ZN_1 SUB CAT:Water Use Connections Plant Hot Water Energy
+  PERIMETER_MID_ZN_4 SUB CAT:Water Use Connections Plant Hot Water Energy
+
+ For Meter=Water Heater:WaterSystems:PlantLoopHeatingDemand [J], ResourceType=PlantLoopHeatingDemand, EndUse=WaterSystems, contents are:
+  SHWSYS1 WATER HEATER:Water Heater Source Side Heat Transfer Energy
+
+ For Meter=Gas:Plant [J], ResourceType=Gas, Group=Plant, contents are:
+  SHWSYS1 WATER HEATER:Water Heater Gas Energy
+  SHWSYS1 WATER HEATER:Water Heater Off Cycle Parasitic Gas Energy
+  SHWSYS1 WATER HEATER:Water Heater On Cycle Parasitic Gas Energy
+
+ For Meter=WaterSystems:Gas [J], ResourceType=Gas, EndUse=WaterSystems, contents are:
+  SHWSYS1 WATER HEATER:Water Heater Gas Energy
+  SHWSYS1 WATER HEATER:Water Heater Off Cycle Parasitic Gas Energy
+  SHWSYS1 WATER HEATER:Water Heater On Cycle Parasitic Gas Energy
+
+ For Meter=Water Heater:WaterSystems:Gas [J], ResourceType=Gas, EndUse=WaterSystems, contents are:
+  SHWSYS1 WATER HEATER:Water Heater Gas Energy
+  SHWSYS1 WATER HEATER:Water Heater Off Cycle Parasitic Gas Energy
+  SHWSYS1 WATER HEATER:Water Heater On Cycle Parasitic Gas Energy
+
+ For Meter=Water Heater:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  SHWSYS1 WATER HEATER:Water Heater Water Volume
+
+ For Meter=Water Heater:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  SHWSYS1 WATER HEATER:Water Heater Mains Water Volume
+
+ For Meter=Carbon Equivalent:Facility [kg], ResourceType=Carbon Equivalent, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass
+
+ For Meter=CarbonEquivalentEmissions:Carbon Equivalent [kg], ResourceType=Carbon Equivalent, EndUse=CarbonEquivalentEmissions, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass
+
+ For Meter=WIRED_LTG_ELECTRICITY [J], ResourceType=Electricity, contents are:
+  EMS:Wired_LTG
+
+ For Meter=WIRED_INT_EQUIP [J], ResourceType=Electricity, contents are:
+ Values for this meter will be Source Meter=InteriorEquipment:Electricity; but will be decremented by:
+  CORE_BOTTOM_ELEVATORS_EQUIP:Electric Equipment Electric Energy

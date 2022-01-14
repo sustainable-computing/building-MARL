@@ -12758,6 +12758,11 @@ Output:Variable,
     Zone Air Relative Humidity,    !- Variable Name
     timestep;                 !- Reporting Frequency
 
+Output:Variable,
+    *,                        !- Key Value
+    Facility Total HVAC Electric Demand Power,    !- Variable Name
+    hourly;                   !- Reporting Frequency
+
 OUTPUT:VARIABLE,
     TopFloor_Plenum,          !- Key Value
     Zone Air Relative Humidity,    !- Variable Name
@@ -12849,6 +12854,111 @@ OUTPUT:VARIABLE,
     Timestep;                 !- Reporting Frequency
 
 OUTPUT:VARIABLE,
+    TopFloor_Plenum VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    MidFloor_Plenum VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    FirstFloor_Plenum VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Core_top VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Core_mid VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Core_bottom VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_top_ZN_3 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_top_ZN_2 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_top_ZN_1 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_top_ZN_4 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_bot_ZN_3 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_bot_ZN_2 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_bot_ZN_1 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_bot_ZN_4 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_mid_ZN_3 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_mid_ZN_2 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_mid_ZN_1 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Perimeter_mid_ZN_4 VAV Box Reheat Coil,    !- Key Value
+    Heating Coil Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    PACU_VAV_mid,             !- Key Value
+    Air System Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    PACU_VAV_top,             !- Key Value
+    Air System Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    PACU_VAV_bot,             !- Key Value
+    Air System Electric Energy,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
     Environment,              !- Key Value
     Site Outdoor Air Drybulb Temperature,    !- Variable Name
     Timestep;                 !- Reporting Frequency
@@ -12856,6 +12966,11 @@ OUTPUT:VARIABLE,
 OUTPUT:VARIABLE,
     Environment,              !- Key Value
     Site Direct Solar Radiation Rate per Area,    !- Variable Name
+    Timestep;                 !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    Whole Building,           !- Key Value
+    Facility Total HVAC Electric Demand Power,    !- Variable Name
     Timestep;                 !- Reporting Frequency
 
 OUTPUT:VARIABLE,

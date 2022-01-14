@@ -59,6 +59,7 @@ class Model:
                  reward=None,
                  eplus_naming_dict=None,
                  eplus_var_types=None,
+                 eplus_meter_dict=None,
                  buffer_capacity=None,
                  buffer_seed=None,
                  buffer_chkpt_dir=None,
@@ -104,6 +105,7 @@ class Model:
         self.reward = reward
         self.eplus_naming_dict = dict() if eplus_naming_dict is None else eplus_naming_dict
         self.eplus_var_types = dict() if eplus_var_types is None else eplus_var_types
+        self.eplus_meter_dict = dict() if eplus_meter_dict is None else eplus_meter_dict
         self.prev_reward = None
         self.total_timestep = -1
         self.leap_weather = False
@@ -418,6 +420,13 @@ class Model:
 
         # Add state values
         state_vars = self.get_current_state_variables()
+        
+        # Add for asked meter values
+        for meter_name in self.eplus_meter_dict:
+            handle = self.api.exchange.get_meter_handle(meter_name)
+            if handle == -1:
+                continue
+            current_state[self.eplus_meter_dict[meter_name]] = self.api.exchange.get_meter_value(handle)
 
         # Add for temp extra output
         for entry in self.idf.idfobjects['OUTPUT:VARIABLE']:
