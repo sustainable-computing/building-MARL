@@ -1,9 +1,12 @@
+from email.policy import default
 import sys
 import os
 from ppo import PPO
 import argparse
 import torch
 import numpy as np
+import glob
+import datetime
 sys.path.insert(0, "/home/tianyu/building-MARL/")
 from cobs import Model
 Model.set_energyplus_folder("/usr/local/EnergyPlus-9-3-0/")
@@ -66,6 +69,25 @@ if __name__ == '__main__':
         type=int,
         default=0,
     )
+    parser.add_argument(
+        '--train_on',
+        help='Set to -1 for parallel training, 0-14 otherwise indicating which zone to train, other zones will use rule-based controller',
+        type=int,
+        default=-1
+    )
+    parser.add_argument(
+        '--diverse_training',
+        help='Set to an integer for diverse training, where all other agents are previous policies. 0 to turn off',
+        type=int,
+        default=0
+    )
+    parser.add_argument(
+        '--diverse_weight',
+        help='Set the weight for diversity loss',
+        type=float,
+        default=0.01
+    )
+    
     args = parser.parse_args()
     
     print("============================================================================================")
@@ -79,14 +101,22 @@ if __name__ == '__main__':
     else:
         print("Device set to: cpu")
     print("============================================================================================")
-    run_num_pretrained = 19
+    run_num = 19
     os.makedirs(f"PPO_weights", exist_ok=True)
     if not args.multi_agent:
-        checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num_pretrained}.pth"
+        checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num}.pth"
+    elif args.train_on == -1:
+        os.makedirs(f"PPO_weights/PPO_{args.seed}_{run_num}", exist_ok=True)
+        checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num}/agent"
     else:
-        os.makedirs(f"PPO_weights/PPO_{args.seed}_{run_num_pretrained}", exist_ok=True)
-        checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num_pretrained}/agent"
-    log_f = open(f"log_{run_num_pretrained}", "w+")
+        os.makedirs(f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training", exist_ok=True)
+        checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/agent"
+        if args.diverse_training != 0:
+            os.makedirs(f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/{args.diverse_weight}", exist_ok=True)
+            checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/{args.diverse_weight}/agent"
+    
+    log_path = f"{checkpoint_path[:checkpoint_path.rfind('/')]}/log_{args.seed}_{run_num}"
+    log_f = open(f"{log_path}_{len(glob.glob(log_path + '_*'))}", "w+")
 
     available_zones = ['TopFloor_Plenum', 'MidFloor_Plenum', 'FirstFloor_Plenum',
                        'Core_top', 'Core_mid', 'Core_bottom',
@@ -109,7 +139,8 @@ if __name__ == '__main__':
 
     model = Model(idf_file_name="./eplus_files/OfficeMedium_Denver.idf",
                   weather_file="./eplus_files/USA_CO_Denver-Aurora-Buckley.AFB_.724695_TMY3.epw",
-                  eplus_naming_dict=eplus_extra_states)
+                  eplus_naming_dict=eplus_extra_states,
+                  tmp_idf_path=checkpoint_path[:checkpoint_path.rfind('/')])
     
     # Add them to the IDF file so we can retrieve them
     for key, _ in eplus_extra_states.items():
@@ -117,22 +148,25 @@ if __name__ == '__main__':
                                 {"Key Value": key[1], "Variable Name": key[0], "Reporting Frequency": "Timestep"})
     
     # Setup controls to all VAV boxes
-    for zone in available_zones:
-        if "Plenum" not in zone:
-            model.add_configuration("Schedule:Constant",
-                                    {"Name": f"{zone} VAV Customized Schedule",
-                                     "Schedule Type Limits Name": "Fraction",
-                                     "Hourly Value": 0})
-            model.edit_configuration(idf_header_name="AirTerminal:SingleDuct:VAV:Reheat",
-                                     identifier={"Name": f"{zone} VAV Box Component"},
-                                     update_values={"Zone Minimum Air Flow Input Method": "Scheduled",
-                                                    "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
+    control_zones = available_zones[3:]
+    if args.multi_agent and args.train_on != -1:
+        control_zones = [available_zones[3 + args.train_on]]
+    for zone in control_zones:
+        model.add_configuration("Schedule:Constant",
+                                {"Name": f"{zone} VAV Customized Schedule",
+                                 "Schedule Type Limits Name": "Fraction",
+                                 "Hourly Value": 0})
+        model.edit_configuration(idf_header_name="AirTerminal:SingleDuct:VAV:Reheat",
+                                 identifier={"Name": f"{zone} VAV Box Component"},
+                                 update_values={"Zone Minimum Air Flow Input Method": "Scheduled",
+                                                "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
 
     # Environment setup
-    model.set_runperiod(*(10, 1991, 7, 1))
+    model.set_runperiod(*(30, 1991, 7, 1))
     model.set_timestep(4)
     
     # Agent setup
+    # TODO: add single-agent diversity?
     if not args.multi_agent:
         agent = PPO(15 + 15 + 1 + 1 + 15 + 1, # State dimension, temp + humidity + outdoor temp + solar + occupancy + hour
                     15, # Action dimension, 1 for each zone
@@ -140,11 +174,17 @@ if __name__ == '__main__':
                     device=device,
                     diverse_policies=list(), diverse_weight=0)
     else:
+        num_rl_agent = 15 if args.train_on == -1 else 1
+        existing_policies = list()
+        if args.train_on == -1 and args.diverse_training != 0:
+            existing_policies = list(glob.glob(f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/agent_*.pth"))
         agent = [PPO(1 + 1 + 1 + 1 + 1 + 1, # State dimension, own temperature + humidity + outdoor temp + solar + occupancy + hour
                      1, # Action dimension, 1 for each zone
                      0.003, 0.0005, 1, 10, 0.2, has_continuous_action_space=True, action_std_init=0.6, 
                      device=device,
-                     diverse_policies=list(), diverse_weight=0) for _ in range(15)]
+                     diverse_policies=existing_policies, diverse_weight=args.diverse_weight, diverse_increase=True) for _ in range(num_rl_agent)]
+        
+        
     
     for ep in range(args.episodes):
         state = model.reset()
@@ -153,14 +193,14 @@ if __name__ == '__main__':
             # Transfer the state into the format of only selected states
             agent_state = [state["outdoor temperature"], state["site solar radiation"], state["time"].hour]
             action = list()
-            for i, zone in enumerate(available_zones[3:]):
+            for i, zone in enumerate(control_zones):
                 if not args.multi_agent:
                     agent_state.append(state[f"{zone} humidity"])
                     agent_state.append(state["temperature"][zone])
                     agent_state.append(state["occupancy"][zone])
                 else:
                     action.append(agent[i].select_action(agent_state + [state[f"{zone} humidity"], state["temperature"][zone], state["occupancy"][zone]]))
-                    agent[i].buffer.rewards.append(-state[f"{zone} vav energy"] + -state[f"{airloops[zone]} energy"])
+                    agent[i].buffer.rewards.append(-state[f"{zone} vav energy"])  # -state[f"{airloops[zone]} energy"]
                     agent[i].buffer.is_terminals.append(state["terminate"])
             
             # Get action and round to 0~1
@@ -171,7 +211,7 @@ if __name__ == '__main__':
             action = list(1/(1 + np.exp(-action)))
             
             actions = list()
-            for i, zone in enumerate(available_zones[3:]):
+            for i, zone in enumerate(control_zones):
                 actions.append({"priority": 0,
                                 "component_type": "Schedule:Constant",
                                 "control_type": "Schedule Value",
@@ -185,17 +225,20 @@ if __name__ == '__main__':
                 agent.buffer.is_terminals.append(state["terminate"])
             total_energy += state["total hvac"]
 
-        print(f"Episode: {ep}\t\tTotal energy: {total_energy}")
-        log_f.write(f"Episode: {ep}\t\tTotal energy: {total_energy}\n")
+        print(f"[{datetime.datetime.now()}]Episode: {ep}\t\tTotal energy: {total_energy}")
+        log_f.write(f"[{datetime.datetime.now()}]Episode: {ep}\t\tTotal energy: {total_energy}\n")
         log_f.flush()
         
         if not args.multi_agent:
-            agent.save(checkpoint_path)
             agent.update()
+            agent.save(checkpoint_path)
         else:
             for i in range(len(agent)):
-                agent[i].save(f"{checkpoint_path}_{i}.pth")
                 agent[i].update()
+                if args.diverse_training != 0:
+                    agent[i].save(f"{checkpoint_path}_{args.diverse_training}.pth")
+                else:
+                    agent[i].save(f"{checkpoint_path}_{i}.pth")
 
     log_f.close()
     print("Done")

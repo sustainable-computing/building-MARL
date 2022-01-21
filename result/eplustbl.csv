@@ -1,4 +1,4 @@
-Program Version:,EnergyPlus, Version 9.3.0-baff08990c, YMD=2021.12.19 06:02
+Program Version:,EnergyPlus, Version 9.3.0-baff08990c, YMD=2022.01.20 21:48
 Tabular Output Report in Format: ,Comma
 
 Building:,Medium Office
@@ -7,16 +7,16 @@ Environment:,RUN PERIOD 1 ** Denver-Aurora-Buckley AFB CO USA TMY3 WMO#=724695
 ----------------------------------------------------------------------------------------------------
 REPORT:,Annual Building Utility Performance Summary
 FOR:,Entire Facility
-Values gathered over       240.00 hours
+Values gathered over       720.00 hours
 WARNING: THE REPORT DOES NOT REPRESENT A FULL ANNUAL SIMULATION.
 
 Site and Source Energy
 
 ,,Total Energy [GJ],Energy Per Total Building Area [MJ/m2],Energy Per Conditioned Building Area [MJ/m2]
-,Total Site Energy,64.76,13.00,13.00
-,Net Site Energy,64.76,13.00,13.00
-,Total Source Energy,200.44,40.23,40.23
-,Net Source Energy,200.44,40.23,40.23
+,Total Site Energy,146.69,29.44,29.44
+,Net Site Energy,146.69,29.44,29.44
+,Total Source Energy,450.88,90.50,90.50
+,Net Source Energy,450.88,90.50,90.50
 
 
 Site to Source Energy Conversion Factors
@@ -48,42 +48,42 @@ Building Area
 End Uses
 
 ,,Electricity [GJ],Natural Gas [GJ],Additional Fuel [GJ],District Cooling [GJ],District Heating [GJ],Water [m3]
-,Heating,6.40,0.08,0.00,0.00,0.00,0.00
-,Cooling,17.52,0.00,0.00,0.00,0.00,0.00
-,Interior Lighting,7.14,0.00,0.00,0.00,0.00,0.00
-,Exterior Lighting,0.88,0.00,0.00,0.00,0.00,0.00
-,Interior Equipment,18.96,0.00,0.00,0.00,0.00,0.00
-,Exterior Equipment,0.30,0.00,0.00,0.00,0.00,0.00
-,Fans,11.32,0.00,0.00,0.00,0.00,0.00
-,Pumps,0.00,0.00,0.00,0.00,0.00,0.00
+,Heating,0.03,0.00,0.00,0.00,0.00,0.00
+,Cooling,42.18,0.00,0.00,0.00,0.00,0.00
+,Interior Lighting,23.58,0.00,0.00,0.00,0.00,0.00
+,Exterior Lighting,2.70,0.00,0.00,0.00,0.00,0.00
+,Interior Equipment,60.44,0.00,0.00,0.00,0.00,0.00
+,Exterior Equipment,0.95,0.00,0.00,0.00,0.00,0.00
+,Fans,10.23,0.00,0.00,0.00,0.00,0.00
+,Pumps,0.01,0.00,0.00,0.00,0.00,0.00
 ,Heat Rejection,0.00,0.00,0.00,0.00,0.00,0.00
 ,Humidification,0.00,0.00,0.00,0.00,0.00,0.00
 ,Heat Recovery,0.00,0.00,0.00,0.00,0.00,0.00
-,Water Systems,0.00,2.14,0.00,0.00,0.00,6.55
+,Water Systems,0.00,6.57,0.00,0.00,0.00,21.62
 ,Refrigeration,0.00,0.00,0.00,0.00,0.00,0.00
 ,Generators,0.00,0.00,0.00,0.00,0.00,0.00
 ,,,,,,,
-,Total End Uses,62.53,2.23,0.00,0.00,0.00,6.55
+,Total End Uses,140.12,6.57,0.00,0.00,0.00,21.62
 Note: Electricity appears to be the principal heating source based on energy usage.
 
 
 End Uses By Subcategory
 
 ,,Subcategory,Electricity [GJ],Natural Gas [GJ],Additional Fuel [GJ],District Cooling [GJ],District Heating [GJ],Water [m3]
-,Heating,General,6.40,0.08,0.00,0.00,0.00,0.00
-,Cooling,General,17.52,0.00,0.00,0.00,0.00,0.00
-,Interior Lighting,General Lights,7.14,0.00,0.00,0.00,0.00,0.00
-,Exterior Lighting,General,0.88,0.00,0.00,0.00,0.00,0.00
-,Interior Equipment,MiscPlug,18.96,0.00,0.00,0.00,0.00,0.00
-,Exterior Equipment,Transformer,0.30,0.00,0.00,0.00,0.00,0.00
-,Fans,General,11.32,0.00,0.00,0.00,0.00,0.00
-,Pumps,General,0.00,0.00,0.00,0.00,0.00,0.00
+,Heating,General,0.03,0.00,0.00,0.00,0.00,0.00
+,Cooling,General,42.18,0.00,0.00,0.00,0.00,0.00
+,Interior Lighting,General Lights,23.58,0.00,0.00,0.00,0.00,0.00
+,Exterior Lighting,General,2.70,0.00,0.00,0.00,0.00,0.00
+,Interior Equipment,MiscPlug,60.44,0.00,0.00,0.00,0.00,0.00
+,Exterior Equipment,Transformer,0.95,0.00,0.00,0.00,0.00,0.00
+,Fans,General,10.23,0.00,0.00,0.00,0.00,0.00
+,Pumps,General,0.01,0.00,0.00,0.00,0.00,0.00
 ,Heat Rejection,General,0.00,0.00,0.00,0.00,0.00,0.00
 ,Humidification,General,0.00,0.00,0.00,0.00,0.00,0.00
 ,Heat Recovery,General,0.00,0.00,0.00,0.00,0.00,0.00
-,Water Systems,sub cat,0.00,0.00,0.00,0.00,0.00,6.55
+,Water Systems,sub cat,0.00,0.00,0.00,0.00,0.00,21.62
 ,,General,0.00,0.00,0.00,0.00,0.00,0.00
-,,Water Heater,0.00,2.14,0.00,0.00,0.00,0.00
+,,Water Heater,0.00,6.57,0.00,0.00,0.00,0.00
 ,Refrigeration,General,0.00,0.00,0.00,0.00,0.00,0.00
 ,Generators,General,0.00,0.00,0.00,0.00,0.00,0.00
 
@@ -92,19 +92,19 @@ Normalized Metrics
 Utility Use Per Conditioned Floor Area
 
 ,,Electricity Intensity [MJ/m2],Natural Gas Intensity [MJ/m2],Additional Fuel Intensity [MJ/m2],District Cooling Intensity [MJ/m2],District Heating Intensity [MJ/m2],Water Intensity [m3/m2]
-,Lighting,1.61,0.00,0.00,0.00,0.00,0.00
-,HVAC,7.08,0.45,0.00,0.00,0.00,0.00
-,Other,3.87,0.00,0.00,0.00,0.00,0.00
-,Total,12.55,0.45,0.00,0.00,0.00,0.00
+,Lighting,5.27,0.00,0.00,0.00,0.00,0.00
+,HVAC,10.53,1.32,0.00,0.00,0.00,0.00
+,Other,12.32,0.00,0.00,0.00,0.00,0.00
+,Total,28.12,1.32,0.00,0.00,0.00,0.00
 
 
 Utility Use Per Total Floor Area
 
 ,,Electricity Intensity [MJ/m2],Natural Gas Intensity [MJ/m2],Additional Fuel Intensity [MJ/m2],District Cooling Intensity [MJ/m2],District Heating Intensity [MJ/m2],Water Intensity [m3/m2]
-,Lighting,1.61,0.00,0.00,0.00,0.00,0.00
-,HVAC,7.08,0.45,0.00,0.00,0.00,0.00
-,Other,3.87,0.00,0.00,0.00,0.00,0.00
-,Total,12.55,0.45,0.00,0.00,0.00,0.00
+,Lighting,5.27,0.00,0.00,0.00,0.00,0.00
+,HVAC,10.53,1.32,0.00,0.00,0.00,0.00
+,Other,12.32,0.00,0.00,0.00,0.00,0.00
+,Total,28.12,1.32,0.00,0.00,0.00,0.00
 
 
 Electric Loads Satisfied
@@ -118,12 +118,12 @@ Electric Loads Satisfied
 ,Net Decrease in On-Site Storage,0.000,0.00
 ,Total On-Site Electric Sources,0.000,0.00
 ,,,
-,Electricity Coming From Utility,62.530,100.00
+,Electricity Coming From Utility,140.122,100.00
 ,Surplus Electricity Going To Utility,0.000,0.00
-,Net Electricity From Utility,62.530,100.00
+,Net Electricity From Utility,140.122,100.00
 ,,,
-,Total On-Site and Utility Electric Sources,62.530,100.00
-,Total Electricity End Uses,62.530,100.00
+,Total On-Site and Utility Electric Sources,140.122,100.00
+,Total Electricity End Uses,140.122,100.00
 
 
 On-Site Thermal Sources
@@ -150,10 +150,10 @@ Water Source Summary
 ,Final Storage,0.00,0.00
 ,Change in Storage,0.00,0.00
 ,-,-,-
-,Water Supplied by Utility,6.55,100.00
+,Water Supplied by Utility,21.62,100.00
 ,-,-,-
-,Total On Site, Change in Storage, and Utility Water Sources,6.55,100.00
-,Total Water End Uses,6.55,100.00
+,Total On Site, Change in Storage, and Utility Water Sources,21.62,100.00
+,Total Water End Uses,21.62,100.00
 
 
 Setpoint Not Met Criteria
@@ -167,8 +167,8 @@ Comfort and Setpoint Not Met Summary
 
 ,,Facility [Hours]
 ,Time Setpoint Not Met During Occupied Heating,0.00
-,Time Setpoint Not Met During Occupied Cooling,14.00
-,Time Not Comfortable Based on Simple ASHRAE 55-2004,8.75
+,Time Setpoint Not Met During Occupied Cooling,40.50
+,Time Not Comfortable Based on Simple ASHRAE 55-2004,48.75
 
 
 Note 1: An asterisk (*) indicates that the feature is not yet implemented.
@@ -178,7 +178,7 @@ FOR:,Entire Facility
 General
 
 ,,Value
-,Program Version and Build,EnergyPlus, Version 9.3.0-baff08990c, YMD=2021.12.19 06:02
+,Program Version and Build,EnergyPlus, Version 9.3.0-baff08990c, YMD=2022.01.20 21:48
 ,RunPeriod,RUN PERIOD 1
 ,Weather File,Denver-Aurora-Buckley AFB CO USA TMY3 WMO#=724695
 ,Latitude [deg],39.72
@@ -187,7 +187,7 @@ General
 ,Time Zone,-7.0
 ,North Axis Angle [deg],0.00
 ,Rotation for Appendix G [deg],0.00
-,Hours Simulated [hrs],240.00
+,Hours Simulated [hrs],720.00
 
 
 ENVELOPE
@@ -388,21 +388,21 @@ DX Heating Coils
 Heating Coils
 
 ,,Type,Design Coil Load [W],Nominal Total Capacity [W],Nominal Efficiency [W/W]
-,CORE_BOTTOM VAV BOX REHEAT COIL,Coil:Heating:Electric,,9284.43,1.00
-,CORE_MID VAV BOX REHEAT COIL,Coil:Heating:Electric,,17494.67,1.00
+,CORE_BOTTOM VAV BOX REHEAT COIL,Coil:Heating:Electric,,28853.50,1.00
+,CORE_MID VAV BOX REHEAT COIL,Coil:Heating:Electric,,21449.63,1.00
 ,CORE_TOP VAV BOX REHEAT COIL,Coil:Heating:Electric,,33041.24,1.00
 ,PERIMETER_TOP_ZN_3 VAV BOX REHEAT COIL,Coil:Heating:Electric,,14510.21,1.00
 ,PERIMETER_TOP_ZN_2 VAV BOX REHEAT COIL,Coil:Heating:Electric,,9641.60,1.00
 ,PERIMETER_TOP_ZN_1 VAV BOX REHEAT COIL,Coil:Heating:Electric,,14776.99,1.00
 ,PERIMETER_TOP_ZN_4 VAV BOX REHEAT COIL,Coil:Heating:Electric,,9641.43,1.00
 ,PERIMETER_BOT_ZN_3 VAV BOX REHEAT COIL,Coil:Heating:Electric,,9532.58,1.00
-,PERIMETER_BOT_ZN_2 VAV BOX REHEAT COIL,Coil:Heating:Electric,,6495.55,1.00
+,PERIMETER_BOT_ZN_2 VAV BOX REHEAT COIL,Coil:Heating:Electric,,6750.81,1.00
 ,PERIMETER_BOT_ZN_1 VAV BOX REHEAT COIL,Coil:Heating:Electric,,9858.85,1.00
-,PERIMETER_BOT_ZN_4 VAV BOX REHEAT COIL,Coil:Heating:Electric,,6495.55,1.00
+,PERIMETER_BOT_ZN_4 VAV BOX REHEAT COIL,Coil:Heating:Electric,,7146.91,1.00
 ,PERIMETER_MID_ZN_3 VAV BOX REHEAT COIL,Coil:Heating:Electric,,11356.62,1.00
 ,PERIMETER_MID_ZN_2 VAV BOX REHEAT COIL,Coil:Heating:Electric,,7658.72,1.00
 ,PERIMETER_MID_ZN_1 VAV BOX REHEAT COIL,Coil:Heating:Electric,,11642.39,1.00
-,PERIMETER_MID_ZN_4 VAV BOX REHEAT COIL,Coil:Heating:Electric,,7658.65,1.00
+,PERIMETER_MID_ZN_4 VAV BOX REHEAT COIL,Coil:Heating:Electric,,7830.31,1.00
 ,PACU_VAV_BOT_HEATC,Coil:Heating:Fuel,,32645.83,0.80
 ,PACU_VAV_MID_HEATC,Coil:Heating:Fuel,,33934.62,0.80
 ,PACU_VAV_TOP_HEATC,Coil:Heating:Fuel,,32977.76,0.80
@@ -449,16 +449,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,23.15,21.84
+,July,24.13,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,23.15,21.84
-,Minimum of Months,23.15,21.84
-,Maximum of Months,23.15,21.84
+,Annual Sum or Average,24.13,22.80
+,Minimum of Months,24.13,22.80
+,Maximum of Months,24.13,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -473,16 +473,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.66,21.84
+,July,24.82,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.66,21.84
-,Minimum of Months,22.66,21.84
-,Maximum of Months,22.66,21.84
+,Annual Sum or Average,24.82,22.80
+,Minimum of Months,24.82,22.80
+,Maximum of Months,24.82,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -497,16 +497,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,23.42,21.84
+,July,24.84,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,23.42,21.84
-,Minimum of Months,23.42,21.84
-,Maximum of Months,23.42,21.84
+,Annual Sum or Average,24.84,22.80
+,Minimum of Months,24.84,22.80
+,Maximum of Months,24.84,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -521,16 +521,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,23.31,21.84
+,July,24.62,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,23.31,21.84
-,Minimum of Months,23.31,21.84
-,Maximum of Months,23.31,21.84
+,Annual Sum or Average,24.62,22.80
+,Minimum of Months,24.62,22.80
+,Maximum of Months,24.62,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -545,16 +545,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,23.86,21.84
+,July,24.53,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,23.86,21.84
-,Minimum of Months,23.86,21.84
-,Maximum of Months,23.86,21.84
+,Annual Sum or Average,24.53,22.80
+,Minimum of Months,24.53,22.80
+,Maximum of Months,24.53,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -569,16 +569,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.30,21.84
+,July,24.50,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.30,21.84
-,Minimum of Months,22.30,21.84
-,Maximum of Months,22.30,21.84
+,Annual Sum or Average,24.50,22.80
+,Minimum of Months,24.50,22.80
+,Maximum of Months,24.50,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -593,16 +593,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,23.09,21.84
+,July,24.30,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,23.09,21.84
-,Minimum of Months,23.09,21.84
-,Maximum of Months,23.09,21.84
+,Annual Sum or Average,24.30,22.80
+,Minimum of Months,24.30,22.80
+,Maximum of Months,24.30,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -617,16 +617,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.58,21.84
+,July,24.20,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.58,21.84
-,Minimum of Months,22.58,21.84
-,Maximum of Months,22.58,21.84
+,Annual Sum or Average,24.20,22.80
+,Minimum of Months,24.20,22.80
+,Maximum of Months,24.20,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -641,16 +641,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.25,21.84
+,July,24.16,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.25,21.84
-,Minimum of Months,22.25,21.84
-,Maximum of Months,22.25,21.84
+,Annual Sum or Average,24.16,22.80
+,Minimum of Months,24.16,22.80
+,Maximum of Months,24.16,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -665,16 +665,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.65,21.84
+,July,23.95,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.65,21.84
-,Minimum of Months,22.65,21.84
-,Maximum of Months,22.65,21.84
+,Annual Sum or Average,23.95,22.80
+,Minimum of Months,23.95,22.80
+,Maximum of Months,23.95,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -689,16 +689,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.96,21.84
+,July,24.08,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.96,21.84
-,Minimum of Months,22.96,21.84
-,Maximum of Months,22.96,21.84
+,Annual Sum or Average,24.08,22.80
+,Minimum of Months,24.08,22.80
+,Maximum of Months,24.08,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -713,16 +713,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.77,21.84
+,July,23.93,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.77,21.84
-,Minimum of Months,22.77,21.84
-,Maximum of Months,22.77,21.84
+,Annual Sum or Average,23.93,22.80
+,Minimum of Months,23.93,22.80
+,Maximum of Months,23.93,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -737,16 +737,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.57,21.84
+,July,23.90,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.57,21.84
-,Minimum of Months,22.57,21.84
-,Maximum of Months,22.57,21.84
+,Annual Sum or Average,23.90,22.80
+,Minimum of Months,23.90,22.80
+,Maximum of Months,23.90,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -761,16 +761,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.45,21.84
+,July,23.75,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.45,21.84
-,Minimum of Months,22.45,21.84
-,Maximum of Months,22.45,21.84
+,Annual Sum or Average,23.75,22.80
+,Minimum of Months,23.75,22.80
+,Maximum of Months,23.75,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -785,16 +785,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.56,21.84
+,July,24.12,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.56,21.84
-,Minimum of Months,22.56,21.84
-,Maximum of Months,22.56,21.84
+,Annual Sum or Average,24.12,22.80
+,Minimum of Months,24.12,22.80
+,Maximum of Months,24.12,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -809,16 +809,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.55,21.84
+,July,24.23,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.55,21.84
-,Minimum of Months,22.55,21.84
-,Maximum of Months,22.55,21.84
+,Annual Sum or Average,24.23,22.80
+,Minimum of Months,24.23,22.80
+,Maximum of Months,24.23,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -833,16 +833,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,22.97,21.84
+,July,24.27,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,22.97,21.84
-,Minimum of Months,22.97,21.84
-,Maximum of Months,22.97,21.84
+,Annual Sum or Average,24.27,22.80
+,Minimum of Months,24.27,22.80
+,Maximum of Months,24.27,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -857,16 +857,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,23.19,21.84
+,July,24.07,22.80
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,23.19,21.84
-,Minimum of Months,23.19,21.84
-,Maximum of Months,23.19,21.84
+,Annual Sum or Average,24.07,22.80
+,Minimum of Months,24.07,22.80
+,Maximum of Months,24.07,22.80
 
 
 ----------------------------------------------------------------------------------------------------
@@ -881,16 +881,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,19.894,0.967,0.000
+,July,484.000,21.394,0.913,0.000
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,19.894,0.967,0.000
-,Minimum of Months,157.000,19.894,0.967,0.000
-,Maximum of Months,157.000,19.894,0.967,0.000
+,Annual Sum or Average,484.000,21.394,0.913,0.000
+,Minimum of Months,484.000,21.394,0.913,0.000
+,Maximum of Months,484.000,21.394,0.913,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -905,16 +905,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,19.894,0.499,0.000
+,July,484.000,21.394,0.667,0.000
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,19.894,0.499,0.000
-,Minimum of Months,157.000,19.894,0.499,0.000
-,Maximum of Months,157.000,19.894,0.499,0.000
+,Annual Sum or Average,484.000,21.394,0.667,0.000
+,Minimum of Months,484.000,21.394,0.667,0.000
+,Maximum of Months,484.000,21.394,0.667,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -929,16 +929,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,19.894,1.241,0.000
+,July,484.000,21.394,0.721,0.000
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,19.894,1.241,0.000
-,Minimum of Months,157.000,19.894,1.241,0.000
-,Maximum of Months,157.000,19.894,1.241,0.000
+,Annual Sum or Average,484.000,21.394,0.721,0.000
+,Minimum of Months,484.000,21.394,0.721,0.000
+,Maximum of Months,484.000,21.394,0.721,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -953,16 +953,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,4.194,0.883,0.117
+,July,484.000,4.510,0.998,0.091
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,4.194,0.883,0.117
-,Minimum of Months,157.000,4.194,0.883,0.117
-,Maximum of Months,157.000,4.194,0.883,0.117
+,Annual Sum or Average,484.000,4.510,0.998,0.091
+,Minimum of Months,484.000,4.510,0.998,0.091
+,Maximum of Months,484.000,4.510,0.998,0.091
 
 
 ----------------------------------------------------------------------------------------------------
@@ -977,16 +977,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,2.655,2.137,0.123
+,July,484.000,2.855,1.793,0.096
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,2.655,2.137,0.123
-,Minimum of Months,157.000,2.655,2.137,0.123
-,Maximum of Months,157.000,2.655,2.137,0.123
+,Annual Sum or Average,484.000,2.855,1.793,0.096
+,Minimum of Months,484.000,2.855,1.793,0.096
+,Maximum of Months,484.000,2.855,1.793,0.096
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1001,16 +1001,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,4.194,1.840,0.116
+,July,484.000,4.510,1.256,0.091
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,4.194,1.840,0.116
-,Minimum of Months,157.000,4.194,1.840,0.116
-,Maximum of Months,157.000,4.194,1.840,0.116
+,Annual Sum or Average,484.000,4.510,1.256,0.091
+,Minimum of Months,484.000,4.510,1.256,0.091
+,Maximum of Months,484.000,4.510,1.256,0.091
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1025,16 +1025,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,2.655,2.130,0.123
+,July,484.000,2.855,1.725,0.096
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,2.655,2.130,0.123
-,Minimum of Months,157.000,2.655,2.130,0.123
-,Maximum of Months,157.000,2.655,2.130,0.123
+,Annual Sum or Average,484.000,2.855,1.725,0.096
+,Minimum of Months,484.000,2.855,1.725,0.096
+,Maximum of Months,484.000,2.855,1.725,0.096
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1049,16 +1049,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,4.194,0.941,0.064
+,July,484.000,4.510,0.689,0.050
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,4.194,0.941,0.064
-,Minimum of Months,157.000,4.194,0.941,0.064
-,Maximum of Months,157.000,4.194,0.941,0.064
+,Annual Sum or Average,484.000,4.510,0.689,0.050
+,Minimum of Months,484.000,4.510,0.689,0.050
+,Maximum of Months,484.000,4.510,0.689,0.050
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1073,16 +1073,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,2.655,2.415,0.067
+,July,484.000,2.855,1.477,0.052
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,2.655,2.415,0.067
-,Minimum of Months,157.000,2.655,2.415,0.067
-,Maximum of Months,157.000,2.655,2.415,0.067
+,Annual Sum or Average,484.000,2.855,1.477,0.052
+,Minimum of Months,484.000,2.855,1.477,0.052
+,Maximum of Months,484.000,2.855,1.477,0.052
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1097,16 +1097,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,4.194,1.849,0.767
+,July,484.000,4.510,0.950,0.810
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,4.194,1.849,0.767
-,Minimum of Months,157.000,4.194,1.849,0.767
-,Maximum of Months,157.000,4.194,1.849,0.767
+,Annual Sum or Average,484.000,4.510,0.950,0.810
+,Minimum of Months,484.000,4.510,0.950,0.810
+,Maximum of Months,484.000,4.510,0.950,0.810
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1121,16 +1121,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,2.655,2.648,0.067
+,July,484.000,2.855,1.369,0.052
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,2.655,2.648,0.067
-,Minimum of Months,157.000,2.655,2.648,0.067
-,Maximum of Months,157.000,2.655,2.648,0.067
+,Annual Sum or Average,484.000,2.855,1.369,0.052
+,Minimum of Months,484.000,2.855,1.369,0.052
+,Maximum of Months,484.000,2.855,1.369,0.052
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1145,16 +1145,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,4.194,1.795,0.097
+,July,484.000,4.510,1.125,0.076
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,4.194,1.795,0.097
-,Minimum of Months,157.000,4.194,1.795,0.097
-,Maximum of Months,157.000,4.194,1.795,0.097
+,Annual Sum or Average,484.000,4.510,1.125,0.076
+,Minimum of Months,484.000,4.510,1.125,0.076
+,Maximum of Months,484.000,4.510,1.125,0.076
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1169,16 +1169,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,2.655,3.507,0.102
+,July,484.000,2.855,1.753,0.080
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,2.655,3.507,0.102
-,Minimum of Months,157.000,2.655,3.507,0.102
-,Maximum of Months,157.000,2.655,3.507,0.102
+,Annual Sum or Average,484.000,2.855,1.753,0.080
+,Minimum of Months,484.000,2.855,1.753,0.080
+,Maximum of Months,484.000,2.855,1.753,0.080
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1193,16 +1193,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,4.194,1.933,0.097
+,July,484.000,4.510,1.150,0.076
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,4.194,1.933,0.097
-,Minimum of Months,157.000,4.194,1.933,0.097
-,Maximum of Months,157.000,4.194,1.933,0.097
+,Annual Sum or Average,484.000,4.510,1.150,0.076
+,Minimum of Months,484.000,4.510,1.150,0.076
+,Maximum of Months,484.000,4.510,1.150,0.076
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1217,16 +1217,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,157.000,2.655,2.136,0.102
+,July,484.000,2.855,1.605,0.080
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,157.000,2.655,2.136,0.102
-,Minimum of Months,157.000,2.655,2.136,0.102
-,Maximum of Months,157.000,2.655,2.136,0.102
+,Annual Sum or Average,484.000,2.855,1.605,0.080
+,Minimum of Months,484.000,2.855,1.605,0.080
+,Maximum of Months,484.000,2.855,1.605,0.080
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1313,16 +1313,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.984065E+09,0.374438E+08,0.000,676949.935,0.272598E+09,0.000,0.184753E+09,0.000
+,July,0.727240E+09,0.175967E+10,0.000,6757866.259,0.472572E+09,0.000,0.123495E+10,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.984065E+09,0.374438E+08,0.000,676949.935,0.272598E+09,0.000,0.184753E+09,0.000
-,Minimum of Months,0.984065E+09,0.374438E+08,0.000,676949.935,0.272598E+09,0.000,0.184753E+09,0.000
-,Maximum of Months,0.984065E+09,0.374438E+08,0.000,676949.935,0.272598E+09,0.000,0.184753E+09,0.000
+,Annual Sum or Average,0.727240E+09,0.175967E+10,0.000,6757866.259,0.472572E+09,0.000,0.123495E+10,0.000
+,Minimum of Months,0.727240E+09,0.175967E+10,0.000,6757866.259,0.472572E+09,0.000,0.123495E+10,0.000
+,Maximum of Months,0.727240E+09,0.175967E+10,0.000,6757866.259,0.472572E+09,0.000,0.123495E+10,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1337,16 +1337,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.330250E+09,0.627331E+08,0.000,1557738.469,0.168113E+09,0.000,0.247755E+09,0.000
+,July,0.421801E+09,0.138664E+10,0.000,6252627.421,0.194475E+09,0.000,0.109995E+10,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.330250E+09,0.627331E+08,0.000,1557738.469,0.168113E+09,0.000,0.247755E+09,0.000
-,Minimum of Months,0.330250E+09,0.627331E+08,0.000,1557738.469,0.168113E+09,0.000,0.247755E+09,0.000
-,Maximum of Months,0.330250E+09,0.627331E+08,0.000,1557738.469,0.168113E+09,0.000,0.247755E+09,0.000
+,Annual Sum or Average,0.421801E+09,0.138664E+10,0.000,6252627.421,0.194475E+09,0.000,0.109995E+10,0.000
+,Minimum of Months,0.421801E+09,0.138664E+10,0.000,6252627.421,0.194475E+09,0.000,0.109995E+10,0.000
+,Maximum of Months,0.421801E+09,0.138664E+10,0.000,6252627.421,0.194475E+09,0.000,0.109995E+10,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1361,16 +1361,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.121190E+10,0.000,0.000,92676.225,0.527147E+09,3058206.320,5105773.696,0.000
+,July,0.454476E+09,0.132429E+10,0.000,6361080.939,0.204720E+09,0.000,0.101568E+10,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.121190E+10,0.000,0.000,92676.225,0.527147E+09,3058206.320,5105773.696,0.000
-,Minimum of Months,0.121190E+10,0.000,0.000,92676.225,0.527147E+09,3058206.320,5105773.696,0.000
-,Maximum of Months,0.121190E+10,0.000,0.000,92676.225,0.527147E+09,3058206.320,5105773.696,0.000
+,Annual Sum or Average,0.454476E+09,0.132429E+10,0.000,6361080.939,0.204720E+09,0.000,0.101568E+10,0.000
+,Minimum of Months,0.454476E+09,0.132429E+10,0.000,6361080.939,0.204720E+09,0.000,0.101568E+10,0.000
+,Maximum of Months,0.454476E+09,0.132429E+10,0.000,6361080.939,0.204720E+09,0.000,0.101568E+10,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1385,16 +1385,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.202864E+09,0.103555E+08,0.000,53245.836,0.750296E+08,2055592.139,2447637.794,0.000
+,July,0.161713E+09,0.433357E+09,0.000,1608590.557,0.389937E+08,0.000,0.228981E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.202864E+09,0.103555E+08,0.000,53245.836,0.750296E+08,2055592.139,2447637.794,0.000
-,Minimum of Months,0.202864E+09,0.103555E+08,0.000,53245.836,0.750296E+08,2055592.139,2447637.794,0.000
-,Maximum of Months,0.202864E+09,0.103555E+08,0.000,53245.836,0.750296E+08,2055592.139,2447637.794,0.000
+,Annual Sum or Average,0.161713E+09,0.433357E+09,0.000,1608590.557,0.389937E+08,0.000,0.228981E+09,0.000
+,Minimum of Months,0.161713E+09,0.433357E+09,0.000,1608590.557,0.389937E+08,0.000,0.228981E+09,0.000
+,Maximum of Months,0.161713E+09,0.433357E+09,0.000,1608590.557,0.389937E+08,0.000,0.228981E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1409,16 +1409,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.233933E+09,4446511.418,0.000,75871.793,0.965578E+08,142765.302,0.423511E+08,0.000
+,July,0.188054E+09,0.369921E+09,0.000,2411707.055,0.104439E+09,0.000,0.322577E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.233933E+09,4446511.418,0.000,75871.793,0.965578E+08,142765.302,0.423511E+08,0.000
-,Minimum of Months,0.233933E+09,4446511.418,0.000,75871.793,0.965578E+08,142765.302,0.423511E+08,0.000
-,Maximum of Months,0.233933E+09,4446511.418,0.000,75871.793,0.965578E+08,142765.302,0.423511E+08,0.000
+,Annual Sum or Average,0.188054E+09,0.369921E+09,0.000,2411707.055,0.104439E+09,0.000,0.322577E+09,0.000
+,Minimum of Months,0.188054E+09,0.369921E+09,0.000,2411707.055,0.104439E+09,0.000,0.322577E+09,0.000
+,Maximum of Months,0.188054E+09,0.369921E+09,0.000,2411707.055,0.104439E+09,0.000,0.322577E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1433,16 +1433,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.398646E+09,1425553.965,0.000,2165.473,0.150441E+09,7021954.530,2016782.195,0.000
+,July,0.279250E+09,0.482695E+09,0.000,1590990.946,0.106576E+09,0.000,0.236983E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.398646E+09,1425553.965,0.000,2165.473,0.150441E+09,7021954.530,2016782.195,0.000
-,Minimum of Months,0.398646E+09,1425553.965,0.000,2165.473,0.150441E+09,7021954.530,2016782.195,0.000
-,Maximum of Months,0.398646E+09,1425553.965,0.000,2165.473,0.150441E+09,7021954.530,2016782.195,0.000
+,Annual Sum or Average,0.279250E+09,0.482695E+09,0.000,1590990.946,0.106576E+09,0.000,0.236983E+09,0.000
+,Minimum of Months,0.279250E+09,0.482695E+09,0.000,1590990.946,0.106576E+09,0.000,0.236983E+09,0.000
+,Maximum of Months,0.279250E+09,0.482695E+09,0.000,1590990.946,0.106576E+09,0.000,0.236983E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1457,16 +1457,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.290610E+09,6835795.838,0.000,122645.619,0.118310E+09,6929393.288,1271054.008,0.000
+,July,0.293098E+09,0.333180E+09,0.000,1201548.313,0.146150E+09,0.000,0.179536E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.290610E+09,6835795.838,0.000,122645.619,0.118310E+09,6929393.288,1271054.008,0.000
-,Minimum of Months,0.290610E+09,6835795.838,0.000,122645.619,0.118310E+09,6929393.288,1271054.008,0.000
-,Maximum of Months,0.290610E+09,6835795.838,0.000,122645.619,0.118310E+09,6929393.288,1271054.008,0.000
+,Annual Sum or Average,0.293098E+09,0.333180E+09,0.000,1201548.313,0.146150E+09,0.000,0.179536E+09,0.000
+,Minimum of Months,0.293098E+09,0.333180E+09,0.000,1201548.313,0.146150E+09,0.000,0.179536E+09,0.000
+,Maximum of Months,0.293098E+09,0.333180E+09,0.000,1201548.313,0.146150E+09,0.000,0.179536E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1481,16 +1481,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.230021E+09,3719326.599,0.000,1089.849,0.741223E+08,0.000,282821.827,0.000
+,July,0.140514E+09,0.361747E+09,0.000,829816.355,0.343251E+08,0.000,0.128096E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.230021E+09,3719326.599,0.000,1089.849,0.741223E+08,0.000,282821.827,0.000
-,Minimum of Months,0.230021E+09,3719326.599,0.000,1089.849,0.741223E+08,0.000,282821.827,0.000
-,Maximum of Months,0.230021E+09,3719326.599,0.000,1089.849,0.741223E+08,0.000,282821.827,0.000
+,Annual Sum or Average,0.140514E+09,0.361747E+09,0.000,829816.355,0.343251E+08,0.000,0.128096E+09,0.000
+,Minimum of Months,0.140514E+09,0.361747E+09,0.000,829816.355,0.343251E+08,0.000,0.128096E+09,0.000
+,Maximum of Months,0.140514E+09,0.361747E+09,0.000,829816.355,0.343251E+08,0.000,0.128096E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1505,16 +1505,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.314902E+09,5039230.662,0.000,279147.175,0.125834E+09,1875446.884,0.619595E+08,0.000
+,July,0.198868E+09,0.326540E+09,0.000,1615996.677,0.119275E+09,0.000,0.243814E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.314902E+09,5039230.662,0.000,279147.175,0.125834E+09,1875446.884,0.619595E+08,0.000
-,Minimum of Months,0.314902E+09,5039230.662,0.000,279147.175,0.125834E+09,1875446.884,0.619595E+08,0.000
-,Maximum of Months,0.314902E+09,5039230.662,0.000,279147.175,0.125834E+09,1875446.884,0.619595E+08,0.000
+,Annual Sum or Average,0.198868E+09,0.326540E+09,0.000,1615996.677,0.119275E+09,0.000,0.243814E+09,0.000
+,Minimum of Months,0.198868E+09,0.326540E+09,0.000,1615996.677,0.119275E+09,0.000,0.243814E+09,0.000
+,Maximum of Months,0.198868E+09,0.326540E+09,0.000,1615996.677,0.119275E+09,0.000,0.243814E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1529,16 +1529,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.402066E+09,0.196740E+08,0.000,518.634,0.144624E+09,0.546852E+08,17824.514,0.000
+,July,0.265179E+09,0.445138E+09,0.000,709483.649,0.116839E+09,0.189969E+08,0.910712E+08,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.402066E+09,0.196740E+08,0.000,518.634,0.144624E+09,0.546852E+08,17824.514,0.000
-,Minimum of Months,0.402066E+09,0.196740E+08,0.000,518.634,0.144624E+09,0.546852E+08,17824.514,0.000
-,Maximum of Months,0.402066E+09,0.196740E+08,0.000,518.634,0.144624E+09,0.546852E+08,17824.514,0.000
+,Annual Sum or Average,0.265179E+09,0.445138E+09,0.000,709483.649,0.116839E+09,0.189969E+08,0.910712E+08,0.000
+,Minimum of Months,0.265179E+09,0.445138E+09,0.000,709483.649,0.116839E+09,0.189969E+08,0.910712E+08,0.000
+,Maximum of Months,0.265179E+09,0.445138E+09,0.000,709483.649,0.116839E+09,0.189969E+08,0.910712E+08,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1553,16 +1553,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.409285E+09,4065856.004,0.000,34584.084,0.150743E+09,7370750.677,926687.184,0.000
+,July,0.281787E+09,0.310492E+09,0.000,518998.242,0.139475E+09,0.000,0.101814E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.409285E+09,4065856.004,0.000,34584.084,0.150743E+09,7370750.677,926687.184,0.000
-,Minimum of Months,0.409285E+09,4065856.004,0.000,34584.084,0.150743E+09,7370750.677,926687.184,0.000
-,Maximum of Months,0.409285E+09,4065856.004,0.000,34584.084,0.150743E+09,7370750.677,926687.184,0.000
+,Annual Sum or Average,0.281787E+09,0.310492E+09,0.000,518998.242,0.139475E+09,0.000,0.101814E+09,0.000
+,Minimum of Months,0.281787E+09,0.310492E+09,0.000,518998.242,0.139475E+09,0.000,0.101814E+09,0.000
+,Maximum of Months,0.281787E+09,0.310492E+09,0.000,518998.242,0.139475E+09,0.000,0.101814E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1577,16 +1577,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.413557E+09,3570345.252,0.000,397.773,0.195746E+09,0.000,1162364.874,0.000
+,July,0.294407E+09,0.429032E+09,0.000,1133757.461,0.145524E+09,0.000,0.206351E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.413557E+09,3570345.252,0.000,397.773,0.195746E+09,0.000,1162364.874,0.000
-,Minimum of Months,0.413557E+09,3570345.252,0.000,397.773,0.195746E+09,0.000,1162364.874,0.000
-,Maximum of Months,0.413557E+09,3570345.252,0.000,397.773,0.195746E+09,0.000,1162364.874,0.000
+,Annual Sum or Average,0.294407E+09,0.429032E+09,0.000,1133757.461,0.145524E+09,0.000,0.206351E+09,0.000
+,Minimum of Months,0.294407E+09,0.429032E+09,0.000,1133757.461,0.145524E+09,0.000,0.206351E+09,0.000
+,Maximum of Months,0.294407E+09,0.429032E+09,0.000,1133757.461,0.145524E+09,0.000,0.206351E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1601,16 +1601,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.434558E+09,8827060.914,0.000,453701.785,0.241924E+09,3421666.538,0.922363E+08,0.000
+,July,0.221904E+09,0.405905E+09,0.000,2159966.279,0.105839E+09,0.000,0.334227E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.434558E+09,8827060.914,0.000,453701.785,0.241924E+09,3421666.538,0.922363E+08,0.000
-,Minimum of Months,0.434558E+09,8827060.914,0.000,453701.785,0.241924E+09,3421666.538,0.922363E+08,0.000
-,Maximum of Months,0.434558E+09,8827060.914,0.000,453701.785,0.241924E+09,3421666.538,0.922363E+08,0.000
+,Annual Sum or Average,0.221904E+09,0.405905E+09,0.000,2159966.279,0.105839E+09,0.000,0.334227E+09,0.000
+,Minimum of Months,0.221904E+09,0.405905E+09,0.000,2159966.279,0.105839E+09,0.000,0.334227E+09,0.000
+,Maximum of Months,0.221904E+09,0.405905E+09,0.000,2159966.279,0.105839E+09,0.000,0.334227E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1625,16 +1625,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.425022E+09,0.272875E+08,0.000,281883.897,0.199862E+09,6222572.537,0.310007E+08,0.000
+,July,0.289672E+09,0.564365E+09,0.000,1286574.008,0.656996E+08,0.000,0.214341E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.425022E+09,0.272875E+08,0.000,281883.897,0.199862E+09,6222572.537,0.310007E+08,0.000
-,Minimum of Months,0.425022E+09,0.272875E+08,0.000,281883.897,0.199862E+09,6222572.537,0.310007E+08,0.000
-,Maximum of Months,0.425022E+09,0.272875E+08,0.000,281883.897,0.199862E+09,6222572.537,0.310007E+08,0.000
+,Annual Sum or Average,0.289672E+09,0.564365E+09,0.000,1286574.008,0.656996E+08,0.000,0.214341E+09,0.000
+,Minimum of Months,0.289672E+09,0.564365E+09,0.000,1286574.008,0.656996E+08,0.000,0.214341E+09,0.000
+,Maximum of Months,0.289672E+09,0.564365E+09,0.000,1286574.008,0.656996E+08,0.000,0.214341E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1649,16 +1649,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.299175E+09,0.264218E+08,0.000,457726.555,0.153556E+09,5035827.334,0.250485E+08,0.000
+,July,0.317883E+09,0.392898E+09,0.000,837943.013,0.119854E+09,0.000,0.158222E+09,0.000
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.299175E+09,0.264218E+08,0.000,457726.555,0.153556E+09,5035827.334,0.250485E+08,0.000
-,Minimum of Months,0.299175E+09,0.264218E+08,0.000,457726.555,0.153556E+09,5035827.334,0.250485E+08,0.000
-,Maximum of Months,0.299175E+09,0.264218E+08,0.000,457726.555,0.153556E+09,5035827.334,0.250485E+08,0.000
+,Annual Sum or Average,0.317883E+09,0.392898E+09,0.000,837943.013,0.119854E+09,0.000,0.158222E+09,0.000
+,Minimum of Months,0.317883E+09,0.392898E+09,0.000,837943.013,0.119854E+09,0.000,0.158222E+09,0.000
+,Maximum of Months,0.317883E+09,0.392898E+09,0.000,837943.013,0.119854E+09,0.000,0.158222E+09,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1673,16 +1673,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,0.594885E+10,0.247055E+11
+,July,0.371326E+10,0.559011E+11
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,0.594885E+10,0.247055E+11
-,Minimum of Months,0.594885E+10,0.247055E+11
-,Maximum of Months,0.594885E+10,0.247055E+11
+,Annual Sum or Average,0.371326E+10,0.559011E+11
+,Minimum of Months,0.371326E+10,0.559011E+11
+,Maximum of Months,0.371326E+10,0.559011E+11
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1697,16 +1697,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,0.352552E+10,0.179871E+11
+,July,0.335934E+10,0.514989E+11
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,0.352552E+10,0.179871E+11
-,Minimum of Months,0.352552E+10,0.179871E+11
-,Maximum of Months,0.352552E+10,0.179871E+11
+,Annual Sum or Average,0.335934E+10,0.514989E+11
+,Minimum of Months,0.335934E+10,0.514989E+11
+,Maximum of Months,0.335934E+10,0.514989E+11
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1721,16 +1721,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,0.831192E+10,0.270154E+11
+,July,0.319197E+10,0.560891E+11
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,0.831192E+10,0.270154E+11
-,Minimum of Months,0.831192E+10,0.270154E+11
-,Maximum of Months,0.831192E+10,0.270154E+11
+,Annual Sum or Average,0.319197E+10,0.560891E+11
+,Minimum of Months,0.319197E+10,0.560891E+11
+,Maximum of Months,0.319197E+10,0.560891E+11
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1745,16 +1745,16 @@ Custom Monthly Report
 ,April,-,-
 ,May,-,-
 ,June,-,-
-,July,0.355455E+11,0.810151E+08
+,July,0.533931E+11,461299.048
 ,August,-,-
 ,September,-,-
 ,October,-,-
 ,November,-,-
 ,December,-,-
 ,,,
-,Annual Sum or Average,0.355455E+11,0.810151E+08
-,Minimum of Months,0.355455E+11,0.810151E+08
-,Maximum of Months,0.355455E+11,0.810151E+08
+,Annual Sum or Average,0.533931E+11,461299.048
+,Minimum of Months,0.533931E+11,461299.048
+,Maximum of Months,0.533931E+11,461299.048
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1769,16 +1769,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-,July,0.625301E+11,185299.325,10-JUL-07:30,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
+,July,0.140122E+12,150925.783,17-JUL-12:00,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,,,,,,
-,Annual Sum or Average,0.625301E+11,,,,,,,,,,0.000,,0.000,0.000,0.000,0.000,0.000,0.000
-,Minimum of Months,0.625301E+11,185299.325,,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
-,Maximum of Months,0.625301E+11,185299.325,,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
+,Annual Sum or Average,0.140122E+12,,,,,,,,,,0.000,,0.000,0.000,0.000,0.000,0.000,0.000
+,Minimum of Months,0.140122E+12,150925.783,,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
+,Maximum of Months,0.140122E+12,150925.783,,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1793,16 +1793,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-,July,0.625301E+11,185299.325,10-JUL-07:30,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
+,July,0.140122E+12,150925.783,17-JUL-12:00,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,,,,,,
-,Annual Sum or Average,0.625301E+11,,,,,,,,,,0.000,,0.000,0.000,0.000,0.000,0.000,0.000
-,Minimum of Months,0.625301E+11,185299.325,,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
-,Maximum of Months,0.625301E+11,185299.325,,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
+,Annual Sum or Average,0.140122E+12,,,,,,,,,,0.000,,0.000,0.000,0.000,0.000,0.000,0.000
+,Minimum of Months,0.140122E+12,150925.783,,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
+,Maximum of Months,0.140122E+12,150925.783,,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1913,16 +1913,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,2.00,27.06,0.00,0.00
+,July,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,2.00,27.06,0.00,
-,Minimum of Months,0.00,0.00,0.00,0.00,2.00,27.06,0.00,0.00
-,Maximum of Months,0.00,0.00,0.00,0.00,2.00,27.06,0.00,0.00
+,Annual Sum or Average,0.00,,0.00,,0.00,,0.00,
+,Minimum of Months,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1937,16 +1937,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,2.50,27.01,0.00,0.00
+,July,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,2.50,27.01,0.00,
-,Minimum of Months,0.00,0.00,0.00,0.00,2.50,27.01,0.00,0.00
-,Maximum of Months,0.00,0.00,0.00,0.00,2.50,27.01,0.00,0.00
+,Annual Sum or Average,0.00,,0.00,,0.00,,0.00,
+,Minimum of Months,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1961,16 +1961,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,0.25,26.97,0.25,26.97
+,July,0.00,0.00,0.00,0.00,4.00,27.12,2.75,27.09
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,0.25,26.97,0.25,26.97
-,Minimum of Months,0.00,0.00,0.00,0.00,0.25,26.97,0.25,26.97
-,Maximum of Months,0.00,0.00,0.00,0.00,0.25,26.97,0.25,26.97
+,Annual Sum or Average,0.00,,0.00,,4.00,27.12,2.75,27.09
+,Minimum of Months,0.00,0.00,0.00,0.00,4.00,27.12,2.75,27.09
+,Maximum of Months,0.00,0.00,0.00,0.00,4.00,27.12,2.75,27.09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1985,16 +1985,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,5.25,27.26,5.25,27.26
+,July,0.00,0.00,0.00,0.00,14.75,27.88,14.75,27.88
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,5.25,27.26,5.25,27.26
-,Minimum of Months,0.00,0.00,0.00,0.00,5.25,27.26,5.25,27.26
-,Maximum of Months,0.00,0.00,0.00,0.00,5.25,27.26,5.25,27.26
+,Annual Sum or Average,0.00,,0.00,,14.75,27.88,14.75,27.88
+,Minimum of Months,0.00,0.00,0.00,0.00,14.75,27.88,14.75,27.88
+,Maximum of Months,0.00,0.00,0.00,0.00,14.75,27.88,14.75,27.88
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2009,16 +2009,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,0.50,27.04,0.50,27.04
+,July,0.00,0.00,0.00,0.00,7.75,27.47,7.50,27.48
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,0.50,27.04,0.50,27.04
-,Minimum of Months,0.00,0.00,0.00,0.00,0.50,27.04,0.50,27.04
-,Maximum of Months,0.00,0.00,0.00,0.00,0.50,27.04,0.50,27.04
+,Annual Sum or Average,0.00,,0.00,,7.75,27.47,7.50,27.48
+,Minimum of Months,0.00,0.00,0.00,0.00,7.75,27.47,7.50,27.48
+,Maximum of Months,0.00,0.00,0.00,0.00,7.75,27.47,7.50,27.48
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2033,16 +2033,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,4.00,27.73,2.25,27.65
+,July,0.00,0.00,0.00,0.00,9.75,28.15,4.50,28.43
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,4.00,27.73,2.25,27.65
-,Minimum of Months,0.00,0.00,0.00,0.00,4.00,27.73,2.25,27.65
-,Maximum of Months,0.00,0.00,0.00,0.00,4.00,27.73,2.25,27.65
+,Annual Sum or Average,0.00,,0.00,,9.75,28.15,4.50,28.43
+,Minimum of Months,0.00,0.00,0.00,0.00,9.75,28.15,4.50,28.43
+,Maximum of Months,0.00,0.00,0.00,0.00,9.75,28.15,4.50,28.43
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2081,16 +2081,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,5.25,27.19,5.25,27.19
+,July,0.00,0.00,0.00,0.00,8.50,28.02,8.50,28.02
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,5.25,27.19,5.25,27.19
-,Minimum of Months,0.00,0.00,0.00,0.00,5.25,27.19,5.25,27.19
-,Maximum of Months,0.00,0.00,0.00,0.00,5.25,27.19,5.25,27.19
+,Annual Sum or Average,0.00,,0.00,,8.50,28.02,8.50,28.02
+,Minimum of Months,0.00,0.00,0.00,0.00,8.50,28.02,8.50,28.02
+,Maximum of Months,0.00,0.00,0.00,0.00,8.50,28.02,8.50,28.02
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2105,16 +2105,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,1.25,27.04,1.25,27.04
+,July,0.00,0.00,0.00,0.00,11.25,25.38,11.25,25.38
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,1.25,27.04,1.25,27.04
-,Minimum of Months,0.00,0.00,0.00,0.00,1.25,27.04,1.25,27.04
-,Maximum of Months,0.00,0.00,0.00,0.00,1.25,27.04,1.25,27.04
+,Annual Sum or Average,0.00,,0.00,,11.25,25.38,11.25,25.38
+,Minimum of Months,0.00,0.00,0.00,0.00,11.25,25.38,11.25,25.38
+,Maximum of Months,0.00,0.00,0.00,0.00,11.25,25.38,11.25,25.38
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2129,16 +2129,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,2.00,27.29,1.00,27.28
+,July,0.00,0.00,0.00,0.00,5.75,28.23,3.75,28.11
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,2.00,27.29,1.00,27.28
-,Minimum of Months,0.00,0.00,0.00,0.00,2.00,27.29,1.00,27.28
-,Maximum of Months,0.00,0.00,0.00,0.00,2.00,27.29,1.00,27.28
+,Annual Sum or Average,0.00,,0.00,,5.75,28.23,3.75,28.11
+,Minimum of Months,0.00,0.00,0.00,0.00,5.75,28.23,3.75,28.11
+,Maximum of Months,0.00,0.00,0.00,0.00,5.75,28.23,3.75,28.11
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2177,16 +2177,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,3.75,27.62,3.75,27.62
+,July,0.00,0.00,0.00,0.00,10.25,28.12,10.25,28.12
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,3.75,27.62,3.75,27.62
-,Minimum of Months,0.00,0.00,0.00,0.00,3.75,27.62,3.75,27.62
-,Maximum of Months,0.00,0.00,0.00,0.00,3.75,27.62,3.75,27.62
+,Annual Sum or Average,0.00,,0.00,,10.25,28.12,10.25,28.12
+,Minimum of Months,0.00,0.00,0.00,0.00,10.25,28.12,10.25,28.12
+,Maximum of Months,0.00,0.00,0.00,0.00,10.25,28.12,10.25,28.12
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2201,16 +2201,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,2.25,27.11,2.25,27.11
+,July,0.00,0.00,0.00,0.00,4.50,27.30,4.50,27.30
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,2.25,27.11,2.25,27.11
-,Minimum of Months,0.00,0.00,0.00,0.00,2.25,27.11,2.25,27.11
-,Maximum of Months,0.00,0.00,0.00,0.00,2.25,27.11,2.25,27.11
+,Annual Sum or Average,0.00,,0.00,,4.50,27.30,4.50,27.30
+,Minimum of Months,0.00,0.00,0.00,0.00,4.50,27.30,4.50,27.30
+,Maximum of Months,0.00,0.00,0.00,0.00,4.50,27.30,4.50,27.30
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2225,16 +2225,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-
-,July,0.00,0.00,0.00,0.00,5.00,27.93,3.50,27.89
+,July,0.00,0.00,0.00,0.00,7.25,28.22,4.00,28.22
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.00,,0.00,,5.00,27.93,3.50,27.89
-,Minimum of Months,0.00,0.00,0.00,0.00,5.00,27.93,3.50,27.89
-,Maximum of Months,0.00,0.00,0.00,0.00,5.00,27.93,3.50,27.89
+,Annual Sum or Average,0.00,,0.00,,7.25,28.22,4.00,28.22
+,Minimum of Months,0.00,0.00,0.00,0.00,7.25,28.22,4.00,28.22
+,Maximum of Months,0.00,0.00,0.00,0.00,7.25,28.22,4.00,28.22
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2249,16 +2249,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,151.00,22.47,1.00,22.66,0.50,19.97
+,July,193.75,23.23,85.50,24.16,0.00,0.00
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,151.00,22.47,1.00,22.66,0.50,19.97
-,Minimum of Months,151.00,22.47,1.00,22.66,0.50,19.97
-,Maximum of Months,151.00,22.47,1.00,22.66,0.50,19.97
+,Annual Sum or Average,193.75,23.23,85.50,24.16,0.00,
+,Minimum of Months,193.75,23.23,85.50,24.16,0.00,0.00
+,Maximum of Months,193.75,23.23,85.50,24.16,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2345,16 +2345,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,121.25,23.32,4.00,25.07,0.00,0.00
+,July,72.25,23.77,149.75,24.40,0.00,0.00
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,121.25,23.32,4.00,25.07,0.00,
-,Minimum of Months,121.25,23.32,4.00,25.07,0.00,0.00
-,Maximum of Months,121.25,23.32,4.00,25.07,0.00,0.00
+,Annual Sum or Average,72.25,23.77,149.75,24.40,0.00,
+,Minimum of Months,72.25,23.77,149.75,24.40,0.00,0.00
+,Maximum of Months,72.25,23.77,149.75,24.40,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2369,16 +2369,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,153.75,21.51,0.50,22.92,0.25,21.08
+,July,66.75,23.66,172.75,24.30,0.00,0.00
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,153.75,21.51,0.50,22.92,0.25,21.08
-,Minimum of Months,153.75,21.51,0.50,22.92,0.25,21.08
-,Maximum of Months,153.75,21.51,0.50,22.92,0.25,21.08
+,Annual Sum or Average,66.75,23.66,172.75,24.30,0.00,
+,Minimum of Months,66.75,23.66,172.75,24.30,0.00,0.00
+,Maximum of Months,66.75,23.66,172.75,24.30,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2393,16 +2393,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,119.00,22.37,16.00,25.33,0.00,0.00
+,July,80.25,23.41,251.75,24.36,4.00,24.30
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,119.00,22.37,16.00,25.33,0.00,
-,Minimum of Months,119.00,22.37,16.00,25.33,0.00,0.00
-,Maximum of Months,119.00,22.37,16.00,25.33,0.00,0.00
+,Annual Sum or Average,80.25,23.41,251.75,24.36,4.00,24.30
+,Minimum of Months,80.25,23.41,251.75,24.36,4.00,24.30
+,Maximum of Months,80.25,23.41,251.75,24.36,4.00,24.30
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2417,16 +2417,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,129.75,21.67,21.25,25.44,1.50,23.53
+,July,126.00,23.48,316.25,24.45,25.50,26.43
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,129.75,21.67,21.25,25.44,1.50,23.53
-,Minimum of Months,129.75,21.67,21.25,25.44,1.50,23.53
-,Maximum of Months,129.75,21.67,21.25,25.44,1.50,23.53
+,Annual Sum or Average,126.00,23.48,316.25,24.45,25.50,26.43
+,Minimum of Months,126.00,23.48,316.25,24.45,25.50,26.43
+,Maximum of Months,126.00,23.48,316.25,24.45,25.50,26.43
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2441,16 +2441,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,143.00,21.47,10.25,24.83,0.75,19.99
+,July,143.50,23.15,254.00,24.38,9.50,25.45
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,143.00,21.47,10.25,24.83,0.75,19.99
-,Minimum of Months,143.00,21.47,10.25,24.83,0.75,19.99
-,Maximum of Months,143.00,21.47,10.25,24.83,0.75,19.99
+,Annual Sum or Average,143.50,23.15,254.00,24.38,9.50,25.45
+,Minimum of Months,143.50,23.15,254.00,24.38,9.50,25.45
+,Maximum of Months,143.50,23.15,254.00,24.38,9.50,25.45
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2465,16 +2465,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,133.75,21.70,18.50,24.56,3.00,24.19
+,July,199.50,22.74,210.50,24.30,12.25,26.00
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,133.75,21.70,18.50,24.56,3.00,24.19
-,Minimum of Months,133.75,21.70,18.50,24.56,3.00,24.19
-,Maximum of Months,133.75,21.70,18.50,24.56,3.00,24.19
+,Annual Sum or Average,199.50,22.74,210.50,24.30,12.25,26.00
+,Minimum of Months,199.50,22.74,210.50,24.30,12.25,26.00
+,Maximum of Months,199.50,22.74,210.50,24.30,12.25,26.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2489,16 +2489,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,143.25,22.45,6.50,25.41,0.00,0.00
+,July,120.00,23.55,159.25,24.29,2.75,24.45
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,143.25,22.45,6.50,25.41,0.00,
-,Minimum of Months,143.25,22.45,6.50,25.41,0.00,0.00
-,Maximum of Months,143.25,22.45,6.50,25.41,0.00,0.00
+,Annual Sum or Average,120.00,23.55,159.25,24.29,2.75,24.45
+,Minimum of Months,120.00,23.55,159.25,24.29,2.75,24.45
+,Maximum of Months,120.00,23.55,159.25,24.29,2.75,24.45
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2513,16 +2513,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,115.75,21.64,29.00,25.20,1.25,24.05
+,July,165.25,23.17,259.75,24.46,18.00,26.65
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,115.75,21.64,29.00,25.20,1.25,24.05
-,Minimum of Months,115.75,21.64,29.00,25.20,1.25,24.05
-,Maximum of Months,115.75,21.64,29.00,25.20,1.25,24.05
+,Annual Sum or Average,165.25,23.17,259.75,24.46,18.00,26.65
+,Minimum of Months,165.25,23.17,259.75,24.46,18.00,26.65
+,Maximum of Months,165.25,23.17,259.75,24.46,18.00,26.65
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2537,16 +2537,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,137.50,21.76,10.50,25.73,0.00,0.00
+,July,186.50,22.96,194.50,24.37,10.50,23.37
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,137.50,21.76,10.50,25.73,0.00,
-,Minimum of Months,137.50,21.76,10.50,25.73,0.00,0.00
-,Maximum of Months,137.50,21.76,10.50,25.73,0.00,0.00
+,Annual Sum or Average,186.50,22.96,194.50,24.37,10.50,23.37
+,Minimum of Months,186.50,22.96,194.50,24.37,10.50,23.37
+,Maximum of Months,186.50,22.96,194.50,24.37,10.50,23.37
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2561,16 +2561,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,138.25,21.36,14.25,24.32,2.50,20.58
+,July,243.25,22.73,159.25,24.37,8.75,26.09
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,138.25,21.36,14.25,24.32,2.50,20.58
-,Minimum of Months,138.25,21.36,14.25,24.32,2.50,20.58
-,Maximum of Months,138.25,21.36,14.25,24.32,2.50,20.58
+,Annual Sum or Average,243.25,22.73,159.25,24.37,8.75,26.09
+,Minimum of Months,243.25,22.73,159.25,24.37,8.75,26.09
+,Maximum of Months,243.25,22.73,159.25,24.37,8.75,26.09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2585,16 +2585,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,143.00,21.83,7.00,25.17,0.00,0.00
+,July,123.00,23.09,201.25,24.19,2.00,24.68
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,143.00,21.83,7.00,25.17,0.00,
-,Minimum of Months,143.00,21.83,7.00,25.17,0.00,0.00
-,Maximum of Months,143.00,21.83,7.00,25.17,0.00,0.00
+,Annual Sum or Average,123.00,23.09,201.25,24.19,2.00,24.68
+,Minimum of Months,123.00,23.09,201.25,24.19,2.00,24.68
+,Maximum of Months,123.00,23.09,201.25,24.19,2.00,24.68
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2609,16 +2609,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,119.25,21.50,26.25,24.83,2.25,24.28
+,July,123.25,23.43,301.25,24.45,21.00,26.71
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,119.25,21.50,26.25,24.83,2.25,24.28
-,Minimum of Months,119.25,21.50,26.25,24.83,2.25,24.28
-,Maximum of Months,119.25,21.50,26.25,24.83,2.25,24.28
+,Annual Sum or Average,123.25,23.43,301.25,24.45,21.00,26.71
+,Minimum of Months,123.25,23.43,301.25,24.45,21.00,26.71
+,Maximum of Months,123.25,23.43,301.25,24.45,21.00,26.71
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2633,16 +2633,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,114.00,21.96,17.50,25.46,0.00,0.00
+,July,116.00,23.31,255.00,24.38,5.50,25.62
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,114.00,21.96,17.50,25.46,0.00,
-,Minimum of Months,114.00,21.96,17.50,25.46,0.00,0.00
-,Maximum of Months,114.00,21.96,17.50,25.46,0.00,0.00
+,Annual Sum or Average,116.00,23.31,255.00,24.38,5.50,25.62
+,Minimum of Months,116.00,23.31,255.00,24.38,5.50,25.62
+,Maximum of Months,116.00,23.31,255.00,24.38,5.50,25.62
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2657,16 +2657,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,108.00,22.11,30.25,24.97,3.50,26.64
+,July,186.50,22.90,207.00,24.32,10.50,26.07
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,108.00,22.11,30.25,24.97,3.50,26.64
-,Minimum of Months,108.00,22.11,30.25,24.97,3.50,26.64
-,Maximum of Months,108.00,22.11,30.25,24.97,3.50,26.64
+,Annual Sum or Average,186.50,22.90,207.00,24.32,10.50,26.07
+,Minimum of Months,186.50,22.90,207.00,24.32,10.50,26.07
+,Maximum of Months,186.50,22.90,207.00,24.32,10.50,26.07
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2681,16 +2681,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.878346E+10,34292.64,04-JUL-13:16,27.00,12.45,0.480933E+09,2538.07,03-JUL-07:15,11.50,7.87
+,July,0.240165E+11,26233.04,18-JUL-08:00,26.00,13.48,0.186871E+10,2538.32,19-JUL-15:00,17.00,14.94
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.878346E+10,,,,,0.480933E+09,,,,
-,Minimum of Months,0.878346E+10,34292.64,,27.00,12.45,0.480933E+09,2538.07,,11.50,7.87
-,Maximum of Months,0.878346E+10,34292.64,,27.00,12.45,0.480933E+09,2538.07,,11.50,7.87
+,Annual Sum or Average,0.240165E+11,,,,,0.186871E+10,,,,
+,Minimum of Months,0.240165E+11,26233.04,,26.00,13.48,0.186871E+10,2538.32,,17.00,14.94
+,Maximum of Months,0.240165E+11,26233.04,,26.00,13.48,0.186871E+10,2538.32,,17.00,14.94
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2705,16 +2705,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.292834E+10,19721.50,04-JUL-14:48,27.00,12.08,0.00,0.00,01-JUL-00:15,15.78,5.63
+,July,0.572740E+10,9288.47,23-JUL-13:30,34.50,16.47,0.00,0.00,01-JUL-00:15,15.78,5.63
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.292834E+10,,,,,0.00,,,,
-,Minimum of Months,0.292834E+10,19721.50,,27.00,12.08,0.00,0.00,,15.78,5.63
-,Maximum of Months,0.292834E+10,19721.50,,27.00,12.08,0.00,0.00,,15.78,5.63
+,Annual Sum or Average,0.572740E+10,,,,,0.00,,,,
+,Minimum of Months,0.572740E+10,9288.47,,34.50,16.47,0.00,0.00,,15.78,5.63
+,Maximum of Months,0.572740E+10,9288.47,,34.50,16.47,0.00,0.00,,15.78,5.63
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2729,16 +2729,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.161809E+10,13101.78,01-JUL-02:08,19.38,7.47,0.00,0.00,01-JUL-00:15,15.78,5.63
+,July,0.330658E+10,4572.25,01-JUL-19:45,23.00,8.79,0.00,0.00,01-JUL-00:15,15.78,5.63
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.161809E+10,,,,,0.00,,,,
-,Minimum of Months,0.161809E+10,13101.78,,19.38,7.47,0.00,0.00,,15.78,5.63
-,Maximum of Months,0.161809E+10,13101.78,,19.38,7.47,0.00,0.00,,15.78,5.63
+,Annual Sum or Average,0.330658E+10,,,,,0.00,,,,
+,Minimum of Months,0.330658E+10,4572.25,,23.00,8.79,0.00,0.00,,15.78,5.63
+,Maximum of Months,0.330658E+10,4572.25,,23.00,8.79,0.00,0.00,,15.78,5.63
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2753,16 +2753,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.231853E+10,15381.36,01-JUL-06:16,21.50,8.53,0.00,0.00,01-JUL-00:15,15.78,5.63
+,July,0.340839E+10,3590.23,18-JUL-15:15,30.75,15.02,0.00,0.00,01-JUL-00:15,15.78,5.63
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.231853E+10,,,,,0.00,,,,
-,Minimum of Months,0.231853E+10,15381.36,,21.50,8.53,0.00,0.00,,15.78,5.63
-,Maximum of Months,0.231853E+10,15381.36,,21.50,8.53,0.00,0.00,,15.78,5.63
+,Annual Sum or Average,0.340839E+10,,,,,0.00,,,,
+,Minimum of Months,0.340839E+10,3590.23,,30.75,15.02,0.00,0.00,,15.78,5.63
+,Maximum of Months,0.340839E+10,3590.23,,30.75,15.02,0.00,0.00,,15.78,5.63
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2777,16 +2777,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.415767E+10,28067.54,01-JUL-03:46,17.00,6.45,0.543733E+09,2538.01,03-JUL-07:45,12.50,8.30
+,July,0.169637E+11,16938.59,18-JUL-15:30,30.50,15.27,0.188093E+10,2538.19,19-JUL-15:00,17.00,14.94
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.415767E+10,,,,,0.543733E+09,,,,
-,Minimum of Months,0.415767E+10,28067.54,,17.00,6.45,0.543733E+09,2538.01,,12.50,8.30
-,Maximum of Months,0.415767E+10,28067.54,,17.00,6.45,0.543733E+09,2538.01,,12.50,8.30
+,Annual Sum or Average,0.169637E+11,,,,,0.188093E+10,,,,
+,Minimum of Months,0.169637E+11,16938.59,,30.50,15.27,0.188093E+10,2538.19,,17.00,14.94
+,Maximum of Months,0.169637E+11,16938.59,,30.50,15.27,0.188093E+10,2538.19,,17.00,14.94
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2801,16 +2801,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.794186E+10,32737.22,01-JUL-00:28,17.55,7.08,0.426981E+09,1974.10,02-JUL-14:30,29.00,12.48
+,July,0.184942E+11,19770.01,23-JUL-14:00,35.00,16.93,0.187838E+10,2538.24,19-JUL-15:00,17.00,14.94
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.794186E+10,,,,,0.426981E+09,,,,
-,Minimum of Months,0.794186E+10,32737.22,,17.55,7.08,0.426981E+09,1974.10,,29.00,12.48
-,Maximum of Months,0.794186E+10,32737.22,,17.55,7.08,0.426981E+09,1974.10,,29.00,12.48
+,Annual Sum or Average,0.184942E+11,,,,,0.187838E+10,,,,
+,Minimum of Months,0.184942E+11,19770.01,,35.00,16.93,0.187838E+10,2538.24,,17.00,14.94
+,Maximum of Months,0.184942E+11,19770.01,,35.00,16.93,0.187838E+10,2538.24,,17.00,14.94
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2825,16 +2825,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.163677E+10,10098.10,08-JUL-15:16,27.00,13.16,0.107367E+09,535.69,09-JUL-14:15,34.25,13.68
+,July,0.571183E+10,7818.70,16-JUL-14:30,35.50,14.51,0.395261E+09,535.09,19-JUL-15:45,19.25,15.68
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.163677E+10,,,,,0.107367E+09,,,,
-,Minimum of Months,0.163677E+10,10098.10,,27.00,13.16,0.107367E+09,535.69,,34.25,13.68
-,Maximum of Months,0.163677E+10,10098.10,,27.00,13.16,0.107367E+09,535.69,,34.25,13.68
+,Annual Sum or Average,0.571183E+10,,,,,0.395261E+09,,,,
+,Minimum of Months,0.571183E+10,7818.70,,35.50,14.51,0.395261E+09,535.09,,19.25,15.68
+,Maximum of Months,0.571183E+10,7818.70,,35.50,14.51,0.395261E+09,535.09,,19.25,15.68
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2849,16 +2849,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.217547E+10,13086.87,01-JUL-08:01,26.00,9.47,58703756.94,338.71,03-JUL-07:00,13.00,8.50
+,July,0.595703E+10,14018.28,01-JUL-08:17,26.00,9.47,0.249402E+09,338.75,19-JUL-15:45,19.25,15.68
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.217547E+10,,,,,58703756.94,,,,
-,Minimum of Months,0.217547E+10,13086.87,,26.00,9.47,58703756.94,338.71,,13.00,8.50
-,Maximum of Months,0.217547E+10,13086.87,,26.00,9.47,58703756.94,338.71,,13.00,8.50
+,Annual Sum or Average,0.595703E+10,,,,,0.249402E+09,,,,
+,Minimum of Months,0.595703E+10,14018.28,,26.00,9.47,0.249402E+09,338.75,,19.25,15.68
+,Maximum of Months,0.595703E+10,14018.28,,26.00,9.47,0.249402E+09,338.75,,19.25,15.68
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2873,16 +2873,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.260695E+10,13885.74,01-JUL-12:16,29.00,11.08,90052698.32,422.32,09-JUL-13:45,34.50,13.72
+,July,0.699069E+10,14639.52,01-JUL-12:47,29.00,10.80,0.390523E+09,535.09,19-JUL-15:45,19.25,15.68
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.260695E+10,,,,,90052698.32,,,,
-,Minimum of Months,0.260695E+10,13885.74,,29.00,11.08,90052698.32,422.32,,34.50,13.72
-,Maximum of Months,0.260695E+10,13885.74,,29.00,11.08,90052698.32,422.32,,34.50,13.72
+,Annual Sum or Average,0.699069E+10,,,,,0.390523E+09,,,,
+,Minimum of Months,0.699069E+10,14639.52,,29.00,10.80,0.390523E+09,535.09,,19.25,15.68
+,Maximum of Months,0.699069E+10,14639.52,,29.00,10.80,0.390523E+09,535.09,,19.25,15.68
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2897,16 +2897,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.185501E+10,14623.98,01-JUL-15:47,30.00,10.72,59028766.35,338.69,02-JUL-14:45,29.00,12.48
+,July,0.557790E+10,15905.15,01-JUL-16:31,29.25,10.56,0.238231E+09,338.73,19-JUL-15:45,19.25,15.68
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.185501E+10,,,,,59028766.35,,,,
-,Minimum of Months,0.185501E+10,14623.98,,30.00,10.72,59028766.35,338.69,,29.00,12.48
-,Maximum of Months,0.185501E+10,14623.98,,30.00,10.72,59028766.35,338.69,,29.00,12.48
+,Annual Sum or Average,0.557790E+10,,,,,0.238231E+09,,,,
+,Minimum of Months,0.557790E+10,15905.15,,29.25,10.56,0.238231E+09,338.73,,19.25,15.68
+,Maximum of Months,0.557790E+10,15905.15,,29.25,10.56,0.238231E+09,338.73,,19.25,15.68
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2921,16 +2921,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.180112E+10,6747.05,08-JUL-16:01,27.75,13.28,0.101873E+09,531.13,03-JUL-07:00,13.00,8.50
+,July,0.425665E+10,6221.37,16-JUL-14:30,35.50,14.51,0.395015E+09,536.07,16-JUL-14:45,35.75,14.64
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.180112E+10,,,,,0.101873E+09,,,,
-,Minimum of Months,0.180112E+10,6747.05,,27.75,13.28,0.101873E+09,531.13,,13.00,8.50
-,Maximum of Months,0.180112E+10,6747.05,,27.75,13.28,0.101873E+09,531.13,,13.00,8.50
+,Annual Sum or Average,0.425665E+10,,,,,0.395015E+09,,,,
+,Minimum of Months,0.425665E+10,6221.37,,35.50,14.51,0.395015E+09,536.07,,35.75,14.64
+,Maximum of Months,0.425665E+10,6221.37,,35.50,14.51,0.395015E+09,536.07,,35.75,14.64
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2945,16 +2945,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.208177E+10,9887.59,01-JUL-09:02,26.00,9.60,61354687.94,339.07,09-JUL-15:30,32.00,13.31
+,July,0.505573E+10,12111.60,01-JUL-07:47,26.00,9.47,0.248458E+09,338.75,02-JUL-10:45,25.50,10.34
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.208177E+10,,,,,61354687.94,,,,
-,Minimum of Months,0.208177E+10,9887.59,,26.00,9.60,61354687.94,339.07,,32.00,13.31
-,Maximum of Months,0.208177E+10,9887.59,,26.00,9.60,61354687.94,339.07,,32.00,13.31
+,Annual Sum or Average,0.505573E+10,,,,,0.248458E+09,,,,
+,Minimum of Months,0.505573E+10,12111.60,,26.00,9.47,0.248458E+09,338.75,,25.50,10.34
+,Maximum of Months,0.505573E+10,12111.60,,26.00,9.47,0.248458E+09,338.75,,25.50,10.34
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2969,16 +2969,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.252897E+10,10225.95,04-JUL-13:16,27.00,12.45,97522655.30,544.73,09-JUL-12:15,32.02,13.41
+,July,0.601165E+10,10642.76,17-JUL-12:00,36.00,14.76,0.388334E+09,613.00,17-JUL-12:15,36.00,14.76
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.252897E+10,,,,,97522655.30,,,,
-,Minimum of Months,0.252897E+10,10225.95,,27.00,12.45,97522655.30,544.73,,32.02,13.41
-,Maximum of Months,0.252897E+10,10225.95,,27.00,12.45,97522655.30,544.73,,32.02,13.41
+,Annual Sum or Average,0.601165E+10,,,,,0.388334E+09,,,,
+,Minimum of Months,0.601165E+10,10642.76,,36.00,14.76,0.388334E+09,613.00,,36.00,14.76
+,Maximum of Months,0.601165E+10,10642.76,,36.00,14.76,0.388334E+09,613.00,,36.00,14.76
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2993,16 +2993,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.198966E+10,10905.28,08-JUL-15:53,28.00,13.44,57413821.92,305.15,02-JUL-15:00,28.00,12.40
+,July,0.461287E+10,13047.68,01-JUL-16:47,29.00,10.51,0.236685E+09,338.73,30-JUL-15:15,23.50,18.46
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.198966E+10,,,,,57413821.92,,,,
-,Minimum of Months,0.198966E+10,10905.28,,28.00,13.44,57413821.92,305.15,,28.00,12.40
-,Maximum of Months,0.198966E+10,10905.28,,28.00,13.44,57413821.92,305.15,,28.00,12.40
+,Annual Sum or Average,0.461287E+10,,,,,0.236685E+09,,,,
+,Minimum of Months,0.461287E+10,13047.68,,29.00,10.51,0.236685E+09,338.73,,23.50,18.46
+,Maximum of Months,0.461287E+10,13047.68,,29.00,10.51,0.236685E+09,338.73,,23.50,18.46
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3017,16 +3017,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.236899E+10,8834.24,08-JUL-15:16,27.00,13.16,95746636.82,471.24,09-JUL-13:45,34.50,13.72
+,July,0.581260E+10,7123.91,16-JUL-14:30,35.50,14.51,0.391709E+09,535.08,19-JUL-15:45,19.25,15.68
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.236899E+10,,,,,95746636.82,,,,
-,Minimum of Months,0.236899E+10,8834.24,,27.00,13.16,95746636.82,471.24,,34.50,13.72
-,Maximum of Months,0.236899E+10,8834.24,,27.00,13.16,95746636.82,471.24,,34.50,13.72
+,Annual Sum or Average,0.581260E+10,,,,,0.391709E+09,,,,
+,Minimum of Months,0.581260E+10,7123.91,,35.50,14.51,0.391709E+09,535.08,,19.25,15.68
+,Maximum of Months,0.581260E+10,7123.91,,35.50,14.51,0.391709E+09,535.08,,19.25,15.68
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3041,16 +3041,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.234798E+10,13689.94,01-JUL-08:46,26.00,9.47,60422718.10,338.66,05-JUL-10:30,24.00,13.43
+,July,0.577982E+10,14004.89,01-JUL-08:17,26.00,9.47,0.249492E+09,338.75,02-JUL-10:45,25.50,10.34
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.234798E+10,,,,,60422718.10,,,,
-,Minimum of Months,0.234798E+10,13689.94,,26.00,9.47,60422718.10,338.66,,24.00,13.43
-,Maximum of Months,0.234798E+10,13689.94,,26.00,9.47,60422718.10,338.66,,24.00,13.43
+,Annual Sum or Average,0.577982E+10,,,,,0.249492E+09,,,,
+,Minimum of Months,0.577982E+10,14004.89,,26.00,9.47,0.249492E+09,338.75,,25.50,10.34
+,Maximum of Months,0.577982E+10,14004.89,,26.00,9.47,0.249492E+09,338.75,,25.50,10.34
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3065,16 +3065,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.231885E+10,12733.05,08-JUL-15:16,27.00,13.16,0.103291E+09,535.03,06-JUL-13:00,32.00,12.98
+,July,0.651159E+10,12441.91,01-JUL-12:47,29.00,10.80,0.393162E+09,535.08,25-JUL-14:45,21.50,16.13
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.231885E+10,,,,,0.103291E+09,,,,
-,Minimum of Months,0.231885E+10,12733.05,,27.00,13.16,0.103291E+09,535.03,,32.00,12.98
-,Maximum of Months,0.231885E+10,12733.05,,27.00,13.16,0.103291E+09,535.03,,32.00,12.98
+,Annual Sum or Average,0.651159E+10,,,,,0.393162E+09,,,,
+,Minimum of Months,0.651159E+10,12441.91,,29.00,10.80,0.393162E+09,535.08,,21.50,16.13
+,Maximum of Months,0.651159E+10,12441.91,,29.00,10.80,0.393162E+09,535.08,,21.50,16.13
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3089,16 +3089,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.175313E+10,15890.67,01-JUL-17:01,28.75,10.53,65852811.30,338.69,05-JUL-15:45,23.50,13.34
+,July,0.523827E+10,14697.02,01-JUL-16:31,29.25,10.56,0.240254E+09,338.73,30-JUL-15:15,23.50,18.46
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.175313E+10,,,,,65852811.30,,,,
-,Minimum of Months,0.175313E+10,15890.67,,28.75,10.53,65852811.30,338.69,,23.50,13.34
-,Maximum of Months,0.175313E+10,15890.67,,28.75,10.53,65852811.30,338.69,,23.50,13.34
+,Annual Sum or Average,0.523827E+10,,,,,0.240254E+09,,,,
+,Minimum of Months,0.523827E+10,14697.02,,29.25,10.56,0.240254E+09,338.73,,23.50,18.46
+,Maximum of Months,0.523827E+10,14697.02,,29.25,10.56,0.240254E+09,338.73,,23.50,18.46
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3113,7 +3113,7 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,0.00,0.00,01-JUL-00:08,15.78
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
@@ -3137,16 +3137,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,15723005.49,9175.07,02-JUL-05:02,10.00
+,July,29912053.67,4064.21,01-JUL-06:47,23.00
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,15723005.49,,,
-,Minimum of Months,15723005.49,9175.07,,10.00
-,Maximum of Months,15723005.49,9175.07,,10.00
+,Annual Sum or Average,29912053.67,,,
+,Minimum of Months,29912053.67,4064.21,,23.00
+,Maximum of Months,29912053.67,4064.21,,23.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3161,16 +3161,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,12071254.07,8849.32,08-JUL-15:16,27.00
+,July,17233150.65,3030.18,15-JUL-15:02,34.75
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,12071254.07,,,
-,Minimum of Months,12071254.07,8849.32,,27.00
-,Maximum of Months,12071254.07,8849.32,,27.00
+,Annual Sum or Average,17233150.65,,,
+,Minimum of Months,17233150.65,3030.18,,34.75
+,Maximum of Months,17233150.65,3030.18,,34.75
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3185,16 +3185,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,7109715.25,6610.87,04-JUL-13:16,27.00
+,July,9652492.62,2116.38,29-JUL-11:54,24.00
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,7109715.25,,,
-,Minimum of Months,7109715.25,6610.87,,27.00
-,Maximum of Months,7109715.25,6610.87,,27.00
+,Annual Sum or Average,9652492.62,,,
+,Minimum of Months,9652492.62,2116.38,,24.00
+,Maximum of Months,9652492.62,2116.38,,24.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3209,7 +3209,7 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,0.00,0.00,01-JUL-00:08,15.78
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
@@ -3233,16 +3233,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,5470064.18,8597.21,10-JUL-06:04,18.50
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,5470064.18,,,
-,Minimum of Months,5470064.18,8597.21,,18.50
-,Maximum of Months,5470064.18,8597.21,,18.50
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3257,16 +3257,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,512726.47,1480.98,10-JUL-06:04,18.50
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,512726.47,,,
-,Minimum of Months,512726.47,1480.98,,18.50
-,Maximum of Months,512726.47,1480.98,,18.50
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3281,16 +3281,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,887.39,3.94,10-JUL-06:04,18.50
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,887.39,,,
-,Minimum of Months,887.39,3.94,,18.50
-,Maximum of Months,887.39,3.94,,18.50
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3305,16 +3305,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,2173536.57,2058.87,09-JUL-06:03,16.75
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,2173536.57,,,
-,Minimum of Months,2173536.57,2058.87,,16.75
-,Maximum of Months,2173536.57,2058.87,,16.75
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3329,16 +3329,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,1287622.26,2107.10,07-JUL-05:17,16.00
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,1287622.26,,,
-,Minimum of Months,1287622.26,2107.10,,16.00
-,Maximum of Months,1287622.26,2107.10,,16.00
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3353,7 +3353,7 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,0.00,0.00,01-JUL-00:08,15.78
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
@@ -3377,16 +3377,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,62294.57,207.65,03-JUL-06:05,11.00
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,62294.57,,,
-,Minimum of Months,62294.57,207.65,,11.00
-,Maximum of Months,62294.57,207.65,,11.00
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3401,16 +3401,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,28098942.18,5683.25,03-JUL-06:05,11.00
+,July,16238830.63,4323.81,03-JUL-06:15,11.00
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,28098942.18,,,
-,Minimum of Months,28098942.18,5683.25,,11.00
-,Maximum of Months,28098942.18,5683.25,,11.00
+,Annual Sum or Average,16238830.63,,,
+,Minimum of Months,16238830.63,4323.81,,11.00
+,Maximum of Months,16238830.63,4323.81,,11.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3425,16 +3425,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,385604.94,810.54,09-JUL-06:03,16.75
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,385604.94,,,
-,Minimum of Months,385604.94,810.54,,16.75
-,Maximum of Months,385604.94,810.54,,16.75
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3449,7 +3449,7 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,0.00,0.00,01-JUL-00:08,15.78
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
@@ -3473,7 +3473,7 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,0.00,0.00,01-JUL-00:08,15.78
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
@@ -3497,16 +3497,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,760182.84,1081.72,09-JUL-06:03,16.75
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,760182.84,,,
-,Minimum of Months,760182.84,1081.72,,16.75
-,Maximum of Months,760182.84,1081.72,,16.75
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3521,16 +3521,16 @@ Custom Monthly Report
 ,April,-,-,-,-
 ,May,-,-,-,-
 ,June,-,-,-,-
-,July,245089.58,1009.98,09-JUL-06:03,16.75
+,July,0.00,0.00,01-JUL-00:15,15.78
 ,August,-,-,-,-
 ,September,-,-,-,-
 ,October,-,-,-,-
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,245089.58,,,
-,Minimum of Months,245089.58,1009.98,,16.75
-,Maximum of Months,245089.58,1009.98,,16.75
+,Annual Sum or Average,0.00,,,
+,Minimum of Months,0.00,0.00,,15.78
+,Maximum of Months,0.00,0.00,,15.78
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3545,16 +3545,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.174783E+10,6490.85,02-JUL-07:15,0.687283E+10,29050.39,02-JUL-07:15
+,July,0.577136E+10,6490.85,02-JUL-07:15,0.224594E+11,29050.39,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.174783E+10,,,0.687283E+10,,
-,Minimum of Months,0.174783E+10,6490.85,,0.687283E+10,29050.39,
-,Maximum of Months,0.174783E+10,6490.85,,0.687283E+10,29050.39,
+,Annual Sum or Average,0.577136E+10,,,0.224594E+11,,
+,Minimum of Months,0.577136E+10,6490.85,,0.224594E+11,29050.39,
+,Maximum of Months,0.577136E+10,6490.85,,0.224594E+11,29050.39,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3569,16 +3569,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.174783E+10,6490.85,02-JUL-07:15,0.297253E+10,6808.32,02-JUL-07:15
+,July,0.577136E+10,6490.85,02-JUL-07:15,0.934165E+10,6808.32,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.174783E+10,,,0.297253E+10,,
-,Minimum of Months,0.174783E+10,6490.85,,0.297253E+10,6808.32,
-,Maximum of Months,0.174783E+10,6490.85,,0.297253E+10,6808.32,
+,Annual Sum or Average,0.577136E+10,,,0.934165E+10,,
+,Minimum of Months,0.577136E+10,6490.85,,0.934165E+10,6808.32,
+,Maximum of Months,0.577136E+10,6490.85,,0.934165E+10,6808.32,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3593,16 +3593,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.174783E+10,6490.85,02-JUL-07:15,0.297253E+10,6808.32,02-JUL-07:15
+,July,0.577136E+10,6490.85,02-JUL-07:15,0.934165E+10,6808.32,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.174783E+10,,,0.297253E+10,,
-,Minimum of Months,0.174783E+10,6490.85,,0.297253E+10,6808.32,
-,Maximum of Months,0.174783E+10,6490.85,,0.297253E+10,6808.32,
+,Annual Sum or Average,0.577136E+10,,,0.934165E+10,,
+,Minimum of Months,0.577136E+10,6490.85,,0.934165E+10,6808.32,
+,Maximum of Months,0.577136E+10,6490.85,,0.934165E+10,6808.32,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3617,16 +3617,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.192750E+09,652.69,02-JUL-07:15,0.626633E+09,1435.25,02-JUL-07:15
+,July,0.636578E+09,652.69,02-JUL-07:15,0.196929E+10,1435.25,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.192750E+09,,,0.626633E+09,,
-,Minimum of Months,0.192750E+09,652.69,,0.626633E+09,1435.25,
-,Maximum of Months,0.192750E+09,652.69,,0.626633E+09,1435.25,
+,Annual Sum or Average,0.636578E+09,,,0.196929E+10,,
+,Minimum of Months,0.636578E+09,652.69,,0.196929E+10,1435.25,
+,Maximum of Months,0.636578E+09,652.69,,0.196929E+10,1435.25,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3641,16 +3641,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.123354E+09,413.21,02-JUL-07:15,0.396686E+09,908.57,02-JUL-07:15
+,July,0.406915E+09,413.21,02-JUL-07:15,0.124665E+10,908.57,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.123354E+09,,,0.396686E+09,,
-,Minimum of Months,0.123354E+09,413.21,,0.396686E+09,908.57,
-,Maximum of Months,0.123354E+09,413.21,,0.396686E+09,908.57,
+,Annual Sum or Average,0.406915E+09,,,0.124665E+10,,
+,Minimum of Months,0.406915E+09,413.21,,0.124665E+10,908.57,
+,Maximum of Months,0.406915E+09,413.21,,0.124665E+10,908.57,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3665,16 +3665,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.194560E+09,652.69,02-JUL-07:15,0.626629E+09,1435.24,02-JUL-07:15
+,July,0.641455E+09,652.69,02-JUL-07:15,0.196928E+10,1435.24,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.194560E+09,,,0.626629E+09,,
-,Minimum of Months,0.194560E+09,652.69,,0.626629E+09,1435.24,
-,Maximum of Months,0.194560E+09,652.69,,0.626629E+09,1435.24,
+,Annual Sum or Average,0.641455E+09,,,0.196928E+10,,
+,Minimum of Months,0.641455E+09,652.69,,0.196928E+10,1435.24,
+,Maximum of Months,0.641455E+09,652.69,,0.196928E+10,1435.24,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3689,16 +3689,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.122182E+09,413.18,02-JUL-07:15,0.396683E+09,908.57,02-JUL-07:15
+,July,0.403261E+09,413.18,02-JUL-07:15,0.124664E+10,908.57,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.122182E+09,,,0.396683E+09,,
-,Minimum of Months,0.122182E+09,413.18,,0.396683E+09,908.57,
-,Maximum of Months,0.122182E+09,413.18,,0.396683E+09,908.57,
+,Annual Sum or Average,0.403261E+09,,,0.124664E+10,,
+,Minimum of Months,0.403261E+09,413.18,,0.124664E+10,908.57,
+,Maximum of Months,0.403261E+09,413.18,,0.124664E+10,908.57,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3713,16 +3713,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.192676E+09,652.69,02-JUL-07:15,0.626633E+09,1435.25,02-JUL-07:15
+,July,0.636596E+09,652.69,02-JUL-07:15,0.196929E+10,1435.25,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.192676E+09,,,0.626633E+09,,
-,Minimum of Months,0.192676E+09,652.69,,0.626633E+09,1435.25,
-,Maximum of Months,0.192676E+09,652.69,,0.626633E+09,1435.25,
+,Annual Sum or Average,0.636596E+09,,,0.196929E+10,,
+,Minimum of Months,0.636596E+09,652.69,,0.196929E+10,1435.25,
+,Maximum of Months,0.636596E+09,652.69,,0.196929E+10,1435.25,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3737,16 +3737,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.123412E+09,413.21,02-JUL-07:15,0.396686E+09,908.57,02-JUL-07:15
+,July,0.407123E+09,413.21,02-JUL-07:15,0.124665E+10,908.57,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.123412E+09,,,0.396686E+09,,
-,Minimum of Months,0.123412E+09,413.21,,0.396686E+09,908.57,
-,Maximum of Months,0.123412E+09,413.21,,0.396686E+09,908.57,
+,Annual Sum or Average,0.407123E+09,,,0.124665E+10,,
+,Minimum of Months,0.407123E+09,413.21,,0.124665E+10,908.57,
+,Maximum of Months,0.407123E+09,413.21,,0.124665E+10,908.57,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3761,16 +3761,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.194604E+09,652.69,02-JUL-07:15,0.626629E+09,1435.24,02-JUL-07:15
+,July,0.641624E+09,652.69,02-JUL-07:15,0.196928E+10,1435.24,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.194604E+09,,,0.626629E+09,,
-,Minimum of Months,0.194604E+09,652.69,,0.626629E+09,1435.24,
-,Maximum of Months,0.194604E+09,652.69,,0.626629E+09,1435.24,
+,Annual Sum or Average,0.641624E+09,,,0.196928E+10,,
+,Minimum of Months,0.641624E+09,652.69,,0.196928E+10,1435.24,
+,Maximum of Months,0.641624E+09,652.69,,0.196928E+10,1435.24,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3785,16 +3785,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.122182E+09,413.18,02-JUL-07:15,0.396683E+09,908.57,02-JUL-07:15
+,July,0.403434E+09,413.18,02-JUL-07:15,0.124664E+10,908.57,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.122182E+09,,,0.396683E+09,,
-,Minimum of Months,0.122182E+09,413.18,,0.396683E+09,908.57,
-,Maximum of Months,0.122182E+09,413.18,,0.396683E+09,908.57,
+,Annual Sum or Average,0.403434E+09,,,0.124664E+10,,
+,Minimum of Months,0.403434E+09,413.18,,0.124664E+10,908.57,
+,Maximum of Months,0.403434E+09,413.18,,0.124664E+10,908.57,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3809,16 +3809,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.192750E+09,652.69,02-JUL-07:15,0.626633E+09,1435.25,02-JUL-07:15
+,July,0.636578E+09,652.69,02-JUL-07:15,0.196929E+10,1435.25,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.192750E+09,,,0.626633E+09,,
-,Minimum of Months,0.192750E+09,652.69,,0.626633E+09,1435.25,
-,Maximum of Months,0.192750E+09,652.69,,0.626633E+09,1435.25,
+,Annual Sum or Average,0.636578E+09,,,0.196929E+10,,
+,Minimum of Months,0.636578E+09,652.69,,0.196929E+10,1435.25,
+,Maximum of Months,0.636578E+09,652.69,,0.196929E+10,1435.25,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3833,16 +3833,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.123354E+09,413.21,02-JUL-07:15,0.396686E+09,908.57,02-JUL-07:15
+,July,0.406915E+09,413.21,02-JUL-07:15,0.124665E+10,908.57,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.123354E+09,,,0.396686E+09,,
-,Minimum of Months,0.123354E+09,413.21,,0.396686E+09,908.57,
-,Maximum of Months,0.123354E+09,413.21,,0.396686E+09,908.57,
+,Annual Sum or Average,0.406915E+09,,,0.124665E+10,,
+,Minimum of Months,0.406915E+09,413.21,,0.124665E+10,908.57,
+,Maximum of Months,0.406915E+09,413.21,,0.124665E+10,908.57,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3857,16 +3857,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.194557E+09,652.69,02-JUL-07:15,0.626629E+09,1435.24,02-JUL-07:15
+,July,0.641455E+09,652.69,02-JUL-07:15,0.196928E+10,1435.24,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.194557E+09,,,0.626629E+09,,
-,Minimum of Months,0.194557E+09,652.69,,0.626629E+09,1435.24,
-,Maximum of Months,0.194557E+09,652.69,,0.626629E+09,1435.24,
+,Annual Sum or Average,0.641455E+09,,,0.196928E+10,,
+,Minimum of Months,0.641455E+09,652.69,,0.196928E+10,1435.24,
+,Maximum of Months,0.641455E+09,652.69,,0.196928E+10,1435.24,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3881,16 +3881,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.122182E+09,413.18,02-JUL-07:15,0.396683E+09,908.57,02-JUL-07:15
+,July,0.403261E+09,413.18,02-JUL-07:15,0.124664E+10,908.57,02-JUL-07:15
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.122182E+09,,,0.396683E+09,,
-,Minimum of Months,0.122182E+09,413.18,,0.396683E+09,908.57,
-,Maximum of Months,0.122182E+09,413.18,,0.396683E+09,908.57,
+,Annual Sum or Average,0.403261E+09,,,0.124664E+10,,
+,Minimum of Months,0.403261E+09,413.18,,0.124664E+10,908.57,
+,Maximum of Months,0.403261E+09,413.18,,0.124664E+10,908.57,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3905,16 +3905,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.134930E+10,0.174783E+10,0.687283E+10,0.00,0.00
+,July,0.447327E+10,0.577136E+10,0.224594E+11,0.00,0.00
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.134930E+10,0.174783E+10,0.687283E+10,0.00,0.00
-,Minimum of Months,0.134930E+10,0.174783E+10,0.687283E+10,0.00,0.00
-,Maximum of Months,0.134930E+10,0.174783E+10,0.687283E+10,0.00,0.00
+,Annual Sum or Average,0.447327E+10,0.577136E+10,0.224594E+11,0.00,0.00
+,Minimum of Months,0.447327E+10,0.577136E+10,0.224594E+11,0.00,0.00
+,Maximum of Months,0.447327E+10,0.577136E+10,0.224594E+11,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3929,16 +3929,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.134930E+10,0.174783E+10,0.297253E+10,0.00,0.00
+,July,0.447327E+10,0.577136E+10,0.934165E+10,0.00,0.00
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.134930E+10,0.174783E+10,0.297253E+10,0.00,0.00
-,Minimum of Months,0.134930E+10,0.174783E+10,0.297253E+10,0.00,0.00
-,Maximum of Months,0.134930E+10,0.174783E+10,0.297253E+10,0.00,0.00
+,Annual Sum or Average,0.447327E+10,0.577136E+10,0.934165E+10,0.00,0.00
+,Minimum of Months,0.447327E+10,0.577136E+10,0.934165E+10,0.00,0.00
+,Maximum of Months,0.447327E+10,0.577136E+10,0.934165E+10,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3953,16 +3953,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.134930E+10,0.174783E+10,0.297253E+10,0.00,0.00
+,July,0.447327E+10,0.577136E+10,0.934165E+10,0.00,0.00
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.134930E+10,0.174783E+10,0.297253E+10,0.00,0.00
-,Minimum of Months,0.134930E+10,0.174783E+10,0.297253E+10,0.00,0.00
-,Maximum of Months,0.134930E+10,0.174783E+10,0.297253E+10,0.00,0.00
+,Annual Sum or Average,0.447327E+10,0.577136E+10,0.934165E+10,0.00,0.00
+,Minimum of Months,0.447327E+10,0.577136E+10,0.934165E+10,0.00,0.00
+,Maximum of Months,0.447327E+10,0.577136E+10,0.934165E+10,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3977,16 +3977,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.284444E+09,0.192750E+09,0.626633E+09,26816985.38,78413863.54
+,July,0.943006E+09,0.636578E+09,0.196929E+10,63884474.13,0.210319E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.284444E+09,0.192750E+09,0.626633E+09,26816985.38,78413863.54
-,Minimum of Months,0.284444E+09,0.192750E+09,0.626633E+09,26816985.38,78413863.54
-,Maximum of Months,0.284444E+09,0.192750E+09,0.626633E+09,26816985.38,78413863.54
+,Annual Sum or Average,0.943006E+09,0.636578E+09,0.196929E+10,63884474.13,0.210319E+09
+,Minimum of Months,0.943006E+09,0.636578E+09,0.196929E+10,63884474.13,0.210319E+09
+,Maximum of Months,0.943006E+09,0.636578E+09,0.196929E+10,63884474.13,0.210319E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4001,16 +4001,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.180077E+09,0.123354E+09,0.396686E+09,23648439.13,53482919.17
+,July,0.597001E+09,0.406915E+09,0.124665E+10,44948198.71,0.141380E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.180077E+09,0.123354E+09,0.396686E+09,23648439.13,53482919.17
-,Minimum of Months,0.180077E+09,0.123354E+09,0.396686E+09,23648439.13,53482919.17
-,Maximum of Months,0.180077E+09,0.123354E+09,0.396686E+09,23648439.13,53482919.17
+,Annual Sum or Average,0.597001E+09,0.406915E+09,0.124665E+10,44948198.71,0.141380E+09
+,Minimum of Months,0.597001E+09,0.406915E+09,0.124665E+10,44948198.71,0.141380E+09
+,Maximum of Months,0.597001E+09,0.406915E+09,0.124665E+10,44948198.71,0.141380E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4025,16 +4025,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.284444E+09,0.194560E+09,0.626629E+09,38051281.33,75378078.33
+,July,0.943006E+09,0.641455E+09,0.196928E+10,65630928.88,0.207574E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.284444E+09,0.194560E+09,0.626629E+09,38051281.33,75378078.33
-,Minimum of Months,0.284444E+09,0.194560E+09,0.626629E+09,38051281.33,75378078.33
-,Maximum of Months,0.284444E+09,0.194560E+09,0.626629E+09,38051281.33,75378078.33
+,Annual Sum or Average,0.943006E+09,0.641455E+09,0.196928E+10,65630928.88,0.207574E+09
+,Minimum of Months,0.943006E+09,0.641455E+09,0.196928E+10,65630928.88,0.207574E+09
+,Maximum of Months,0.943006E+09,0.641455E+09,0.196928E+10,65630928.88,0.207574E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4049,16 +4049,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.180065E+09,0.122182E+09,0.396683E+09,21062623.18,53551532.77
+,July,0.596961E+09,0.403261E+09,0.124664E+10,45990107.22,0.138938E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.180065E+09,0.122182E+09,0.396683E+09,21062623.18,53551532.77
-,Minimum of Months,0.180065E+09,0.122182E+09,0.396683E+09,21062623.18,53551532.77
-,Maximum of Months,0.180065E+09,0.122182E+09,0.396683E+09,21062623.18,53551532.77
+,Annual Sum or Average,0.596961E+09,0.403261E+09,0.124664E+10,45990107.22,0.138938E+09
+,Minimum of Months,0.596961E+09,0.403261E+09,0.124664E+10,45990107.22,0.138938E+09
+,Maximum of Months,0.596961E+09,0.403261E+09,0.124664E+10,45990107.22,0.138938E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4073,16 +4073,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.284444E+09,0.192676E+09,0.626633E+09,17807428.51,43998673.47
+,July,0.943006E+09,0.636596E+09,0.196929E+10,37790760.45,0.106612E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.284444E+09,0.192676E+09,0.626633E+09,17807428.51,43998673.47
-,Minimum of Months,0.284444E+09,0.192676E+09,0.626633E+09,17807428.51,43998673.47
-,Maximum of Months,0.284444E+09,0.192676E+09,0.626633E+09,17807428.51,43998673.47
+,Annual Sum or Average,0.943006E+09,0.636596E+09,0.196929E+10,37790760.45,0.106612E+09
+,Minimum of Months,0.943006E+09,0.636596E+09,0.196929E+10,37790760.45,0.106612E+09
+,Maximum of Months,0.943006E+09,0.636596E+09,0.196929E+10,37790760.45,0.106612E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4097,16 +4097,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.180077E+09,0.123412E+09,0.396686E+09,12276742.14,29563441.19
+,July,0.597001E+09,0.407123E+09,0.124665E+10,26051486.40,71016965.29
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.180077E+09,0.123412E+09,0.396686E+09,12276742.14,29563441.19
-,Minimum of Months,0.180077E+09,0.123412E+09,0.396686E+09,12276742.14,29563441.19
-,Maximum of Months,0.180077E+09,0.123412E+09,0.396686E+09,12276742.14,29563441.19
+,Annual Sum or Average,0.597001E+09,0.407123E+09,0.124665E+10,26051486.40,71016965.29
+,Minimum of Months,0.597001E+09,0.407123E+09,0.124665E+10,26051486.40,71016965.29
+,Maximum of Months,0.597001E+09,0.407123E+09,0.124665E+10,26051486.40,71016965.29
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4121,16 +4121,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.284444E+09,0.194604E+09,0.626629E+09,0.233154E+09,0.135420E+09
+,July,0.943006E+09,0.641624E+09,0.196928E+10,0.666508E+09,0.370325E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.284444E+09,0.194604E+09,0.626629E+09,0.233154E+09,0.135420E+09
-,Minimum of Months,0.284444E+09,0.194604E+09,0.626629E+09,0.233154E+09,0.135420E+09
-,Maximum of Months,0.284444E+09,0.194604E+09,0.626629E+09,0.233154E+09,0.135420E+09
+,Annual Sum or Average,0.943006E+09,0.641624E+09,0.196928E+10,0.666508E+09,0.370325E+09
+,Minimum of Months,0.943006E+09,0.641624E+09,0.196928E+10,0.666508E+09,0.370325E+09
+,Maximum of Months,0.943006E+09,0.641624E+09,0.196928E+10,0.666508E+09,0.370325E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4145,16 +4145,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.180065E+09,0.122182E+09,0.396683E+09,12742448.84,28783990.11
+,July,0.596961E+09,0.403434E+09,0.124664E+10,25810690.60,70383027.50
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.180065E+09,0.122182E+09,0.396683E+09,12742448.84,28783990.11
-,Minimum of Months,0.180065E+09,0.122182E+09,0.396683E+09,12742448.84,28783990.11
-,Maximum of Months,0.180065E+09,0.122182E+09,0.396683E+09,12742448.84,28783990.11
+,Annual Sum or Average,0.596961E+09,0.403434E+09,0.124664E+10,25810690.60,70383027.50
+,Minimum of Months,0.596961E+09,0.403434E+09,0.124664E+10,25810690.60,70383027.50
+,Maximum of Months,0.596961E+09,0.403434E+09,0.124664E+10,25810690.60,70383027.50
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4169,16 +4169,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.284444E+09,0.192750E+09,0.626633E+09,29527187.10,66039507.09
+,July,0.943006E+09,0.636578E+09,0.196929E+10,59300196.50,0.173168E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.284444E+09,0.192750E+09,0.626633E+09,29527187.10,66039507.09
-,Minimum of Months,0.284444E+09,0.192750E+09,0.626633E+09,29527187.10,66039507.09
-,Maximum of Months,0.284444E+09,0.192750E+09,0.626633E+09,29527187.10,66039507.09
+,Annual Sum or Average,0.943006E+09,0.636578E+09,0.196929E+10,59300196.50,0.173168E+09
+,Minimum of Months,0.943006E+09,0.636578E+09,0.196929E+10,59300196.50,0.173168E+09
+,Maximum of Months,0.943006E+09,0.636578E+09,0.196929E+10,59300196.50,0.173168E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4193,16 +4193,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.180077E+09,0.123354E+09,0.396686E+09,20485584.40,44756486.23
+,July,0.597001E+09,0.406915E+09,0.124665E+10,38627131.33,0.119302E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.180077E+09,0.123354E+09,0.396686E+09,20485584.40,44756486.23
-,Minimum of Months,0.180077E+09,0.123354E+09,0.396686E+09,20485584.40,44756486.23
-,Maximum of Months,0.180077E+09,0.123354E+09,0.396686E+09,20485584.40,44756486.23
+,Annual Sum or Average,0.597001E+09,0.406915E+09,0.124665E+10,38627131.33,0.119302E+09
+,Minimum of Months,0.597001E+09,0.406915E+09,0.124665E+10,38627131.33,0.119302E+09
+,Maximum of Months,0.597001E+09,0.406915E+09,0.124665E+10,38627131.33,0.119302E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4217,16 +4217,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.284444E+09,0.194557E+09,0.626629E+09,24101476.95,66824050.28
+,July,0.943006E+09,0.641455E+09,0.196928E+10,55267472.43,0.176876E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.284444E+09,0.194557E+09,0.626629E+09,24101476.95,66824050.28
-,Minimum of Months,0.284444E+09,0.194557E+09,0.626629E+09,24101476.95,66824050.28
-,Maximum of Months,0.284444E+09,0.194557E+09,0.626629E+09,24101476.95,66824050.28
+,Annual Sum or Average,0.943006E+09,0.641455E+09,0.196928E+10,55267472.43,0.176876E+09
+,Minimum of Months,0.943006E+09,0.641455E+09,0.196928E+10,55267472.43,0.176876E+09
+,Maximum of Months,0.943006E+09,0.641455E+09,0.196928E+10,55267472.43,0.176876E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4241,16 +4241,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.180065E+09,0.122182E+09,0.396683E+09,14272611.44,46805871.41
+,July,0.596961E+09,0.403261E+09,0.124664E+10,38324197.97,0.118522E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.180065E+09,0.122182E+09,0.396683E+09,14272611.44,46805871.41
-,Minimum of Months,0.180065E+09,0.122182E+09,0.396683E+09,14272611.44,46805871.41
-,Maximum of Months,0.180065E+09,0.122182E+09,0.396683E+09,14272611.44,46805871.41
+,Annual Sum or Average,0.596961E+09,0.403261E+09,0.124664E+10,38324197.97,0.118522E+09
+,Minimum of Months,0.596961E+09,0.403261E+09,0.124664E+10,38324197.97,0.118522E+09
+,Maximum of Months,0.596961E+09,0.403261E+09,0.124664E+10,38324197.97,0.118522E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4265,16 +4265,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.00,0.00,0.00,35196034.65,91069667.03
+,July,0.00,0.00,0.00,71052268.99,0.227329E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.00,0.00,0.00,35196034.65,91069667.03
-,Minimum of Months,0.00,0.00,0.00,35196034.65,91069667.03
-,Maximum of Months,0.00,0.00,0.00,35196034.65,91069667.03
+,Annual Sum or Average,0.00,0.00,0.00,71052268.99,0.227329E+09
+,Minimum of Months,0.00,0.00,0.00,71052268.99,0.227329E+09
+,Maximum of Months,0.00,0.00,0.00,71052268.99,0.227329E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4289,16 +4289,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.00,0.00,0.00,40797495.22,0.116436E+09
+,July,0.00,0.00,0.00,85076867.85,0.308133E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.00,0.00,0.00,40797495.22,0.116436E+09
-,Minimum of Months,0.00,0.00,0.00,40797495.22,0.116436E+09
-,Maximum of Months,0.00,0.00,0.00,40797495.22,0.116436E+09
+,Annual Sum or Average,0.00,0.00,0.00,85076867.85,0.308133E+09
+,Minimum of Months,0.00,0.00,0.00,85076867.85,0.308133E+09
+,Maximum of Months,0.00,0.00,0.00,85076867.85,0.308133E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4313,16 +4313,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.00,0.00,0.00,45691072.33,0.109017E+09
+,July,0.00,0.00,0.00,68986612.09,0.315312E+09
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.00,0.00,0.00,45691072.33,0.109017E+09
-,Minimum of Months,0.00,0.00,0.00,45691072.33,0.109017E+09
-,Maximum of Months,0.00,0.00,0.00,45691072.33,0.109017E+09
+,Annual Sum or Average,0.00,0.00,0.00,68986612.09,0.315312E+09
+,Minimum of Months,0.00,0.00,0.00,68986612.09,0.315312E+09
+,Maximum of Months,0.00,0.00,0.00,68986612.09,0.315312E+09
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4337,16 +4337,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-
 ,May,-,-,-,-,-
 ,June,-,-,-,-,-
-,July,0.260999E+11,82597.77,02-JUL-07:15,0.00,0.00
+,July,0.840176E+11,82597.77,02-JUL-07:15,0.00,0.00
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
 ,October,-,-,-,-,-
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,0.260999E+11,,,0.00,0.00
-,Minimum of Months,0.260999E+11,82597.77,,0.00,0.00
-,Maximum of Months,0.260999E+11,82597.77,,0.00,0.00
+,Annual Sum or Average,0.840176E+11,,,0.00,0.00
+,Minimum of Months,0.840176E+11,82597.77,,0.00,0.00
+,Maximum of Months,0.840176E+11,82597.77,,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4361,16 +4361,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-,July,0.714207E+10,0.00,0.880882E+09,0.00,0.299732E+09,0.113186E+11,3871751.99,0.640289E+10,0.175243E+11,0.00,0.00,0.00,0.00,0.00
+,July,0.235793E+11,0.00,0.269890E+10,0.00,0.949126E+09,0.102296E+11,11935846.88,34582516.83,0.421798E+11,0.00,0.00,0.00,0.00,0.00
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,,
-,Annual Sum or Average,0.714207E+10,0.00,0.880882E+09,0.00,0.299732E+09,0.113186E+11,3871751.99,0.640289E+10,0.175243E+11,0.00,0.00,0.00,0.00,0.00
-,Minimum of Months,0.714207E+10,0.00,0.880882E+09,0.00,0.299732E+09,0.113186E+11,3871751.99,0.640289E+10,0.175243E+11,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.714207E+10,0.00,0.880882E+09,0.00,0.299732E+09,0.113186E+11,3871751.99,0.640289E+10,0.175243E+11,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.235793E+11,0.00,0.269890E+10,0.00,0.949126E+09,0.102296E+11,11935846.88,34582516.83,0.421798E+11,0.00,0.00,0.00,0.00,0.00
+,Minimum of Months,0.235793E+11,0.00,0.269890E+10,0.00,0.949126E+09,0.102296E+11,11935846.88,34582516.83,0.421798E+11,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.235793E+11,0.00,0.269890E+10,0.00,0.949126E+09,0.102296E+11,11935846.88,34582516.83,0.421798E+11,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4385,16 +4385,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-
 ,May,-,-,-,-,-,-
 ,June,-,-,-,-,-,-
-,July,0.00,0.00,81015096.70,0.00,0.214406E+10,0.00
+,July,0.00,0.00,461299.05,0.00,0.656507E+10,0.00
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
 ,October,-,-,-,-,-,-
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.00,0.00,81015096.70,0.00,0.214406E+10,0.00
-,Minimum of Months,0.00,0.00,81015096.70,0.00,0.214406E+10,0.00
-,Maximum of Months,0.00,0.00,81015096.70,0.00,0.214406E+10,0.00
+,Annual Sum or Average,0.00,0.00,461299.05,0.00,0.656507E+10,0.00
+,Minimum of Months,0.00,0.00,461299.05,0.00,0.656507E+10,0.00
+,Maximum of Months,0.00,0.00,461299.05,0.00,0.656507E+10,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4409,7 +4409,7 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-,July,25867.87,02-JUL-07:15,0.00,3065.70,01-JUL-19:30,0.00,841.31,09-JUL-07:30,37222.62,10-JUL-15:15,6.85,01-JUL-05:45,58639.30,10-JUL-06:15
+,July,25867.87,02-JUL-07:15,0.00,3065.70,01-JUL-19:30,0.00,841.31,02-JUL-07:30,16164.98,16-JUL-14:30,6.85,01-JUL-06:00,4774.27,03-JUL-06:00
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-,-,-,-,-
@@ -4417,8 +4417,8 @@ Custom Monthly Report
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,,
 ,Annual Sum or Average,,,0.00,,,0.00,,,,,,,,
-,Minimum of Months,25867.87,,0.00,3065.70,,0.00,841.31,,37222.62,,6.85,,58639.30,
-,Maximum of Months,25867.87,,0.00,3065.70,,0.00,841.31,,37222.62,,6.85,,58639.30,
+,Minimum of Months,25867.87,,0.00,3065.70,,0.00,841.31,,16164.98,,6.85,,4774.27,
+,Maximum of Months,25867.87,,0.00,3065.70,,0.00,841.31,,16164.98,,6.85,,4774.27,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4433,16 +4433,16 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-,July,0.625301E+11,185299.325,10-JUL-07:30,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
+,July,0.140122E+12,150925.783,17-JUL-12:00,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,,,,,,
-,Annual Sum or Average,0.625301E+11,,,,,,,,,,0.000,,0.000,0.000,0.000,0.000,0.000,0.000
-,Minimum of Months,0.625301E+11,185299.325,,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
-,Maximum of Months,0.625301E+11,185299.325,,25867.868,56729.907,32406.289,28030.035,41417.067,0.000,6.850,0.000,841.309,0.000,0.000,0.000,0.000,0.000,0.000
+,Annual Sum or Average,0.140122E+12,,,,,,,,,,0.000,,0.000,0.000,0.000,0.000,0.000,0.000
+,Minimum of Months,0.140122E+12,150925.783,,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
+,Maximum of Months,0.140122E+12,150925.783,,25867.868,49960.580,14819.004,0.000,59431.419,0.000,6.850,0.000,840.063,0.000,0.000,0.000,0.000,0.000,0.000
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4457,15 +4457,15 @@ Custom Monthly Report
 ,April,-,-,-,-,-,-,-,-,-,-
 ,May,-,-,-,-,-,-,-,-,-,-
 ,June,-,-,-,-,-,-,-,-,-,-
-,July,0.222507E+10,46995.443,03-JUL-06:15,45109.003,0.000,0.000,1886.440,1886.440,1886.440,45109.003
+,July,0.656553E+10,7185.907,03-JUL-11:30,0.000,0.000,0.000,7185.907,7185.907,7185.907,0.000
 ,August,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-
 ,October,-,-,-,-,-,-,-,-,-,-
 ,November,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,
-,Annual Sum or Average,0.222507E+10,,,,0.000,0.000,,,,
-,Minimum of Months,0.222507E+10,46995.443,,45109.003,0.000,0.000,1886.440,1886.440,1886.440,45109.003
-,Maximum of Months,0.222507E+10,46995.443,,45109.003,0.000,0.000,1886.440,1886.440,1886.440,45109.003
+,Annual Sum or Average,0.656553E+10,,,,0.000,0.000,,,,
+,Minimum of Months,0.656553E+10,7185.907,,0.000,0.000,0.000,7185.907,7185.907,7185.907,0.000
+,Maximum of Months,0.656553E+10,7185.907,,0.000,0.000,0.000,7185.907,7185.907,7185.907,0.000
 
 
