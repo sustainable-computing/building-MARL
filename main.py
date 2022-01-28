@@ -87,6 +87,24 @@ if __name__ == '__main__':
         type=float,
         default=0.01
     )
+    parser.add_argument(
+        '--start_month',
+        help='Set the starting month',
+        type=int,
+        default=7
+    )
+    parser.add_argument(
+        '--std_decay_period',
+        help='Set the number of episode to decay std',
+        type=int,
+        default=100
+    )
+    parser.add_argument(
+        '--prefix',
+        help='Description',
+        type=str,
+        default=""
+    )
     
     args = parser.parse_args()
     
@@ -104,16 +122,17 @@ if __name__ == '__main__':
     run_num = 19
     os.makedirs(f"PPO_weights", exist_ok=True)
     if not args.multi_agent:
-        checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num}.pth"
+        os.makedirs(f"PPO_weights/{args.prefix}single_agent_{args.seed}", exist_ok=True)
+        checkpoint_path = f"PPO_weights/{args.prefix}single_agent_{args.seed}/PPO_{args.seed}_{run_num}.pth"
     elif args.train_on == -1:
-        os.makedirs(f"PPO_weights/PPO_{args.seed}_{run_num}", exist_ok=True)
-        checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num}/agent"
+        os.makedirs(f"PPO_weights/{args.prefix}PPO_{args.seed}_{run_num}", exist_ok=True)
+        checkpoint_path = f"PPO_weights/{args.prefix}PPO_{args.seed}_{run_num}/agent"
     else:
-        os.makedirs(f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training", exist_ok=True)
-        checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/agent"
+        os.makedirs(f"PPO_weights/{args.prefix}PPO_{args.seed}_{run_num}_single_env_training", exist_ok=True)
+        checkpoint_path = f"PPO_weights/{args.prefix}PPO_{args.seed}_{run_num}_single_env_training/agent"
         if args.diverse_training != 0:
-            os.makedirs(f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/{args.diverse_weight}", exist_ok=True)
-            checkpoint_path = f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/{args.diverse_weight}/agent"
+            os.makedirs(f"PPO_weights/{args.prefix}PPO_{args.seed}_{run_num}_single_env_training/{args.diverse_weight}", exist_ok=True)
+            checkpoint_path = f"PPO_weights/{args.prefix}PPO_{args.seed}_{run_num}_single_env_training/{args.diverse_weight}/agent"
     
     log_path = f"{checkpoint_path[:checkpoint_path.rfind('/')]}/log_{args.seed}_{run_num}"
     log_f = open(f"{log_path}_{len(glob.glob(log_path + '_*'))}", "w+")
@@ -162,7 +181,7 @@ if __name__ == '__main__':
                                                 "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
 
     # Environment setup
-    model.set_runperiod(*(30, 1991, 7, 1))
+    model.set_runperiod(*(30, 1991, args.start_month, 1))
     model.set_timestep(4)
     
     # Agent setup
@@ -184,7 +203,7 @@ if __name__ == '__main__':
                      device=device,
                      diverse_policies=existing_policies, diverse_weight=args.diverse_weight, diverse_increase=True) for _ in range(num_rl_agent)]
         
-        
+    best_reward = 0
     
     for ep in range(args.episodes):
         state = model.reset()
@@ -230,15 +249,23 @@ if __name__ == '__main__':
         log_f.flush()
         
         if not args.multi_agent:
+            if ((ep + 1) % args.std_decay_period) == 0:
+                agent.decay_action_std(0.02, 0.1)
             agent.update()
-            agent.save(checkpoint_path)
+            if best_reward < total_energy:
+                agent.save(checkpoint_path)
+                best_reward = total_energy
         else:
             for i in range(len(agent)):
+                if ((ep + 1) % args.std_decay_period) == 0:
+                    agent[i].decay_action_std(0.02, 0.1)
                 agent[i].update()
-                if args.diverse_training != 0:
-                    agent[i].save(f"{checkpoint_path}_{args.diverse_training}.pth")
-                else:
-                    agent[i].save(f"{checkpoint_path}_{i}.pth")
+                if best_reward < total_energy:
+                    if args.diverse_training != 0:
+                        agent[i].save(f"{checkpoint_path}_{args.diverse_training}.pth")
+                    else:
+                        agent[i].save(f"{checkpoint_path}_{i}.pth")
+                    best_reward = total_energy
 
     log_f.close()
     print("Done")
