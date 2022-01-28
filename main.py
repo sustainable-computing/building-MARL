@@ -203,7 +203,7 @@ if __name__ == '__main__':
                      device=device,
                      diverse_policies=existing_policies, diverse_weight=args.diverse_weight, diverse_increase=True) for _ in range(num_rl_agent)]
         
-    best_reward = 0
+    best_reward = -1
     
     for ep in range(args.episodes):
         state = model.reset()
@@ -212,11 +212,14 @@ if __name__ == '__main__':
             # Transfer the state into the format of only selected states
             agent_state = [state["outdoor temperature"], state["site solar radiation"], state["time"].hour]
             action = list()
+            
+            single_agent_reward = 0
             for i, zone in enumerate(control_zones):
                 if not args.multi_agent:
                     agent_state.append(state[f"{zone} humidity"])
                     agent_state.append(state["temperature"][zone])
                     agent_state.append(state["occupancy"][zone])
+                    single_agent_reward += -state[f"{zone} vav energy"]
                 else:
                     action.append(agent[i].select_action(agent_state + [state[f"{zone} humidity"], state["temperature"][zone], state["occupancy"][zone]]))
                     agent[i].buffer.rewards.append(-state[f"{zone} vav energy"])  # -state[f"{airloops[zone]} energy"]
@@ -240,7 +243,7 @@ if __name__ == '__main__':
             state = model.step(actions)
             
             if not args.multi_agent:
-                agent.buffer.rewards.append(-state["total hvac"])
+                agent.buffer.rewards.append(single_agent_reward)
                 agent.buffer.is_terminals.append(state["terminate"])
             total_energy += state["total hvac"]
 
@@ -252,7 +255,7 @@ if __name__ == '__main__':
             if ((ep + 1) % args.std_decay_period) == 0:
                 agent.decay_action_std(0.02, 0.1)
             agent.update()
-            if best_reward < total_energy:
+            if best_reward == -1 or best_reward > total_energy:
                 agent.save(checkpoint_path)
                 best_reward = total_energy
         else:
@@ -260,7 +263,7 @@ if __name__ == '__main__':
                 if ((ep + 1) % args.std_decay_period) == 0:
                     agent[i].decay_action_std(0.02, 0.1)
                 agent[i].update()
-                if best_reward < total_energy:
+                if best_reward == -1 or best_reward > total_energy:
                     if args.diverse_training != 0:
                         agent[i].save(f"{checkpoint_path}_{args.diverse_training}.pth")
                     else:

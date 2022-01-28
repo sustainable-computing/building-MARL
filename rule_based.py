@@ -65,14 +65,14 @@ if __name__ == '__main__':
         state = model.reset()
         total_energy = state["total hvac"]
         while not model.is_terminate():
-            print(state["Perimeter_top_ZN_1 vav energy"])
+            # print(state["Perimeter_top_ZN_1 vav energy"])
             actions = list()
             for i, zone in enumerate(control_zones):
                 actions.append({"priority": 0,
                                 "component_type": "Schedule:Constant",
                                 "control_type": "Schedule Value",
                                 "actuator_key": f"{zone} VAV Customized Schedule",
-                                "value": 0.8,
+                                "value": 0.3,
                                 "start_time": state['timestep'] + 1})
             state = model.step(actions)
             total_energy += state["total hvac"]
