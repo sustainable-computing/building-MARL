@@ -834,15 +834,18 @@ class Model:
         zone_window = {name: set() for name in self.get_available_names_under_group("Zone")}
         all_window = dict()
         for window in self.get_configuration("FenestrationSurface:Detailed"):
-            if window.Surface_Type != "WINDOW":
+            if window.Surface_Type.upper() != "WINDOW":
                 continue
-            all_window[window.Building_Surface_Name] = window.Name
+            if window.Building_Surface_Name not in all_window:
+                all_window[window.Building_Surface_Name] = list()
+            all_window[window.Building_Surface_Name].append(window.Name)
 
         for wall in self.get_configuration("BuildingSurface:Detailed"):
-            if wall.Surface_Type != "WALL":
+            if wall.Surface_Type.upper() != "WALL":
                 continue
             if wall.Name in all_window:
-                zone_window[wall.Zone_Name].add(all_window[wall.Name])
+                for name in all_window[wall.Name]:
+                    zone_window[wall.Zone_Name].add(name)
         return zone_window
 
     def get_doors(self):
@@ -923,6 +926,7 @@ class Model:
                         blind = {"Name": f"{window}_blind",
                                  "Slat Orientation": "Horizontal",
                                  "Slat Width": 0.025,
+                                 "Slat Angle": setpoint,
                                  "Slat Separation": 0.01875,
                                  "Front Side Slat Beam Solar Reflectance": 0.8,
                                  "Back Side Slat Beam Solar Reflectance": 0.8,
@@ -940,10 +944,11 @@ class Model:
                                "Shading Device Material Name": f"{blind_mat.Name}",
                                "Shading Control Type": shading_control_type,
                                "Setpoint": setpoint,
-                               "Type of Slat Angle Control for Blinds": "ScheduledSlatAngle",
+                               "Type of Slat Angle Control for Blinds": "FixedSlatAngle",
                                "Fenestration Surface 1 Name": window_idf.Name}
 
                     if agent_control:
+                        shading["Type of Slat Angle Control for Blinds"] = "ScheduledSlatAngle"
                         shading["Slat Angle Schedule Name"] = f"{window}_shading_schedule"
                         shading["Multiple Surface Control Type"] = "Group"
                         shading["Shading Control Is Scheduled"] = "Yes"
