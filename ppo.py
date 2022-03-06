@@ -19,6 +19,13 @@ class RolloutBuffer:
         del self.rewards[:]
         del self.is_terminals[:]
     
+    def remove_last(self):
+        self.actions.pop()
+        self.states.pop()
+        self.logprobs.pop()
+        self.rewards.pop()
+        self.is_terminals.pop()
+    
     def __len__(self):
         return len(self.actions)
 
