@@ -1,4 +1,5 @@
 from ast import arg
+from local_setting import *
 from email.policy import default
 import sys
 import os
@@ -8,9 +9,9 @@ import torch
 import numpy as np
 import glob
 import datetime
-sys.path.insert(0, "/home/tianyu/building-MARL/")
+sys.path.insert(0, file_path)
 from cobs import Model
-Model.set_energyplus_folder("/usr/local/EnergyPlus-9-3-0/")
+Model.set_energyplus_folder(energyplus_location)
 
 
 if __name__ == '__main__':
@@ -141,6 +142,10 @@ if __name__ == '__main__':
     elif args.train_on == -1:
         os.makedirs(f"PPO_weights/{args.prefix}MA_parallel_training_seed{args.seed}", exist_ok=True)
         checkpoint_path = f"PPO_weights/{args.prefix}MA_parallel_training_seed{args.seed}/agent"
+        if args.diverse_training != 0:
+            os.makedirs(f"PPO_weights/{args.prefix}MA_parallel_training_seed{args.seed}/{args.diverse_weight}", exist_ok=True)
+            checkpoint_path = f"PPO_weights/{args.prefix}MA_parallel_training_seed{args.seed}/{args.diverse_weight}/agent"
+            optimal_path = f"PPO_weights/{args.prefix}MA_parallel_training_seed{args.seed}/agent"
     else:
         os.makedirs(f"PPO_weights/{args.prefix}MA_rule_other_seed{args.seed}", exist_ok=True)
         checkpoint_path = f"PPO_weights/{args.prefix}MA_rule_other_seed{args.seed}/agent"
@@ -210,14 +215,14 @@ if __name__ == '__main__':
                     diverse_policies=list(), diverse_weight=0)
     else:
         num_rl_agent = 5 if args.train_on == -1 else 1
-        existing_policies = list()
-        if args.train_on == -1 and args.diverse_training != 0:
-            existing_policies = list(glob.glob(f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/agent_*.pth"))
+        # existing_policies = list()
+        # if args.train_on == -1 and args.diverse_training != 0:
+        #     existing_policies = list(glob.glob(f"PPO_weights/PPO_{args.seed}_{run_num}_single_env_training/agent_*.pth"))
         agent = [PPO(1 + 1 + 1 + 1 + 1 + 1, # State dimension, own temperature + humidity + outdoor temp + solar + occupancy + hour
                      1, # Action dimension, 1 for each zone
                      0.003, 0.0005, 1, 10, 0.2, has_continuous_action_space=True, action_std_init=0.6, 
                      device=device,
-                     diverse_policies=existing_policies, diverse_weight=args.diverse_weight, diverse_increase=True) for _ in range(num_rl_agent)]
+                     diverse_policies=[f"{optimal_path}_{i}.pth"], diverse_weight=args.diverse_weight, diverse_increase=True) for i in range(num_rl_agent)]
 
     best_reward = -1
 
@@ -231,7 +236,7 @@ if __name__ == '__main__':
             agent_state = [state["outdoor temperature"], state["site solar radiation"], state["time"].hour]
             action = list()
             
-            log_f.write(f"{state}\n")
+            # log_f.write(f"{state}\n")
             single_agent_reward = 0
             for i, zone in enumerate(control_zones):
                 if not args.multi_agent:
@@ -289,10 +294,10 @@ if __name__ == '__main__':
                     agent[i].decay_action_std(0.02, 0.1)
                 agent[i].update()
                 if best_reward == -1 or int(best_reward) >= int(total_energy):
-                    if args.diverse_training != 0:
-                        agent[i].save(f"{checkpoint_path}_{args.diverse_training}.pth")
-                    else:
-                        agent[i].save(f"{checkpoint_path}_{i}.pth")
+                    # if args.diverse_training != 0:
+                    #     agent[i].save(f"{checkpoint_path}_{args.diverse_training}.pth")
+                    # else:
+                    agent[i].save(f"{checkpoint_path}_{i}.pth")
                     best_reward = total_energy
 
     log_f.close()
