@@ -1,2 +1,10 @@
 result/*
 local_setting.py
+*.idf
+*.tar
+log*
+*.sh
+__pycache__/*
+cobs/__pycache__/*
+policy_library/transfer/newa_*
+PPO_weights/*
