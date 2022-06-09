@@ -81,7 +81,7 @@ class ActorCritic(nn.Module):
     def forward(self):
         raise NotImplementedError
 
-    def act(self, state):
+    def act(self, state, return_dist=False):
 
         if self.has_continuous_action_space:
             action_mean = self.actor(state)
@@ -94,7 +94,10 @@ class ActorCritic(nn.Module):
         action = dist.sample()
         action_logprob = dist.log_prob(action)
 
-        return action.detach(), action_logprob.detach()
+        if return_dist:
+            return dist
+        else:
+            return action.detach(), action_logprob.detach()
 
     def evaluate(self, state, action):
 
@@ -146,6 +149,8 @@ class PPO:
         self.policy_old = ActorCritic(state_dim, action_dim, has_continuous_action_space, action_std_init, device).to(device)
         self.policy_old.load_state_dict(self.policy.state_dict())
 
+        self.policy_evaluation = False
+
         self.MseLoss = nn.MSELoss()
         
         self.other_policies = list()
@@ -195,9 +200,16 @@ class PPO:
         print("--------------------------------------------------------------------------------------------")
 
     def select_action(self, state):
+        if self.policy_evaluation:
+            return_dist = True
+        else:
+            return_dist = False
         with torch.no_grad():
             state = torch.FloatTensor(state).to(self.device)
-            action, action_logprob = self.policy_old.act(state)
+            if return_dist:
+                return self.policy_old.act(state, return_dist)
+            else:
+                action, action_logprob = self.policy_old.act(state, return_dist)
 
         self.buffer.states.append(state)
         self.buffer.actions.append(action)

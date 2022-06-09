@@ -4,7 +4,11 @@ local_setting.py
 *.tar
 log*
 *.sh
-__pycache__/*
+__pycache__/
 cobs/__pycache__/*
 policy_library/transfer/newa_*
 PPO_weights/*
+data/
+.DS_Store
+TODO
+*checkpoint.ipynb
