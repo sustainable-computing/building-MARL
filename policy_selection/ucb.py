@@ -144,11 +144,11 @@ class UCB():
             row_str += "\n"
             self.csv_file_obj.write(row_str)
 
-    def calc_ucb_value(self, policy_count, total_count):
+    def calc_ucb_value(self, policy_count, total_count, rho=2):
         if total_count == 0 or policy_count == 0:
             return 0
         else:
-            return np.sqrt(2*np.log(total_count)/policy_count)
+            return np.sqrt(rho*np.log(total_count)/policy_count)
 
     def run_ucb(self, policy_names=[], policies=[], epochs=None,
                 policy_scores=None, policy_counts=None, rho=2, eval_duration=30):
@@ -171,7 +171,7 @@ class UCB():
             while True:
                 print(f"EPOCH {epoch}\n")
 
-                ucb_values = np.array([self.calc_ucb_value(policy_count, np.sum(policy_counts)) for policy_count in policy_counts])
+                ucb_values = np.array([self.calc_ucb_value(policy_count, np.sum(policy_counts), rho=rho) for policy_count in policy_counts])
 
                 chosen_policy_idx = np.argmax(policy_scores + ucb_values)
                 policy_name = policy_names[chosen_policy_idx]
@@ -185,7 +185,7 @@ class UCB():
                     policy_scores_all[policy_name].append(q_policy)
                     policy_counts[chosen_policy_idx] += 1
                     policy_mu = np.mean(policy_scores_all[policy_name])
-                    policy_scores[chosen_policy_idx] = policy_mu + np.sqrt(rho*np.log(np.sum(policy_counts))/policy_counts[chosen_policy_idx])
+                    policy_scores[chosen_policy_idx] = policy_mu
                 epoch += 1
                 self.log_data(policy_scores=policy_scores, policy_counts=policy_counts, flops=0, policy_names=policy_names,
                               start_year=start_year, start_month=start_month, start_day=start_day, policy_name=policy_name)

@@ -16,3 +16,6 @@ TODO
 Core_top_log.txt
 test.py
 testfittedq.py
+.ipynb_checkpoints
+.virtual_documents
+config.py

@@ -1,11 +1,18 @@
+import argparse
 import glob
 import json
+import subprocess
 
 import torch
 
 from policy_selection.ucb import UCB
 from ppo import PPO
 
+
+def init_parser():
+    parser = argparse.ArgumentParser(description="Run UBC Policy Selection for specified zone")
+    parser.add_argument("--zone", type=str, required=True)
+    return parser
 
 def get_policies():
     invalid_policy_loc = "data/invalid_policy_list.json"
@@ -51,13 +58,18 @@ def run_ucb(test_zone, policy_locs, policies, rho=2, eval_duration=30, epochs=10
 
 
 if __name__ == "__main__":
+    parser = init_parser()
+    args = parser.parse_args()
+
     policy_locs, init_policies = get_policies()
     test_zones = ['Core_top', 'Core_mid', 'Core_bottom',
                   'Perimeter_top_ZN_3', 'Perimeter_top_ZN_2', 'Perimeter_top_ZN_1', 'Perimeter_top_ZN_4',
                   'Perimeter_bot_ZN_3', 'Perimeter_bot_ZN_2', 'Perimeter_bot_ZN_1', 'Perimeter_bot_ZN_4',
                   'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2', 'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4']
-
-    test_zone = test_zones[0]  # Choosing zone to run UCB on
+    
+    test_zone = args.zone
+    if test_zone not in test_zones:
+        raise ValueError("test_zone not valid")
     print(f"Running UCB for Zone {test_zone}")
-
     run_ucb(test_zone, policy_locs, init_policies, rho=2, eval_duration=1, epochs=None)
+
