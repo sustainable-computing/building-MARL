@@ -1,5 +1,5 @@
 from ast import arg
-from local_setting import *
+# from local_setting import *
 from email.policy import default
 import sys
 import os
@@ -9,9 +9,9 @@ import torch
 import numpy as np
 import glob
 import datetime
-sys.path.insert(0, file_path)
+sys.path.insert(0, "/Users/aakashsasikumar/Documents/MSc/Research/Dissimilar Policy/building-MARL/")
 from cobs import Model
-Model.set_energyplus_folder(energyplus_location)
+Model.set_energyplus_folder("/Applications/EnergyPlus-9-3-0/")
 
 
 if __name__ == '__main__':
@@ -100,7 +100,8 @@ if __name__ == '__main__':
                 0.003, 0.0005, 1, 10, 0.2, has_continuous_action_space=True, action_std_init=0.2, 
                 device=device,
                 diverse_policies=list(), diverse_weight=0, diverse_increase=True)
-    agent_save_paths = sorted(list(glob.glob(f"policy_library/**.pth")))[args.evaluate_start:args.evaluate_start + args.evaluate_length]
+    # agent_save_paths = sorted(list(glob.glob(f"policy_library/**.pth")))[args.evaluate_start:args.evaluate_start + args.evaluate_length]
+    agent_save_paths = ["policy_library/100_0_1e-1.pth"]
     test_zone = control_zones[0]
 
     for agent_path in agent_save_paths:

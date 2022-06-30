@@ -12,3 +12,7 @@ data/
 .DS_Store
 TODO
 *checkpoint.ipynb
+.history
+Core_top_log.txt
+test.py
+testfittedq.py

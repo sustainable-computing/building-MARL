@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.distributions import MultivariateNormal
+from torch.distributions import Normal
 from torch.distributions import Categorical
 
 
@@ -81,12 +82,13 @@ class ActorCritic(nn.Module):
     def forward(self):
         raise NotImplementedError
 
-    def act(self, state, return_dist=False):
+    def act(self, state, return_dist=False, detach=True):
 
         if self.has_continuous_action_space:
             action_mean = self.actor(state)
             cov_mat = torch.diag(self.action_var).unsqueeze(dim=0)
-            dist = MultivariateNormal(action_mean, cov_mat)
+            # dist = MultivariateNormal(action_mean, cov_mat)
+            dist = Normal(action_mean, torch.sqrt(cov_mat))
         else:
             action_probs = self.actor(state)
             dist = Categorical(action_probs)
@@ -97,7 +99,10 @@ class ActorCritic(nn.Module):
         if return_dist:
             return dist
         else:
-            return action.detach(), action_logprob.detach()
+            if detach:
+                return action.detach(), action_logprob.detach()
+            else:
+                return action, action_logprob
 
     def evaluate(self, state, action):
 
@@ -106,7 +111,8 @@ class ActorCritic(nn.Module):
 
             action_var = self.action_var.expand_as(action_mean)
             cov_mat = torch.diag_embed(action_var).to(self.device)
-            dist = MultivariateNormal(action_mean, cov_mat)
+            dist = Normal(action_mean, torch.sqrt(cov_mat))
+            # dist = MultivariateNormal(action_mean, cov_mat)
 
             # For Single Action Environments.
             if self.action_dim == 1:
@@ -139,6 +145,8 @@ class PPO:
 
         self.buffer = RolloutBuffer()
         self.device = device
+
+        self.state_dim = state_dim
 
         self.policy = ActorCritic(state_dim, action_dim, has_continuous_action_space, action_std_init, device).to(device)
         self.optimizer = torch.optim.Adam([
@@ -199,13 +207,20 @@ class PPO:
 
         print("--------------------------------------------------------------------------------------------")
 
-    def select_action(self, state):
+    def select_action(self, state, no_grad=True):
         if self.policy_evaluation:
             return_dist = True
         else:
             return_dist = False
-        with torch.no_grad():
-            state = torch.FloatTensor(state).to(self.device)
+        # with torch.no_grad():
+        state = torch.FloatTensor(state).to(self.device)
+        if no_grad:
+            with torch.no_grad():
+                if return_dist:
+                    return self.policy_old.act(state, return_dist)
+                else:
+                    action, action_logprob = self.policy_old.act(state, return_dist)
+        elif not no_grad:
             if return_dist:
                 return self.policy_old.act(state, return_dist)
             else:
@@ -219,6 +234,18 @@ class PPO:
             return action.detach().cpu().numpy().flatten()
         else:
             return action.item()
+
+    def calculate_loss(self, discounted_rewards, state_values, old_probs, probs, log_probs=True):
+        state_values = torch.squeeze(state_values)
+        if log_probs:
+            ratios = torch.exp(probs - old_probs)
+        else:
+            ratios = probs / old_probs
+        advantages = discounted_rewards - state_values
+        surr1 = ratios * advantages
+        surr2 = torch.clamp(ratios, 1 - self.eps_clip, 1 + self.eps_clip) * advantages
+        return surr1, surr2
+        
 
     def update(self):
         if len(self.buffer) == 0:
@@ -245,17 +272,8 @@ class PPO:
         for _ in range(self.k_epochs):
             # Evaluating old actions and values
             logprobs, state_values, dist_entropy = self.policy.evaluate(old_states, old_actions)
-
-            # match state_values tensor dimensions with rewards tensor
-            state_values = torch.squeeze(state_values)
-
-            # Finding the ratio (pi_theta / pi_theta__old)
-            ratios = torch.exp(logprobs - old_logprobs.detach())
-
-            # Finding Surrogate Loss
-            advantages = rewards - state_values.detach()
-            surr1 = ratios * advantages
-            surr2 = torch.clamp(ratios, 1 - self.eps_clip, 1 + self.eps_clip) * advantages
+            
+            surr1, surr2 = self.calculate_loss(rewards, state_values, old_logprobs, logprobs)
             
             # Adding diversity term compared to other policies
             dipg_loss = torch.zeros_like(surr1)
@@ -263,12 +281,9 @@ class PPO:
                 # for each other policy, calculate the policy distance ratio and advantages
                 # We want to maximize the distance ratio and make advantage as much as possible
                 other_logprobs, other_state_values, _ = policy.evaluate(old_states, old_actions)
-                other_state_values = torch.squeeze(other_state_values)
-                ratios = torch.exp(logprobs - other_logprobs)
-                advantages = rewards - other_state_values.detach()
                 
-                other_surr1 = ratios * advantages
-                other_surr2 = torch.clamp(ratios, 1 - self.eps_clip, 1 + self.eps_clip) * advantages
+                other_surr1, other_surr2 = self.calculate_loss(rewards, other_state_values, other_logprobs, logprobs)
+                
                 dipg_loss += torch.min(other_surr1, other_surr2)
 
             # final loss of clipped objective PPO
