@@ -1,8 +1,8 @@
 
-from decimal import DivisionByZero
+import config
 from cobs import Model
 
-Model.set_energyplus_folder("/Applications/EnergyPlus-9-3-0/")
+Model.set_energyplus_folder(config.energy_plus_loc)
 import os
 import random
 import traceback
