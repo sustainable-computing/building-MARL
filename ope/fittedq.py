@@ -1,8 +1,9 @@
+import os
+
+import numpy as np
 import torch
 import torch.nn as nn
 from torch.optim import Adam
-
-import numpy as np
 from tqdm import tqdm
 
 
@@ -14,7 +15,9 @@ class FittedQ():
         self.critic_target = CriticNet(state_dim+action_dim, 1)
 
         self.tau = tau
-        self.optimizer = Adam(self.critic.critic.parameters(), lr=critic_lr, weight_decay=weight_decay)
+        self.optimizer = torch.optim.AdamW(self.critic.critic.parameters(), lr=critic_lr, weight_decay=weight_decay)
+        self.scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, "min")
+        # self.optimizer = torch.optim.SGD(self.critic.parameters(), lr=critic_lr)
         self.loss = nn.MSELoss()
         self.soft_update(self.critic, self.critic_target, 1.0)
 
@@ -27,10 +30,11 @@ class FittedQ():
 
         q_inp = torch.cat((states, actions.reshape(-1, 1)), 1)
         q = self.critic(q_inp) / (1-gamma)
-        # critic_loss = torch.sum(torch.square(target_q - q))
-        critic_loss = self.loss(target_q, q)
+        critic_loss = torch.sum(torch.square(target_q - q))
+        # critic_loss = self.loss(target_q, q)
         critic_loss.backward()
         self.optimizer.step()
+        self.scheduler.step(critic_loss)
         self.soft_update(self.critic, self.critic_target, tau=self.tau)
 
         return critic_loss.item()
@@ -57,8 +61,6 @@ class FittedQ():
             actions = torch.zeros((len(train_data)))  # From behavior policy
             rewards = torch.zeros((len(train_data)))
             for i, row in enumerate(train_data):
-                state_vars = ["outdoor_temp", "solar_irradiation", "time_hour",
-                            "zone_humidity", "zone_temp", "zone_occupancy"]
                 state = [row[var] for var in state_vars]
                 states[i] = torch.Tensor(state)
                 rewards[i] = row["reward"]
@@ -74,27 +76,64 @@ class FittedQ():
             losses.append(loss)
             if log_loss:
                 if epoch % log_freq == 0:
-                    with open(log_loss, "a+") as f:
-                        f.write(f"{loss}\n")
+                    for loss in losses:
+                        with open(log_loss, "a+") as f:
+                            f.write(f"{loss}\n")
                     losses.clear()
 
         if log_loss and len(losses):
-            with open(log_loss, "a+") as f:
-                f.write(f"{loss}\n")
+            for loss in losses:
+                with open(log_loss, "a+") as f:
+                    f.write(f"{loss}\n")
+    
+    def estimate_returns(self, eval_policy, test_data):
+        state_vars = ["outdoor_temp", "solar_irradiation", "time_hour",
+                      "zone_humidity", "zone_temp", "zone_occupancy"]
+        states = torch.zeros((len(test_data), len(state_vars)))
+        test_data = test_data.to_dict("records")
+        for i, row in enumerate(test_data):
+            state = [row[var] for var in state_vars]
+            states[i] = torch.Tensor(state)
+        actions = torch.Tensor(eval_policy(states)).sigmoid()
+        inp = torch.cat((states, actions.reshape(-1, 1)), 1)
+        pred_values = self.critic(inp)
+        return torch.sum(pred_values)
+    
+    def save_params(self, log_dir):
+        torch.save(self.critic.state_dict(), os.path.join(log_dir, "critic.pth"))
+        torch.save(self.critic_target.state_dict(), os.path.join(log_dir, "critic_target.pth"))
+    
+    def load_params(self, log_dir):
+        self.critic.load_state_dict(torch.load(os.path.join(log_dir, "critic.pth"), map_location=lambda storage, loc: storage))
+        self.critic_target.load_state_dict(torch.load(os.path.join(log_dir, "critic_target.pth"), map_location=lambda storage, loc: storage))
+
 
 class CriticNet(nn.Module):
     def __init__(self, in_dim, out_dim):
         super(CriticNet, self).__init__()
 
+        # self.critic = nn.Sequential(
+        #     nn.Linear(in_dim, 256),
+        #     nn.ReLU(),
+        #     nn.Linear(256, 256),
+        #     nn.ReLU(),
+        #     nn.Linear(256, 256),
+        #     nn.ReLU(),
+        #     nn.Linear(256, out_dim)
+        # )
+
         self.critic = nn.Sequential(
-            nn.Linear(in_dim, 256),
+            nn.Linear(in_dim, 64),
             nn.Tanh(),
-            nn.Linear(256, 256),
+            nn.Linear(64, 64),
             nn.Tanh(),
-            nn.Linear(256, 256),
-            nn.Tanh(),
-            nn.Linear(256, out_dim)
+            nn.Linear(64, out_dim)
         )
+        # self.critic.apply(self.init_weights)
 
     def forward(self, x):
         return self.critic(x)
+    
+    def init_weights(self, layer):
+        if isinstance(layer, nn.Linear):
+            nn.init.xavier_uniform_(layer.weight)
