@@ -99,13 +99,13 @@ class FittedQ():
         pred_values = self.critic(inp)
         return torch.sum(pred_values)
     
-    def save_params(self, log_dir):
-        torch.save(self.critic.state_dict(), os.path.join(log_dir, "critic.pth"))
-        torch.save(self.critic_target.state_dict(), os.path.join(log_dir, "critic_target.pth"))
+    def save_params(self, log_dir, name):
+        torch.save(self.critic.state_dict(), os.path.join(log_dir, f"{name}.pth"))
+        torch.save(self.critic_target.state_dict(), os.path.join(log_dir, f"{name}_target.pth"))
     
-    def load_params(self, log_dir):
-        self.critic.load_state_dict(torch.load(os.path.join(log_dir, "critic.pth"), map_location=lambda storage, loc: storage))
-        self.critic_target.load_state_dict(torch.load(os.path.join(log_dir, "critic_target.pth"), map_location=lambda storage, loc: storage))
+    def load_params(self, log_dir, name):
+        self.critic.load_state_dict(torch.load(os.path.join(log_dir, f"{name}.pth"), map_location=lambda storage, loc: storage))
+        self.critic_target.load_state_dict(torch.load(os.path.join(log_dir, f"{name}_target.pth"), map_location=lambda storage, loc: storage))
 
 
 class CriticNet(nn.Module):

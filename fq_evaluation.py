@@ -103,10 +103,10 @@ if __name__ == "__main__":
     zone = "Core_top"
     if zone not in test_zones:
         raise ValueError("test_zone not valid")
-    print(f"Running UCB for Zone {zone}")
+    print(f"Running FQE for Zone {zone}")
     log_data = pd.read_csv("data/rule_based_log_data/0_cleaned_log.csv")
-    with open("data/rule_based_log_data/action_probs_all_data.pkl", "rb") as f:
-        behavior_model = pickle.load(f)
+    # with open("data/rule_based_log_data/action_probs_all_data.pkl", "rb") as f:
+    #     behavior_model = pickle.load(f)
 
     num_ts_per_day = 4 * 24
     num_days = 30
@@ -123,12 +123,20 @@ if __name__ == "__main__":
     
     log_dir = os.path.join(log_dir_root, str(run_num))
     os.makedirs(log_dir, exist_ok=True)
+    checkpoint_root = os.path.join(log_dir, "checkpoints")
+    os.makedirs(checkpoint_root, exist_ok=True)
+    total = len(init_policies)
+    i = 0
     for policy_loc, policy in zip(policy_locs, init_policies):
+        policy_name = policy_loc[15:-4]
+        os.makedirs(os.path.join(log_dir, policy_name))
         qf = FittedQ(mini_batch, 6, 1, critic_lr=3e-4, weight_decay=1e-5, tau=0.005)
-        qf.train_fitted_q(policy.select_action, log_loss=f"{log_dir}/qfitted_loss.csv", epochs=50, p_bar=False)
-        qf.save_params(log_dir)
+        qf.train_fitted_q(policy.select_action, log_loss=f"{log_dir}/{policy_name}/qfitted_loss.csv", epochs=1000, p_bar=False)
+        qf.save_params(checkpoint_root, policy_name)
+    
         returns = qf.estimate_returns(policy.select_action, mini_batch)
         with open(f"{log_dir}/policy_returns.csv", "a+") as f:
             f.write(f"{policy_loc},{returns}\n")
-        print(returns)
-        # break
+
+        i += 1
+        print(f"{i}/{total} policies evaluated")
