@@ -20,7 +20,7 @@ def init_parser():
     return parser
 
 
-def get_policies():
+def get_policies(exclusion_list=None):
     invalid_policy_loc = "data/invalid_policy_list.json"
     with open(invalid_policy_loc, "r") as f:
         invalid_policies = json.load(f)["invalid_policies"]
@@ -32,6 +32,11 @@ def get_policies():
     valid_policies = list(set(all_policies) - set(invalid_policies))
 
     valid_policies = sorted(remove_env_diversity(valid_policies))
+
+    if exclusion_list is not None:
+        for policy in exclusion_list:
+            valid_policies.remove(policy)
+
     init_valid_policies = init_policies(valid_policies)
     return valid_policies, init_valid_policies
 
@@ -66,15 +71,36 @@ if __name__ == "__main__":
     np.random.seed(1)
     random.seed(1)
     parser = init_parser()
-    args = parser.parse_args()
+    # args = parser.parse_args()
 
-    policy_locs, init_policies = get_policies()
+    exclusion_list = [
+        "policy_library/100_0.pth",
+        "policy_library/100_1.pth",
+        "policy_library/100_1_1e-1.pth",
+        "policy_library/100_1_1e0.pth",
+        "policy_library/100_1_1e1.pth",
+        "policy_library/100_2.pth",
+        "policy_library/100_3.pth",
+        "policy_library/100_4.pth",
+        "policy_library/100_4_1e0.pth",
+        "policy_library/100_4_1e1.pth",
+        "policy_library/101_0.pth",
+        "policy_library/101_1.pth",
+        "policy_library/101_1_1e-1.pth",
+        "policy_library/101_2.pth",
+        "policy_library/101_2_1e-1.pth",
+        "policy_library/101_3.pth",
+        "policy_library/101_3_1e1.pth"
+    ]
+
+    policy_locs, init_policies = get_policies(exclusion_list=exclusion_list)
     test_zones = ['Core_top', 'Core_mid', 'Core_bottom',
                   'Perimeter_top_ZN_3', 'Perimeter_top_ZN_2', 'Perimeter_top_ZN_1', 'Perimeter_top_ZN_4',
                   'Perimeter_bot_ZN_3', 'Perimeter_bot_ZN_2', 'Perimeter_bot_ZN_1', 'Perimeter_bot_ZN_4',
                   'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2', 'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4']
     
-    zone = args.zone
+    # zone = args.zone
+    zone = "Core_top"
     if zone not in test_zones:
         raise ValueError("test_zone not valid")
     print(f"Running UCB for Zone {zone}")
@@ -105,4 +131,4 @@ if __name__ == "__main__":
         with open(f"{log_dir}/policy_returns.csv", "a+") as f:
             f.write(f"{policy_loc},{returns}\n")
         print(returns)
-        break
+        # break
