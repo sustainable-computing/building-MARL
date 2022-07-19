@@ -3,12 +3,13 @@ import glob
 import json
 import os
 import pickle
-from pkgutil import extend_path
 import random
+from pkgutil import extend_path
 
 import numpy as np
 import pandas as pd
 import torch
+import tqdm
 
 from ope.fittedq import FittedQ
 from ppo import PPO
@@ -73,34 +74,36 @@ if __name__ == "__main__":
     parser = init_parser()
     # args = parser.parse_args()
 
-    exclusion_list = [
-        "policy_library/100_0.pth",
-        "policy_library/100_1.pth",
-        "policy_library/100_1_1e-1.pth",
-        "policy_library/100_1_1e0.pth",
-        "policy_library/100_1_1e1.pth",
-        "policy_library/100_2.pth",
-        "policy_library/100_3.pth",
-        "policy_library/100_4.pth",
-        "policy_library/100_4_1e0.pth",
-        "policy_library/100_4_1e1.pth",
-        "policy_library/101_0.pth",
-        "policy_library/101_1.pth",
-        "policy_library/101_1_1e-1.pth",
-        "policy_library/101_2.pth",
-        "policy_library/101_2_1e-1.pth",
-        "policy_library/101_3.pth",
-        "policy_library/101_3_1e1.pth"
-    ]
+    # exclusion_list = [
+    #     "policy_library/100_0.pth",
+    #     "policy_library/100_1.pth",
+    #     "policy_library/100_1_1e-1.pth",
+    #     "policy_library/100_1_1e0.pth",
+    #     "policy_library/100_1_1e1.pth",
+    #     "policy_library/100_2.pth",
+    #     "policy_library/100_3.pth",
+    #     "policy_library/100_4.pth",
+    #     "policy_library/100_4_1e0.pth",
+    #     "policy_library/100_4_1e1.pth",
+    #     "policy_library/101_0.pth",
+    #     "policy_library/101_1.pth",
+    #     "policy_library/101_1_1e-1.pth",
+    #     "policy_library/101_2.pth",
+    #     "policy_library/101_2_1e-1.pth",
+    #     "policy_library/101_3.pth",
+    #     "policy_library/101_3_1e1.pth",
+    #     "policy_library/101_4.pth",
+    #     "policy_library/102_0.pth",
+    #     "policy_library/102_0_1e-1.pth"]
 
-    policy_locs, init_policies = get_policies(exclusion_list=exclusion_list)
+    policy_locs, init_policies = get_policies()
     test_zones = ['Core_top', 'Core_mid', 'Core_bottom',
                   'Perimeter_top_ZN_3', 'Perimeter_top_ZN_2', 'Perimeter_top_ZN_1', 'Perimeter_top_ZN_4',
                   'Perimeter_bot_ZN_3', 'Perimeter_bot_ZN_2', 'Perimeter_bot_ZN_1', 'Perimeter_bot_ZN_4',
                   'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2', 'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4']
     
     # zone = args.zone
-    zone = "Core_top"
+    zone = "Perimeter_bot_ZN_3"
     if zone not in test_zones:
         raise ValueError("test_zone not valid")
     print(f"Running FQE for Zone {zone}")
@@ -116,27 +119,28 @@ if __name__ == "__main__":
 
     log_dir_root = f"data/fqe_data/{zone}/"
     os.makedirs(log_dir_root, exist_ok=True)
-    if os.listdir(log_dir_root) == 0:
+    if len(os.listdir(log_dir_root)) == 0:
         run_num = 0
     else:
-        run_num = len(os.listdir(log_dir_root))
+        run_num = int(sorted(os.listdir(log_dir_root))[-1]) + 1
     
     log_dir = os.path.join(log_dir_root, str(run_num))
     os.makedirs(log_dir, exist_ok=True)
     checkpoint_root = os.path.join(log_dir, "checkpoints")
     os.makedirs(checkpoint_root, exist_ok=True)
     total = len(init_policies)
-    i = 0
+    pbar = tqdm.tqdm(total=total)
+    # i = 0
     for policy_loc, policy in zip(policy_locs, init_policies):
         policy_name = policy_loc[15:-4]
         os.makedirs(os.path.join(log_dir, policy_name))
         qf = FittedQ(mini_batch, 6, 1, critic_lr=3e-4, weight_decay=1e-5, tau=0.005)
-        qf.train_fitted_q(policy.select_action, log_loss=f"{log_dir}/{policy_name}/qfitted_loss.csv", epochs=1000, p_bar=False)
+        qf.train_fitted_q(policy.select_action, log_loss=f"{log_dir}/{policy_name}/qfitted_loss.csv", epochs=600, p_bar=False)
         qf.save_params(checkpoint_root, policy_name)
     
         returns = qf.estimate_returns(policy.select_action, mini_batch)
         with open(f"{log_dir}/policy_returns.csv", "a+") as f:
             f.write(f"{policy_loc},{returns}\n")
-
-        i += 1
-        print(f"{i}/{total} policies evaluated")
+        pbar.update(1)
+        # i += 1
+        # print(f"{i}/{total} policies evaluated")
