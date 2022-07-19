@@ -6,7 +6,7 @@ def main():
                   'Perimeter_bot_ZN_3', 'Perimeter_bot_ZN_2', 'Perimeter_bot_ZN_1', 'Perimeter_bot_ZN_4',
                   'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2', 'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4']
     
-    for zone in test_zones:
+    for zone in test_zones[:1]:
         stdout = f"data/fqe_data/{zone}.stdout"
         stderr = f"data/fqe_data/{zone}.stderr"
         proc = subprocess.Popen(["python", "fq_evaluation.py", "--zone", zone],

@@ -118,7 +118,10 @@ class UCB():
             state = self.model.step(actions)
             total_energy += state["total hvac"]
 
-        return -(total_energy - 5032951.13628954)/(6472063.181046309 - 5032951.13628954), year, month, date.day
+        # return -(total_energy - 5032951.13628954)/(6472063.181046309 - 5032951.13628954), year, month, date.day
+        return -(total_energy - 14000)/(7e6 - 14000), year, month, date.day
+
+        # return -total_energy/1e7, year, month, date.day
 
     def log_data(self, policy_name=None, policy_scores=None, policy_counts=None, flops=None,
                  initialize=False, policy_names=None, buffer_size=1,

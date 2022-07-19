@@ -68,6 +68,7 @@ if __name__ == "__main__":
                   'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2', 'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4']
     
     test_zone = args.zone
+    # test_zone = "Core_top"
     if test_zone not in test_zones:
         raise ValueError("test_zone not valid")
     print(f"Running UCB for Zone {test_zone}")
