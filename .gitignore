@@ -22,3 +22,4 @@ config.py
 studies/grad_norm_ipw_spearman_corrs_03_07_2022.pkl
 .vscode
 studies/plots
+wandb/
