@@ -21,7 +21,7 @@ class SNIP():
     
     def calculate_loss(self, mini_batch):
         ipw = InverseProbabilityWeighting(mini_batch, retain_grad_fn=True, univariate_action=True)
-        _, states, rewards, \
+        rewards, states, _, \
             policy_action_prob, behavior_action_prob = \
                 ipw.evaluate_policy(self.policy.select_action, self.behavior_policy, score="")
         discounted_rewards = []

@@ -2,16 +2,17 @@ import numpy as np
 import torch
 from ope.iw import InverseProbabilityWeighting
 import torch.nn as nn
-
+from obp.ope import ContinuousOffPolicyEvaluation, KernelizedInverseProbabilityWeighting
+from enum import Enum
 
 class GradNorm():
     def __init__(self, policy, behavior_policy):
         self.policy = policy
         self.behavior_policy = behavior_policy
-    
+
     def calculate_loss(self, mini_batch):
         ipw = InverseProbabilityWeighting(mini_batch, retain_grad_fn=True, univariate_action=True)
-        _, states, rewards, \
+        rewards, states, _, \
             policy_action_prob, behavior_action_prob = \
                 ipw.evaluate_policy(self.policy.select_action, self.behavior_policy, score="")
         discounted_rewards = []
@@ -54,3 +55,37 @@ class GradNorm():
             return layer.weight.grad.norm()
         else:
             return torch.zeros_like(layer.weight)
+
+class ContKernels(Enum):
+    GAUSSIAN = "gaussian"
+    EPANECHNIKOV = "epanechnikov"
+    COSINE = "cosine"
+    TRIANGULAR = "triangular"
+
+class ContinuousGradNorm(GradNorm):
+    def __init__(self, policy, behavior_policy, kernel=ContKernels.GAUSSIAN, bandwidth=0.3):
+        super().__init__(policy, behavior_policy)
+        self.kernel = kernel
+        self.bandwidth = bandwidth
+    def calculate_loss(self, mini_batch):
+        data = mini_batch.to_dict()
+        rewards = []
+        states = []
+        actions = []
+        for i, row in enumerate(data):
+            state_vars = ["outdoor_temp", "solar_irradiation", "time_hour",
+                          "zone_humidity", "zone_temp", "zone_occupancy"]
+            state = [row[var] for var in state_vars]
+            action = row["action"]
+            reward = row["reward"]
+            rewards.append(reward)
+            actions.append(action)
+            states.append(state)
+        kernel = KernelizedInverseProbabilityWeighting(kernel=self.kernel, bandwidth=self.bandwidth)
+        ope = ContinuousOffPolicyEvaluation(bandit_feedback={
+                                                            "action": np.array(actions),
+                                                            "reward": np.array(rewards),
+                                                            "pscore": np.ones((len(data)))
+                                                            },
+                                            ope_estimators=[kernel])
+        # policy_actions = 
