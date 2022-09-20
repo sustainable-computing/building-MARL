@@ -2,7 +2,7 @@ import numpy as np
 import torch
 from ope.iw import InverseProbabilityWeighting
 import torch.nn as nn
-from obp.ope import ContinuousOffPolicyEvaluation, KernelizedInverseProbabilityWeighting
+# from obp.ope import ContinuousOffPolicyEvaluation, KernelizedInverseProbabilityWeighting
 from enum import Enum
 
 class GradNorm():

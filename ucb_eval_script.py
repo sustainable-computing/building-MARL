@@ -7,8 +7,8 @@ def main():
                   'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2', 'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4']
 
     for zone in test_zones:
-        stdout = f"data/{zone}.stdout"
-        stderr = f"data/{zone}.stderr"
+        stdout = f"data/ucb_log_data/stdout/{zone}.stdout"
+        stderr = f"data/ucl_log_data/stderr{zone}.stderr"
         proc = subprocess.Popen(["python", "ucb_evaluation.py", "--zone", zone],
                                 stderr=open(stderr, "w+"),
                                 stdout=open(stdout, "w+"))
