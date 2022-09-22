@@ -324,7 +324,7 @@ class GroupedUCB():
                                   state["temperature"][zone], occupancy]
                     zone_action = policy.select_action(zone_state)
                     zone_action = np.array(zone_action)
-                    zone_action = 1/(1 + np.exp(-zone_action))
+                    zone_action = 0.9/(1 + np.exp(-zone_action)) + 0.1
                     
                     action.append({"priority": 0,
                             "component_type": "Schedule:Constant",
