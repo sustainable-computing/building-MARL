@@ -51,9 +51,11 @@ def remove_env_diversity(policies):
     return new_policies
 
 
-def run_group_ucb(group_config, policy_locs, init_policies, rho=2, eval_duration=30, epochs=100):
+def run_group_ucb(group_config, policy_locs, init_policies, rho=2,
+                  eval_duration=30, epochs=100, pickup_from=None):
     ucb = GroupedUCB(group_config, policy_locs, init_policies,
-                     log_dir=f"data/group_ucb_log_data/")
+                     log_dir=f"data/group_ucb_log_data/",
+                     pickup_from=pickup_from)
     ucb.run_ucb(epochs=epochs, rho=rho, eval_duration=eval_duration)
 
 
@@ -89,4 +91,5 @@ if __name__ == "__main__":
     policy_locs, init_policies = get_policies(policies=all_group_policies, rm_env_diversity=False)
 
     run_group_ucb(group_config, policy_locs, init_policies,
-                  rho=2, eval_duration=30, epochs=None)
+                  rho=2, eval_duration=30, epochs=None,
+                  pickup_from=6)

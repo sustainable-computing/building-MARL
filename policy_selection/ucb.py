@@ -11,7 +11,8 @@ from datetime import datetime
 import json
 
 import numpy as np
-
+import pandas as pd
+import pickle
 
 class UCB():
     def __init__(self, test_zone=None, log_dir="data/ucb_log_data/"):
@@ -204,22 +205,25 @@ class UCB():
 
 
 class GroupedUCB():
-    def __init__(self, group_config, policy_locs, init_policies, log_dir):
+    def __init__(self, group_config, policy_locs, init_policies, log_dir, pickup_from):
         self.group_config = group_config
         self.log_dir = log_dir
         self.policies = {}
+        self.pickup_from = pickup_from
         for i, policy_loc in enumerate(policy_locs):
             self.policies[policy_loc] = init_policies[i]
-
-        if not os.path.isdir(self.log_dir):
-            self.run_num = 0
-        else:
-            runs = os.listdir(self.log_dir)
-            runs = sorted([int(run) for run in runs])
-            if len(runs):
-                self.run_num = int(runs[-1]) + 1
-            else:
+        if pickup_from is None:
+            if not os.path.isdir(self.log_dir):
                 self.run_num = 0
+            else:
+                runs = os.listdir(self.log_dir)
+                runs = sorted([int(run) for run in runs])
+                if len(runs):
+                    self.run_num = int(runs[-1]) + 1
+                else:
+                    self.run_num = 0
+        else:
+            self.run_num = pickup_from
         
         self.init_arms()
     
@@ -239,7 +243,7 @@ class GroupedUCB():
 
     def make_log_dir(self):
         self.save_dir = os.path.join(self.log_dir, f"{self.run_num}")
-        os.makedirs(self.save_dir)
+        os.makedirs(self.save_dir, exist_ok=True)
         with open(os.path.join(self.save_dir, "group_config.json"), "w+") as f:
             json.dump(self.group_config, f)
 
@@ -339,7 +343,7 @@ class GroupedUCB():
     def log_data(self, arm_name=None, arm_scores=None, arm_counts=None, flops=None,
                  initialize=False, arm_names=None, buffer_size=1,
                  start_year=None, start_month=None, start_day=None,
-                 total_energy=None):
+                 total_energy=None, arm_scores_all=None):
         if initialize:
             cols = ["datetime", "flops", "policy_name", "start_year",
                     "start_month", "start_day", "total_energy"]
@@ -361,6 +365,9 @@ class GroupedUCB():
             row_str = ",".join(row_data)
             row_str += "\n"
             self.csv_file_obj.write(row_str)
+            with open(os.path.join(self.save_dir, "arm_scores_all.pkl"), "wb") as f:
+                pickle.dump(arm_scores_all, f)
+
 
     def calc_ucb_value(self, policy_count, total_count, rho=2):
         if total_count == 0 or policy_count == 0:
@@ -368,18 +375,39 @@ class GroupedUCB():
         else:
             return np.sqrt(rho*np.log(total_count)/policy_count)
 
-    def run_ucb(self, epochs=None, arm_scores=None,
-                arm_counts=None, rho=2, eval_duration=30):
-        self.make_log_dir()
-        self.log_data(initialize=True)
-        self.make_cobs_model()
 
+    def get_latest_arm_data(self, df):
+        last_row = df.iloc[-1]
+        arm_scores = []
+        arm_counts = []
+        for column in last_row.keys():
+            if column.startswith("arm_"):
+                if column.endswith("_score"):
+                    arm_scores.append(last_row[column])
+                elif column.endswith("_count"):
+                    arm_counts.append(last_row[column])
+        return arm_scores, arm_counts
+
+
+    def run_ucb(self, epochs=None, arm_scores=None,
+                arm_counts=None, arm_scores_all=None,
+                rho=2, eval_duration=30):
+        self.make_log_dir()
+        if self.pickup_from is None:
+            self.log_data(initialize=True)
+        else:
+            df = pd.read_csv(os.path.join(self.save_dir, "ucb_log_data.csv"))
+            arm_scores, arm_counts = self.get_latest_arm_data(df)
+            arm_scores_all = pickle.load(open(os.path.join(self.save_dir, "arm_scores_all.pkl"), "rb"))
+
+        self.make_cobs_model()
         if arm_scores is None:
             arm_scores = np.ones((len(self.arms))) * np.inf
 
-        arm_scores_all = {}
-        for arm in self.arms:
-            arm_scores_all[arm] = []
+        if arm_scores_all is None:
+            arm_scores_all = {}
+            for arm in self.arms:
+                arm_scores_all[arm] = []
 
         if arm_counts is None:
             arm_counts = np.zeros(len(self.arms))
@@ -407,7 +435,7 @@ class GroupedUCB():
                 epoch += 1
                 self.log_data(arm_scores=arm_scores, arm_counts=arm_counts, flops=0, arm_names=list(self.arms.keys()),
                               start_year=start_year, start_month=start_month, start_day=start_day, arm_name=arm_name,
-                              total_energy=total_energy)
+                              total_energy=total_energy, arm_scores_all=arm_scores_all)
                 if epochs is not None:
                     if epoch == epochs:
                         self.csv_file_obj.close()
