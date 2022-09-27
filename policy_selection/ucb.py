@@ -310,7 +310,7 @@ class GroupedUCB():
 
         # year = random.choice(possible_years)
         # month = random.choice(possible_months) + 1
-        
+
         # while True:
         #     day = random.choice(possible_dates) + 1
         #     try:
@@ -340,7 +340,7 @@ class GroupedUCB():
                         zone_action = policy.select_action(zone_state)
                         zone_action = np.array(zone_action)
                         zone_action = 0.9/(1 + np.exp(-zone_action)) + 0.1
-                        
+
                         action.append({"priority": 0,
                                 "component_type": "Schedule:Constant",
                                 "control_type": "Schedule Value",
@@ -353,7 +353,8 @@ class GroupedUCB():
 
             # return -(total_energy - 5032951.13628954)/(6472063.181046309 - 5032951.13628954), year, month, date.day
             # return -(total_energy - 14000)/(7e6 - 14000), year, month, date.day
-            return - (total_energy - 61540255.66407317) / (613290612.4874102 - 61540255.66407317), year, month, date.day, total_energy  # One month eval (30 days) 
+            # return - (total_energy - 61540255.66407317) / (613290612.4874102 - 61540255.66407317), year, month, date.day, total_energy  # One month eval (30 days) 
+            return - (total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799), year, month, date.day, total_energy  # One month eval (30 days)
         elif self.use_dummy_arms:
             sigma = arm["sigma"]
             mu = arm["mu"]
