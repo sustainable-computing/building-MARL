@@ -205,7 +205,7 @@ class UCB():
 
 
 class GroupedUCB():
-    def __init__(self, group_config, policy_locs, init_policies, log_dir, pickup_from):
+    def __init__(self, group_config, policy_locs, init_policies, log_dir, pickup_from, use_dummy_arms=False):
         self.group_config = group_config
         self.log_dir = log_dir
         self.policies = {}
@@ -226,6 +226,10 @@ class GroupedUCB():
             self.run_num = pickup_from
         
         self.init_arms()
+
+        self.use_dummy_arms = use_dummy_arms
+        if self.use_dummy_arms:
+            self.init_dummy_arms()
     
     def init_arms(self):
         groups = list(self.group_config["groups"].keys())
@@ -240,6 +244,13 @@ class GroupedUCB():
                 arm[groups[j]] = value
             self.arms[i] = arm
         self.group_config["arms"] = self.arms
+    
+    def init_dummy_arms(self):
+        self.dummy_arms = {}
+        for i, arm in enumerate(self.arms):
+            self.dummy_arms[arm] = {}
+            self.dummy_arms[arm]["sigma"] = 0.5
+            self.dummy_arms[arm]["mu"] = i/4
 
     def make_log_dir(self):
         self.save_dir = os.path.join(self.log_dir, f"{self.run_num}")
@@ -293,52 +304,61 @@ class GroupedUCB():
         self.model.set_timestep(timestep_per_hour=timestep_per_hour)
 
     def play(self, arm, eval_duration=30):
-        possible_years = [1994, 1997, 1998, 1999, 2002, 2003, 2004, 2005]
-        possible_months = range(12)
-        possible_dates = range(31)
+        # possible_years = [1994, 1997, 1998, 1999, 2002, 2003, 2004, 2005]
+        # possible_months = range(12)
+        # possible_dates = range(31)
 
-        year = random.choice(possible_years)
-        month = random.choice(possible_months) + 1
+        # year = random.choice(possible_years)
+        # month = random.choice(possible_months) + 1
         
-        while True:
-            day = random.choice(possible_dates) + 1
-            try:
-                date = datetime(year=year, month=month, day=day)
-                if date.weekday() <= 4:
-                    # Date is a weekday
-                    break
-            except ValueError:
-                continue
-        
-        self.set_start_date(run_duration=eval_duration, start_year=year, start_month=month, start_day=day)
-        state = self.model.reset()
-        total_energy = state["total hvac"]
-        while not self.model.is_terminate():
-            action = list()
-            for group in arm.keys():
-                policy = self.policies[arm[group]]
-                for zone in self.group_config["groups"][group]:
-                    occupancy = 1 if state["occupancy"][zone] > 0 else 0
-                    zone_state = [state["outdoor temperature"], state["site solar radiation"],
-                                  state["time"].hour, state[f"{zone} humidity"],
-                                  state["temperature"][zone], occupancy]
-                    zone_action = policy.select_action(zone_state)
-                    zone_action = np.array(zone_action)
-                    zone_action = 0.9/(1 + np.exp(-zone_action)) + 0.1
-                    
-                    action.append({"priority": 0,
-                            "component_type": "Schedule:Constant",
-                            "control_type": "Schedule Value",
-                            "actuator_key": f"{zone} VAV Customized Schedule",
-                            "value": zone_action,
-                            "start_time": state['timestep'] + 1})
+        # while True:
+        #     day = random.choice(possible_dates) + 1
+        #     try:
+        #         date = datetime(year=year, month=month, day=day)
+        #         if date.weekday() <= 4:
+        #             # Date is a weekday
+        #             break
+        #     except ValueError:
+        #         continue
+        year = 1991
+        month = 1
+        day = 1
+        date = datetime(year=year, month=month, day=day)
+        if not self.use_dummy_arms:
+            self.set_start_date(run_duration=eval_duration, start_year=year, start_month=month, start_day=day)
+            state = self.model.reset()
+            total_energy = state["total hvac"]
+            while not self.model.is_terminate():
+                action = list()
+                for group in arm.keys():
+                    policy = self.policies[arm[group]]
+                    for zone in self.group_config["groups"][group]:
+                        occupancy = 1 if state["occupancy"][zone] > 0 else 0
+                        zone_state = [state["outdoor temperature"], state["site solar radiation"],
+                                    state["time"].hour, state[f"{zone} humidity"],
+                                    state["temperature"][zone], occupancy]
+                        zone_action = policy.select_action(zone_state)
+                        zone_action = np.array(zone_action)
+                        zone_action = 0.9/(1 + np.exp(-zone_action)) + 0.1
+                        
+                        action.append({"priority": 0,
+                                "component_type": "Schedule:Constant",
+                                "control_type": "Schedule Value",
+                                "actuator_key": f"{zone} VAV Customized Schedule",
+                                "value": zone_action,
+                                "start_time": state['timestep'] + 1})
 
-            state = self.model.step(action)
-            total_energy += state["total hvac"]
+                state = self.model.step(action)
+                total_energy += state["total hvac"]
 
-        # return -(total_energy - 5032951.13628954)/(6472063.181046309 - 5032951.13628954), year, month, date.day
-        # return -(total_energy - 14000)/(7e6 - 14000), year, month, date.day
-        return - (total_energy - 61540255.66407317) / (613290612.4874102 - 61540255.66407317), year, month, date.day, total_energy  # One month eval (30 days)
+            # return -(total_energy - 5032951.13628954)/(6472063.181046309 - 5032951.13628954), year, month, date.day
+            # return -(total_energy - 14000)/(7e6 - 14000), year, month, date.day
+            return - (total_energy - 61540255.66407317) / (613290612.4874102 - 61540255.66407317), year, month, date.day, total_energy  # One month eval (30 days) 
+        elif self.use_dummy_arms:
+            sigma = arm["sigma"]
+            mu = arm["mu"]
+            q = np.random.normal(mu, sigma)
+            return q, year, month, date.day, 0
 
     def log_data(self, arm_name=None, arm_scores=None, arm_counts=None, flops=None,
                  initialize=False, arm_names=None, buffer_size=1,
@@ -399,8 +419,8 @@ class GroupedUCB():
             df = pd.read_csv(os.path.join(self.save_dir, "ucb_log_data.csv"))
             arm_scores, arm_counts = self.get_latest_arm_data(df)
             arm_scores_all = pickle.load(open(os.path.join(self.save_dir, "arm_scores_all.pkl"), "rb"))
-
-        self.make_cobs_model()
+        if not self.use_dummy_arms:
+            self.make_cobs_model()
         if arm_scores is None:
             arm_scores = np.ones((len(self.arms))) * np.inf
 
@@ -420,8 +440,12 @@ class GroupedUCB():
                 ucb_values = np.array([self.calc_ucb_value(arm_count, np.sum(arm_counts), rho=rho) for arm_count in arm_counts])
 
                 chosen_arm_idx = np.argmax(arm_scores + ucb_values)
-                arm_name = list(self.arms.keys())[chosen_arm_idx]
-                q_policy, start_year, start_month, start_day, total_energy = self.play(self.arms[chosen_arm_idx], eval_duration=eval_duration)
+                if self.use_dummy_arms:
+                    arm_name = list(self.dummy_arms.keys())[chosen_arm_idx]
+                    q_policy, start_year, start_month, start_day, total_energy = self.play(self.dummy_arms[chosen_arm_idx], eval_duration=eval_duration)
+                else:
+                    arm_name = list(self.arms.keys())[chosen_arm_idx]
+                    q_policy, start_year, start_month, start_day, total_energy = self.play(self.arms[chosen_arm_idx], eval_duration=eval_duration)
 
                 if arm_counts[chosen_arm_idx] == 0:
                     arm_scores[chosen_arm_idx] = q_policy

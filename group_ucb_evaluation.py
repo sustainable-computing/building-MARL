@@ -52,10 +52,11 @@ def remove_env_diversity(policies):
 
 
 def run_group_ucb(group_config, policy_locs, init_policies, rho=2,
-                  eval_duration=30, epochs=100, pickup_from=None):
+                  eval_duration=30, epochs=100, pickup_from=None,
+                  use_dummy_arms=False):
     ucb = GroupedUCB(group_config, policy_locs, init_policies,
                      log_dir=f"data/group_ucb_log_data/",
-                     pickup_from=pickup_from)
+                     pickup_from=pickup_from, use_dummy_arms=use_dummy_arms)
     ucb.run_ucb(epochs=epochs, rho=rho, eval_duration=eval_duration)
 
 
@@ -73,14 +74,14 @@ if __name__ == "__main__":
         "group_policies": {
             "perimeter_group": ["policy_library_20220820/105_4_1e0_2.pth",
                                 "policy_library_20220820/102_1_1e-1_2.pth",
-                                "policy_library_20220820/105_4_blind.pth",
-                                "policy_library_20220820/115_1_1e-1_2_blind.pth",
-                                "policy_library_20220820/107_4_1e0_blind.pth"],
+                                "policy_library_20220820/105_4_blind.pth"],
+                                # "policy_library_20220820/115_1_1e-1_2_blind.pth",
+                                # "policy_library_20220820/107_4_1e0_blind.pth"],
             "core_group": ["policy_library_20220820/105_4_1e0_2.pth",
                            "policy_library_20220820/102_1_1e-1_2.pth",
-                           "policy_library_20220820/105_4_blind.pth",
-                           "policy_library_20220820/115_1_1e-1_2_blind.pth",
-                           "policy_library_20220820/107_4_1e0_blind.pth"]
+                           "policy_library_20220820/105_4_blind.pth"]
+                        #    "policy_library_20220820/115_1_1e-1_2_blind.pth",
+                        #    "policy_library_20220820/107_4_1e0_blind.pth"]
         }
     }
 
@@ -92,4 +93,4 @@ if __name__ == "__main__":
 
     run_group_ucb(group_config, policy_locs, init_policies,
                   rho=2, eval_duration=30, epochs=None,
-                  pickup_from=6)
+                  use_dummy_arms=False)
