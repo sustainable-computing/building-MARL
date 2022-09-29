@@ -205,8 +205,9 @@ class UCB():
 
 
 class GroupedUCB():
-    def __init__(self, group_config, policy_locs, init_policies, log_dir, pickup_from, use_dummy_arms=False, dummy_init=[],
-                 dummy_energy_init=[]):
+    def __init__(self, group_config, policy_locs, init_policies,
+                 log_dir, pickup_from, use_dummy_arms=False, random_seed=None,
+                 dummy_init=[], dummy_energy_init=[]):
         self.group_config = group_config
         self.log_dir = log_dir
         self.policies = {}
@@ -231,7 +232,13 @@ class GroupedUCB():
         self.use_dummy_arms = use_dummy_arms
         if self.use_dummy_arms:
             self.init_dummy_arms(dummy_init, dummy_energy_init)
-    
+            self.init_dummy_arms()
+
+        if random_seed is not None:
+            np.random.seed(random_seed)
+            import torch
+            torch.manual_seed(random_seed)
+
     def init_arms(self):
         groups = list(self.group_config["groups"].keys())
         policies = []
@@ -373,7 +380,9 @@ class GroupedUCB():
             # return -(total_energy - 5032951.13628954)/(6472063.181046309 - 5032951.13628954), year, month, date.day
             # return -(total_energy - 14000)/(7e6 - 14000), year, month, date.day
             # return - (total_energy - 61540255.66407317) / (613290612.4874102 - 61540255.66407317), year, month, date.day, total_energy  # One month eval (30 days) 
-            return - (total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799), year, month, date.day, total_energy  # One month eval (30 days)
+            # return - (total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799), year, month, date.day, total_energy  # One month eval (30 days)
+            return 1 - ((total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799)), year, month, date.day, total_energy  # One month eval (30 days)
+
         elif self.use_dummy_arms:
             sigma = arm["sigma"]
             mu = arm["mu"]
@@ -386,11 +395,13 @@ class GroupedUCB():
                  initialize=False, arm_names=None, buffer_size=1,
                  start_year=None, start_month=None, start_day=None,
                  total_energy=None, arm_scores_all=None):
+        self.csv_loc = os.path.join(self.save_dir, "ucb_log_data.csv")
+        self.csv_file_obj = open(self.csv_loc, "a+", buffering=buffer_size)
         if initialize:
             cols = ["datetime", "flops", "policy_name", "start_year",
                     "start_month", "start_day", "total_energy"]
-            self.csv_loc = os.path.join(self.save_dir, "ucb_log_data.csv")
-            self.csv_file_obj = open(self.csv_loc, "w+", buffering=buffer_size)
+            # self.csv_loc = os.path.join(self.save_dir, "ucb_log_data.csv")
+            # self.csv_file_obj = open(self.csv_loc, "w+", buffering=buffer_size)
             for arm in self.arms:
                 cols.append(f"arm_{arm}_score")
                 cols.append(f"arm_{arm}_count")
