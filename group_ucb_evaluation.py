@@ -55,7 +55,7 @@ def remove_env_diversity(policies):
 def run_group_ucb(group_config, policy_locs, init_policies, rho=2,
                   eval_duration=30, epochs=100, pickup_from=None,
                   use_dummy_arms=False, dummy_init=[], dummy_energy_init=[],
-                  random_seed=None):
+                  random_seed=None, environment="B_Denver"):
     # ucb = GroupedUCB(group_config, policy_locs, init_policies,
     #                  log_dir=f"data/group_ucb_log_data/",
     #                  pickup_from=pickup_from, use_dummy_arms=use_dummy_arms,
@@ -64,12 +64,12 @@ def run_group_ucb(group_config, policy_locs, init_policies, rho=2,
     ucb = GroupedUCB(group_config, policy_locs, init_policies,
                      log_dir=f"data/group_ucb_log_data/",
                      pickup_from=pickup_from, use_dummy_arms=use_dummy_arms,
-                     random_seed=random_seed)
+                     random_seed=random_seed, environment=environment)
     ucb.run_ucb(epochs=epochs, rho=rho, eval_duration=eval_duration)
 
 
 if __name__ == "__main__":
-    group_config = {
+    group_config_denver = {
         "groups": {
             "perimeter_group": ['Perimeter_top_ZN_3', 'Perimeter_top_ZN_2',
                                 'Perimeter_top_ZN_1', 'Perimeter_top_ZN_4',
@@ -93,18 +93,70 @@ if __name__ == "__main__":
         }
     }
 
+    group_config_san_francisco = {
+        "groups": {
+            "perimeter_group": ['Perimeter_top_ZN_3', 'Perimeter_top_ZN_2',
+                                'Perimeter_top_ZN_1', 'Perimeter_top_ZN_4',
+                                'Perimeter_bot_ZN_3', 'Perimeter_bot_ZN_2',
+                                'Perimeter_bot_ZN_1', 'Perimeter_bot_ZN_4',
+                                'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2',
+                                'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4'],
+            "core_group": ['Core_top', 'Core_mid', 'Core_bottom']
+        },
+        "group_policies": {
+            "perimeter_group": ["policy_library_20220820/105_4_1e0_2.pth",
+                                "policy_library_20220820/115_1_1e-1_2_blind.pth",
+                                "policy_library_20220820/106_3_blind.pth"],
+                                # "policy_library_20220820/115_1_1e-1_2_blind.pth",
+                                # "policy_library_20220820/107_4_1e0_blind.pth"],
+            "core_group": ["policy_library_20220820/105_4_1e0_2.pth",
+                           "policy_library_20220820/115_1_1e-1_2_blind.pth",
+                           "policy_library_20220820/106_3_blind.pth"]
+                        #    "policy_library_20220820/115_1_1e-1_2_blind.pth",
+                        #    "policy_library_20220820/107_4_1e0_blind.pth"]
+        }
+    }
+
+    group_config_c = {
+        "groups": {
+            "north_group": ["North-1", "North-2", "North-3", "North-G"],
+            "south_group": ["South-1", "South-2", "South-3", "South-GF"],
+            "misc_group": ["Amphitheater", "Lab", "Library"]
+        },
+        "group_policies": {
+            "north_group": ["policy_library_20220820/118_4_1e1_2.pth",
+                           "policy_library_20220820/107_4_1e0_blind.pth",
+                           "policy_library_20220820/108_0_blind.pth"],
+            "south_group": ["policy_library_20220820/118_4_1e1_2.pth",
+                           "policy_library_20220820/107_4_1e0_blind.pth",
+                           "policy_library_20220820/108_0_blind.pth"],
+            "misc_group": ["policy_library_20220820/118_4_1e1_2.pth",
+                           "policy_library_20220820/107_4_1e0_blind.pth",
+                           "policy_library_20220820/108_0_blind.pth"]
+        }
+    }
+    environment = "C"
+    if environment == "B_Denver":
+        group_config = group_config_denver
+    elif environment == "B_SanFrancisco":
+        group_config = group_config_san_francisco
+    elif environment == "C":
+        group_config = group_config_c
+    else:
+        raise ValueError("Environment not supported")
+
     all_group_policies = []
     for group in group_config["groups"]:
         all_group_policies += group_config["group_policies"][group]
 
     policy_locs, init_policies = get_policies(policies=all_group_policies, rm_env_diversity=False)
     # print(int(sys.argv[1])
-    seed = int(sys.argv[1])
-    pickup = int(sys.argv[2])
+    # seed = int(sys.argv[1])
+    # pickup = int(sys.argv[2])
     run_group_ucb(group_config, policy_locs, init_policies,
                   rho=2, eval_duration=30, epochs=None,
-                  use_dummy_arms=False, random_seed=seed,
-                  pickup_from=pickup)
+                  use_dummy_arms=False, random_seed=None,
+                  pickup_from=None, environment=environment)
                 #   use_dummy_arms=False, dummy_init=[[-0.07634012587695521 ,  0.00019889632275749296],
                 #                                    [-0.06479168814222018 ,  0.00017400355408624238],
                 #                                    [-0.2464612539561483 ,  0.00040471553886700396],
@@ -123,7 +175,7 @@ if __name__ == "__main__":
                 #                       [67241280.94946072, 119744.57756582584],
                 #                       [86721075.81236973, 43532.32478188891],
                 #                       [93610431.26342626, 18796.126081259274]])
-                 
+
 
 """
 nohup python group_ucb_evaluation.py 1337> data/group_ucb_std_data/random_seed_1337.out &

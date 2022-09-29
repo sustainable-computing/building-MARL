@@ -207,11 +207,14 @@ class UCB():
 class GroupedUCB():
     def __init__(self, group_config, policy_locs, init_policies,
                  log_dir, pickup_from, use_dummy_arms=False, random_seed=None,
-                 dummy_init=[], dummy_energy_init=[]):
+                 dummy_init=[], dummy_energy_init=[], environment="B_Denver"):
         self.group_config = group_config
         self.log_dir = log_dir
         self.policies = {}
         self.pickup_from = pickup_from
+
+        self.environment = environment
+
         for i, policy_loc in enumerate(policy_locs):
             self.policies[policy_loc] = init_policies[i]
         if pickup_from is None:
@@ -285,44 +288,107 @@ class GroupedUCB():
             json.dump(self.group_config, f)
 
     def make_cobs_model(self):
-        available_zones = ['TopFloor_Plenum', 'MidFloor_Plenum', 'FirstFloor_Plenum',
-                        'Core_top', 'Core_mid', 'Core_bottom',
-                        'Perimeter_top_ZN_3', 'Perimeter_top_ZN_2', 'Perimeter_top_ZN_1', 'Perimeter_top_ZN_4',
-                        'Perimeter_bot_ZN_3', 'Perimeter_bot_ZN_2', 'Perimeter_bot_ZN_1', 'Perimeter_bot_ZN_4',
-                        'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2', 'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4']
-        
-        airloops = {'Core_top': "PACU_VAV_top", 'Core_mid': "PACU_VAV_mid", 'Core_bottom': "PACU_VAV_bot",
-                    'Perimeter_top_ZN_3': "PACU_VAV_top", 'Perimeter_top_ZN_2': "PACU_VAV_top", 'Perimeter_top_ZN_1': "PACU_VAV_top", 'Perimeter_top_ZN_4': "PACU_VAV_top",
-                    'Perimeter_bot_ZN_3': "PACU_VAV_bot", 'Perimeter_bot_ZN_2': "PACU_VAV_bot", 'Perimeter_bot_ZN_1': "PACU_VAV_bot", 'Perimeter_bot_ZN_4': "PACU_VAV_bot",
-                    'Perimeter_mid_ZN_3': "PACU_VAV_mid", 'Perimeter_mid_ZN_2': "PACU_VAV_mid", 'Perimeter_mid_ZN_1': "PACU_VAV_mid", 'Perimeter_mid_ZN_4': "PACU_VAV_mid"}
+        if self.environment.startswith("B_"):
+            available_zones = ['TopFloor_Plenum', 'MidFloor_Plenum', 'FirstFloor_Plenum',
+                            'Core_top', 'Core_mid', 'Core_bottom',
+                            'Perimeter_top_ZN_3', 'Perimeter_top_ZN_2', 'Perimeter_top_ZN_1', 'Perimeter_top_ZN_4',
+                            'Perimeter_bot_ZN_3', 'Perimeter_bot_ZN_2', 'Perimeter_bot_ZN_1', 'Perimeter_bot_ZN_4',
+                            'Perimeter_mid_ZN_3', 'Perimeter_mid_ZN_2', 'Perimeter_mid_ZN_1', 'Perimeter_mid_ZN_4']
+            
+            airloops = {'Core_top': "PACU_VAV_top", 'Core_mid': "PACU_VAV_mid", 'Core_bottom': "PACU_VAV_bot",
+                        'Perimeter_top_ZN_3': "PACU_VAV_top", 'Perimeter_top_ZN_2': "PACU_VAV_top", 'Perimeter_top_ZN_1': "PACU_VAV_top", 'Perimeter_top_ZN_4': "PACU_VAV_top",
+                        'Perimeter_bot_ZN_3': "PACU_VAV_bot", 'Perimeter_bot_ZN_2': "PACU_VAV_bot", 'Perimeter_bot_ZN_1': "PACU_VAV_bot", 'Perimeter_bot_ZN_4': "PACU_VAV_bot",
+                        'Perimeter_mid_ZN_3': "PACU_VAV_mid", 'Perimeter_mid_ZN_2': "PACU_VAV_mid", 'Perimeter_mid_ZN_1': "PACU_VAV_mid", 'Perimeter_mid_ZN_4': "PACU_VAV_mid"}
 
-        # Add state variables that we care about
-        eplus_extra_states = {("Zone Air Relative Humidity", zone): f"{zone} humidity" for zone in available_zones}
-        eplus_extra_states.update({("Heating Coil Electric Energy", f"{zone} VAV Box Reheat Coil"): f"{zone} vav energy" for zone in available_zones})
-        eplus_extra_states.update({("Air System Electric Energy", airloop): f"{airloop} energy" for airloop in set(airloops.values())})
-        eplus_extra_states[('Site Outdoor Air Drybulb Temperature', 'Environment')] = "outdoor temperature"
-        eplus_extra_states[('Site Direct Solar Radiation Rate per Area', 'Environment')] = "site solar radiation"
-        eplus_extra_states[('Facility Total HVAC Electric Demand Power', 'Whole Building')] = "total hvac"
+            # Add state variables that we care about
+            eplus_extra_states = {("Zone Air Relative Humidity", zone): f"{zone} humidity" for zone in available_zones}
+            eplus_extra_states.update({("Heating Coil Electric Energy", f"{zone} VAV Box Reheat Coil"): f"{zone} vav energy" for zone in available_zones})
+            eplus_extra_states.update({("Air System Electric Energy", airloop): f"{airloop} energy" for airloop in set(airloops.values())})
+            eplus_extra_states[('Site Outdoor Air Drybulb Temperature', 'Environment')] = "outdoor temperature"
+            eplus_extra_states[('Site Direct Solar Radiation Rate per Area', 'Environment')] = "site solar radiation"
+            eplus_extra_states[('Facility Total HVAC Electric Demand Power', 'Whole Building')] = "total hvac"
 
-        model = Model(idf_file_name="./eplus_files/OfficeMedium_Denver.idf",
-                           weather_file="./eplus_files/USA_CO_Denver-Aurora-Buckley.AFB_.724695_TMY3.epw",
-                           eplus_naming_dict=eplus_extra_states,
-                           tmp_idf_path=self.save_dir)
-        for key, _ in eplus_extra_states.items():
-            model.add_configuration("Output:Variable",
-                                    {"Key Value": key[1], "Variable Name": key[0], "Reporting Frequency": "Timestep"})
+            if self.environment == "B_Denver":
+                model = Model(idf_file_name="./eplus_files/OfficeMedium_Denver.idf",
+                                weather_file="./eplus_files/USA_CO_Denver-Aurora-Buckley.AFB_.724695_TMY3.epw",
+                                eplus_naming_dict=eplus_extra_states,
+                                tmp_idf_path=self.save_dir)
+                for key, _ in eplus_extra_states.items():
+                    model.add_configuration("Output:Variable",
+                                            {"Key Value": key[1], "Variable Name": key[0], "Reporting Frequency": "Timestep"})
+                
+                # Setup controls to all VAV boxes
+                self.control_zones = available_zones[3:]
+                for zone in self.control_zones:
+                    model.add_configuration("Schedule:Constant",
+                                            {"Name": f"{zone} VAV Customized Schedule",
+                                            "Schedule Type Limits Name": "Fraction",
+                                            "Hourly Value": 0})
+                    model.edit_configuration(idf_header_name="AirTerminal:SingleDuct:VAV:Reheat",
+                                            identifier={"Name": f"{zone} VAV Box Component"},
+                                            update_values={"Zone Minimum Air Flow Input Method": "Scheduled",
+                                                        "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
+            elif self.environment == "B_SanFrancisco":
+                model = Model(idf_file_name="./eplus_files/OfficeMedium_SF.idf",
+                                weather_file="./eplus_files/USA_CA_San.Francisco.Intl.AP.724940_TMY3.epw",
+                                eplus_naming_dict=eplus_extra_states,
+                                tmp_idf_path=self.save_dir)
+                for key, _ in eplus_extra_states.items():
+                    model.add_configuration("Output:Variable",
+                                            {"Key Value": key[1], "Variable Name": key[0], "Reporting Frequency": "Timestep"})
+                
+                # Setup controls to all VAV boxes
+                self.control_zones = available_zones[3:]
+                for zone in self.control_zones:
+                    model.add_configuration("Schedule:Constant",
+                                            {"Name": f"{zone} VAV Customized Schedule",
+                                            "Schedule Type Limits Name": "Fraction",
+                                            "Hourly Value": 0})
+                    model.edit_configuration(idf_header_name="AirTerminal:SingleDuct:VAV:Reheat",
+                                            identifier={"Name": f"{zone} VAV Box Component"},
+                                            update_values={"Zone Minimum Air Flow Input Method": "Scheduled",
+                                                        "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
         
-        # Setup controls to all VAV boxes
-        control_zones = available_zones[3:]
-        for zone in control_zones:
-            model.add_configuration("Schedule:Constant",
-                                    {"Name": f"{zone} VAV Customized Schedule",
-                                    "Schedule Type Limits Name": "Fraction",
-                                    "Hourly Value": 0})
-            model.edit_configuration(idf_header_name="AirTerminal:SingleDuct:VAV:Reheat",
-                                    identifier={"Name": f"{zone} VAV Box Component"},
-                                    update_values={"Zone Minimum Air Flow Input Method": "Scheduled",
-                                                   "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
+        elif self.environment == "C":
+            available_zones = ["Amphitheater", "Lab", "Library",
+                               "North-1", "North-2", "North-3", "North-G",
+                               "South-1", "South-2", "South-3", "South-GF"]
+
+            # Add state variables that we care about
+            eplus_extra_states = {("Zone Air Relative Humidity", zone): f"{zone} humidity" for zone in available_zones}
+            eplus_extra_states.update({("Zone Air System Sensible Heating Rate", f"{zone}"): f"{zone} vav heating energy" for zone in available_zones})
+            eplus_extra_states.update({("Zone Air System Sensible Cooling Rate", f"{zone}"): f"{zone} vav cooling energy" for zone in available_zones})
+            eplus_extra_states.update({("Zone Air Terminal VAV Damper Position", f"VAV HW Rht {zone}"): f"{zone} position" for zone in available_zones})
+            eplus_extra_states[('Site Outdoor Air Drybulb Temperature', 'Environment')] = "outdoor temperature"
+            eplus_extra_states[('Site Direct Solar Radiation Rate per Area', 'Environment')] = "site solar radiation"
+            eplus_extra_states[('Facility Total HVAC Electric Demand Power', 'Whole Building')] = "total hvac"
+            eplus_extra_states[('Schedule Value', 'HVACOperationSchd')] = "operations availability"
+
+
+            model = Model(idf_file_name="./eplus_files/DOEE_V930.idf",
+                        weather_file="./eplus_files/USA_CA_San.Francisco.Intl.AP.724940_TMY3.epw",
+                        eplus_naming_dict=eplus_extra_states,
+                        tmp_idf_path=self.save_dir)
+            
+            # Add them to the IDF file so we can retrieve them
+            for key, _ in eplus_extra_states.items():
+                model.add_configuration("Output:Variable",
+                                        {"Key Value": key[1], "Variable Name": key[0], "Reporting Frequency": "Timestep"})
+            
+            # Setup controls to all VAV boxes
+            self.control_zones = available_zones
+            for zone in self.control_zones:
+                model.add_configuration("Schedule:Constant",
+                                        {"Name": f"{zone} VAV Customized Schedule",
+                                        "Schedule Type Limits Name": "Fraction",
+                                        "Hourly Value": 0.1})
+                model.edit_configuration(idf_header_name="AirTerminal:SingleDuct:VAV:Reheat",
+                                        identifier={"Name": f"VAV HW Rht {zone}"},
+                                        update_values={"Zone Minimum Air Flow Input Method": "Scheduled",
+                                                        "Constant Minimum Air Flow Fraction": "",
+                                                        "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
+        else:
+            raise ValueError("Environment not supported. Only B_Denver, B_SanFrancisco and C are supported.")
         self.model = model
     
     def set_start_date(self, run_duration=30, start_year=1994, start_month=1, start_day=1, timestep_per_hour=4):
@@ -353,7 +419,12 @@ class GroupedUCB():
         if not self.use_dummy_arms:
             self.set_start_date(run_duration=eval_duration, start_year=year, start_month=month, start_day=day)
             state = self.model.reset()
-            total_energy = state["total hvac"]
+            total_energy = 0
+            if self.environment == "C":
+                for zone in self.control_zones:
+                    total_energy += state[f"{zone} vav heating energy"] + state[f"{zone} vav cooling energy"]
+            else:
+                total_energy = state["total hvac"]
             while not self.model.is_terminate():
                 action = list()
                 for group in arm.keys():
@@ -375,13 +446,23 @@ class GroupedUCB():
                                 "start_time": state['timestep'] + 1})
 
                 state = self.model.step(action)
-                total_energy += state["total hvac"]
+                if self.environment == "C":
+                    for zone in self.control_zones:
+                        total_energy += state[f"{zone} vav heating energy"] + state[f"{zone} vav cooling energy"]
+                else:
+                    total_energy += state["total hvac"]
 
             # return -(total_energy - 5032951.13628954)/(6472063.181046309 - 5032951.13628954), year, month, date.day
             # return -(total_energy - 14000)/(7e6 - 14000), year, month, date.day
             # return - (total_energy - 61540255.66407317) / (613290612.4874102 - 61540255.66407317), year, month, date.day, total_energy  # One month eval (30 days) 
             # return - (total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799), year, month, date.day, total_energy  # One month eval (30 days)
-            return 1 - ((total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799)), year, month, date.day, total_energy  # One month eval (30 days)
+            if self.environment == "B_Denver":
+                return (total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799), year, month, date.day, total_energy  # One month eval (30 days)
+            elif self.environment == "B_SanFrancisco":
+                return (total_energy - 7253970.9438649295) / (127149241.43899378 - 7253970.9438649295), year, month, date.day, total_energy  # One month eval (30 days)
+            elif self.environment == "C":
+                return (total_energy - 130078269.4698048) / (296884907.2092965 - 130078269.4698048), year, month, date.day, total_energy  # One month eval (30 days)
+
 
         elif self.use_dummy_arms:
             sigma = arm["sigma"]

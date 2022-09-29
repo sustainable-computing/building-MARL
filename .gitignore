@@ -1,6 +1,5 @@
 result/*
 local_setting.py
-*.idf
 *.tar
 log*
 *.sh
