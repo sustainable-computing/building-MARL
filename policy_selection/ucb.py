@@ -205,7 +205,8 @@ class UCB():
 
 
 class GroupedUCB():
-    def __init__(self, group_config, policy_locs, init_policies, log_dir, pickup_from, use_dummy_arms=False):
+    def __init__(self, group_config, policy_locs, init_policies, log_dir, pickup_from, use_dummy_arms=False, dummy_init=[],
+                 dummy_energy_init=[]):
         self.group_config = group_config
         self.log_dir = log_dir
         self.policies = {}
@@ -229,7 +230,7 @@ class GroupedUCB():
 
         self.use_dummy_arms = use_dummy_arms
         if self.use_dummy_arms:
-            self.init_dummy_arms()
+            self.init_dummy_arms(dummy_init, dummy_energy_init)
     
     def init_arms(self):
         groups = list(self.group_config["groups"].keys())
@@ -245,12 +246,30 @@ class GroupedUCB():
             self.arms[i] = arm
         self.group_config["arms"] = self.arms
     
-    def init_dummy_arms(self):
+    def init_dummy_arms(self, dummy_init=[], dummy_energy_init=[]):
         self.dummy_arms = {}
-        for i, arm in enumerate(self.arms):
-            self.dummy_arms[arm] = {}
-            self.dummy_arms[arm]["sigma"] = 0.5
-            self.dummy_arms[arm]["mu"] = i/4
+        if len(dummy_init) == 0:
+            for i, arm in enumerate(self.arms):
+                self.dummy_arms[arm] = {}
+                self.dummy_arms[arm]["sigma"] = 0.5
+                self.dummy_arms[arm]["mu"] = i/4
+        else:
+            for i, arm in enumerate(self.arms):
+                self.dummy_arms[arm] = {}
+                self.dummy_arms[arm]["mu"] = dummy_init[i][0]
+                self.dummy_arms[arm]["sigma"] = dummy_init[i][1]
+        
+        self.dummy_arms_energy = {}
+        if len(dummy_energy_init) == 0:
+            for i, arm in enumerate(self.arms):
+                self.dummy_arms_energy[arm] = {}
+                self.dummy_arms_energy[arm]["sigma"] = 0
+                self.dummy_arms_energy[arm]["mu"] = 0
+        else:
+            for i, arm in enumerate(self.arms):
+                self.dummy_arms_energy[arm] = {}
+                self.dummy_arms_energy[arm]["mu"] = dummy_energy_init[i][0]
+                self.dummy_arms_energy[arm]["sigma"] = dummy_energy_init[i][1]
 
     def make_log_dir(self):
         self.save_dir = os.path.join(self.log_dir, f"{self.run_num}")
@@ -303,7 +322,7 @@ class GroupedUCB():
         self.model.set_runperiod(days=run_duration, start_year=start_year, start_month=start_month, start_day=start_day, specify_year=True)
         self.model.set_timestep(timestep_per_hour=timestep_per_hour)
 
-    def play(self, arm, eval_duration=30):
+    def play(self, arm_idx, arm, eval_duration=30):
         # possible_years = [1994, 1997, 1998, 1999, 2002, 2003, 2004, 2005]
         # possible_months = range(12)
         # possible_dates = range(31)
@@ -359,7 +378,9 @@ class GroupedUCB():
             sigma = arm["sigma"]
             mu = arm["mu"]
             q = np.random.normal(mu, sigma)
-            return q, year, month, date.day, 0
+            energy_mu = self.dummy_arms_energy[arm_idx]["mu"]
+            energy_sigma = self.dummy_arms_energy[arm_idx]["sigma"]
+            return q, year, month, date.day, np.random.normal(energy_mu, energy_sigma)
 
     def log_data(self, arm_name=None, arm_scores=None, arm_counts=None, flops=None,
                  initialize=False, arm_names=None, buffer_size=1,
@@ -443,10 +464,10 @@ class GroupedUCB():
                 chosen_arm_idx = np.argmax(arm_scores + ucb_values)
                 if self.use_dummy_arms:
                     arm_name = list(self.dummy_arms.keys())[chosen_arm_idx]
-                    q_policy, start_year, start_month, start_day, total_energy = self.play(self.dummy_arms[chosen_arm_idx], eval_duration=eval_duration)
+                    q_policy, start_year, start_month, start_day, total_energy = self.play(chosen_arm_idx, self.dummy_arms[chosen_arm_idx], eval_duration=eval_duration)
                 else:
                     arm_name = list(self.arms.keys())[chosen_arm_idx]
-                    q_policy, start_year, start_month, start_day, total_energy = self.play(self.arms[chosen_arm_idx], eval_duration=eval_duration)
+                    q_policy, start_year, start_month, start_day, total_energy = self.play(chosen_arm_idx, self.arms[chosen_arm_idx], eval_duration=eval_duration)
 
                 if arm_counts[chosen_arm_idx] == 0:
                     arm_scores[chosen_arm_idx] = q_policy

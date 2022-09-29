@@ -53,10 +53,11 @@ def remove_env_diversity(policies):
 
 def run_group_ucb(group_config, policy_locs, init_policies, rho=2,
                   eval_duration=30, epochs=100, pickup_from=None,
-                  use_dummy_arms=False):
+                  use_dummy_arms=False, dummy_init=[], dummy_energy_init=[]):
     ucb = GroupedUCB(group_config, policy_locs, init_policies,
                      log_dir=f"data/group_ucb_log_data/",
-                     pickup_from=pickup_from, use_dummy_arms=use_dummy_arms)
+                     pickup_from=pickup_from, use_dummy_arms=use_dummy_arms,
+                     dummy_init=dummy_init, dummy_energy_init=dummy_energy_init)
     ucb.run_ucb(epochs=epochs, rho=rho, eval_duration=eval_duration)
 
 
@@ -93,4 +94,21 @@ if __name__ == "__main__":
 
     run_group_ucb(group_config, policy_locs, init_policies,
                   rho=2, eval_duration=30, epochs=None,
-                  use_dummy_arms=False)
+                  use_dummy_arms=True, dummy_init=[[-0.07634012587695521 ,  0.00019889632275749296],
+                                                   [-0.06479168814222018 ,  0.00017400355408624238],
+                                                   [-0.2464612539561483 ,  0.00040471553886700396],
+                                                   [-0.042532485953047316 ,  0.00020067615225331773],
+                                                   [ -0.03180728059485464 ,  0.00010975288287409725],
+                                                   [-0.3091377855791769 ,  0.0005110627596823657],
+                                                   [-0.39758458823246345 ,  0.0009780255757999444],
+                                                   [-0.5494167859281477 ,  0.00035264689296064545],
+                                                   [-0.6031213345013304 ,  0.00014653681996857964]],
+                 dummy_energy_init = [[26041592.277509402, 25412.868781034857],
+                                      [24559153.758398768, 21569.880555838994],
+                                      [47861250.442759044, 54499.334659657696],
+                                      [21704528.246989965, 25074.779034631363],
+                                      [20328447.01070846, 13630.252911815853],
+                                      [55896797.228609994, 64347.06691618719],
+                                      [67241280.94946072, 119744.57756582584],
+                                      [86721075.81236973, 43532.32478188891],
+                                      [93610431.26342626, 18796.126081259274]])
