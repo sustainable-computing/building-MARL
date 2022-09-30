@@ -420,11 +420,12 @@ class GroupedUCB():
             self.set_start_date(run_duration=eval_duration, start_year=year, start_month=month, start_day=day)
             state = self.model.reset()
             total_energy = 0
-            if self.environment == "C":
-                for zone in self.control_zones:
-                    total_energy += state[f"{zone} vav heating energy"] + state[f"{zone} vav cooling energy"]
-            else:
-                total_energy = state["total hvac"]
+            # if self.environment == "C":
+            #     for zone in self.control_zones:
+            #         total_energy += state[f"{zone} vav heating energy"] + state[f"{zone} vav cooling energy"]
+            # else:
+            #     total_energy = state["total hvac"]
+            total_energy += state["total hvac"]
             while not self.model.is_terminate():
                 action = list()
                 for group in arm.keys():
@@ -437,7 +438,6 @@ class GroupedUCB():
                         zone_action = policy.select_action(zone_state)
                         zone_action = np.array(zone_action)
                         zone_action = 0.9/(1 + np.exp(-zone_action)) + 0.1
-
                         action.append({"priority": 0,
                                 "component_type": "Schedule:Constant",
                                 "control_type": "Schedule Value",
@@ -446,22 +446,22 @@ class GroupedUCB():
                                 "start_time": state['timestep'] + 1})
 
                 state = self.model.step(action)
-                if self.environment == "C":
-                    for zone in self.control_zones:
-                        total_energy += state[f"{zone} vav heating energy"] + state[f"{zone} vav cooling energy"]
-                else:
-                    total_energy += state["total hvac"]
-
+                # if self.environment == "C":
+                #     for zone in self.control_zones:
+                #         total_energy += state[f"{zone} vav heating energy"] + state[f"{zone} vav cooling energy"]
+                # else:
+                #     total_energy += state["total hvac"]
+                total_energy += state["total hvac"]
             # return -(total_energy - 5032951.13628954)/(6472063.181046309 - 5032951.13628954), year, month, date.day
             # return -(total_energy - 14000)/(7e6 - 14000), year, month, date.day
             # return - (total_energy - 61540255.66407317) / (613290612.4874102 - 61540255.66407317), year, month, date.day, total_energy  # One month eval (30 days) 
             # return - (total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799), year, month, date.day, total_energy  # One month eval (30 days)
             if self.environment == "B_Denver":
-                return (total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799), year, month, date.day, total_energy  # One month eval (30 days)
+                return -((total_energy - 16248682.536965799) / (144517646.5099022 - 16248682.536965799)), year, month, date.day, total_energy  # One month eval (30 days)
             elif self.environment == "B_SanFrancisco":
-                return (total_energy - 7253970.9438649295) / (127149241.43899378 - 7253970.9438649295), year, month, date.day, total_energy  # One month eval (30 days)
+                return -((total_energy - 7253970.9438649295) / (127149241.43899378 - 7253970.9438649295)), year, month, date.day, total_energy  # One month eval (30 days)
             elif self.environment == "C":
-                return (total_energy - 130078269.4698048) / (296884907.2092965 - 130078269.4698048), year, month, date.day, total_energy  # One month eval (30 days)
+                return -((total_energy - 17976704.46193411) / (57561696.237888955 - 17976704.46193411)), year, month, date.day, total_energy  # One month eval (30 days)
 
 
         elif self.use_dummy_arms:
