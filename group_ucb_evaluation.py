@@ -135,7 +135,9 @@ if __name__ == "__main__":
                            "policy_library_20220820/108_0_blind.pth"]
         }
     }
+    seed = int(sys.argv[1])
     environment = str(sys.argv[2])
+
     if environment == "B_Denver":
         group_config = group_config_denver
     elif environment == "B_SanFrancisco":
@@ -150,10 +152,6 @@ if __name__ == "__main__":
         all_group_policies += group_config["group_policies"][group]
 
     policy_locs, init_policies = get_policies(policies=all_group_policies, rm_env_diversity=False)
-    # print(int(sys.argv[1])
-    seed = int(sys.argv[1])
-    
-    # pickup = int(sys.argv[3])
     print("Seed: ", seed, "Environment: ", environment)
     run_group_ucb(group_config, policy_locs, init_policies,
                   rho=2, eval_duration=30, epochs=None,
@@ -177,45 +175,3 @@ if __name__ == "__main__":
                 #                       [67241280.94946072, 119744.57756582584],
                 #                       [86721075.81236973, 43532.32478188891],
                 #                       [93610431.26342626, 18796.126081259274]])
-
-
-"""
-nohup python group_ucb_evaluation.py 1337> data/group_ucb_std_data/random_seed_1337.out &
-nohup python group_ucb_evaluation.py 31720 13 > data/group_ucb_std_data/random_seed_31720.out &
-nohup python group_ucb_evaluation.py 21538 14 > data/group_ucb_std_data/random_seed_21538.out &
-nohup python group_ucb_evaluation.py 69175 15 > data/group_ucb_std_data/random_seed_69175.out &
-nohup python group_ucb_evaluation.py 17170 16 > data/group_ucb_std_data/random_seed_17170.out &
-nohup python group_ucb_evaluation.py 36621 17 > data/group_ucb_std_data/random_seed_36621.out &
-nohup python group_ucb_evaluation.py 41408 18 > data/group_ucb_std_data/random_seed_41408.out &
-nohup python group_ucb_evaluation.py 22808 19 > data/group_ucb_std_data/random_seed_22808.out &
-nohup python group_ucb_evaluation.py 19197 20 > data/group_ucb_std_data/random_seed_19197.out &
-nohup python group_ucb_evaluation.py 23509 21 > data/group_ucb_std_data/random_seed_23509.out &
-nohup python group_ucb_evaluation.py 69266 22 > data/group_ucb_std_data/random_seed_69266.out &
-nohup python group_ucb_evaluation.py 36621 23 > data/group_ucb_std_data/random_seed_36621.out &
-"""
-
-"""
-nohup python group_ucb_evaluation.py 13370 B_SanFrancisco 25 > data/group_ucb_std_data/sf_random_seed_13370.out &
-nohup python group_ucb_evaluation.py 31720 B_SanFrancisco 26 > data/group_ucb_std_data/sf_random_seed_31720.out &
-nohup python group_ucb_evaluation.py 21538 B_SanFrancisco 27 > data/group_ucb_std_data/sf_random_seed_21538.out &
-nohup python group_ucb_evaluation.py 69175 B_SanFrancisco> data/group_ucb_std_data/sf_random_seed_69175.out &
-nohup python group_ucb_evaluation.py 17170 B_SanFrancisco 29 > data/group_ucb_std_data/sf_random_seed_17170.out &
-nohup python group_ucb_evaluation.py 36621 B_SanFrancisco 30 > data/group_ucb_std_data/sf_random_seed_36621.out &
-nohup python group_ucb_evaluation.py 41408 B_SanFrancisco 31 > data/group_ucb_std_data/sf_random_seed_41408.out &
-nohup python group_ucb_evaluation.py 22808 B_SanFrancisco 32 > data/group_ucb_std_data/sf_random_seed_22808.out &
-nohup python group_ucb_evaluation.py 19197 B_SanFrancisco 33 > data/group_ucb_std_data/sf_random_seed_19197.out &
-nohup python group_ucb_evaluation.py 69266 B_SanFrancisco 34 > data/group_ucb_std_data/sf_random_seed_69266.out &
-"""
-
-"""
-nohup python group_ucb_evaluation.py 13370 C > data/group_ucb_std_data/c_random_seed_13370.out &
-nohup python group_ucb_evaluation.py 31720 C > data/group_ucb_std_data/c_random_seed_31720.out &
-nohup python group_ucb_evaluation.py 21538 C > data/group_ucb_std_data/c_random_seed_21538.out &
-nohup python group_ucb_evaluation.py 69175 C > data/group_ucb_std_data/c_random_seed_69175.out &
-nohup python group_ucb_evaluation.py 17170 C > data/group_ucb_std_data/c_random_seed_17170.out &
-nohup python group_ucb_evaluation.py 36621 C > data/group_ucb_std_data/c_random_seed_36621.out &
-nohup python group_ucb_evaluation.py 41408 C > data/group_ucb_std_data/c_random_seed_41408.out &
-nohup python group_ucb_evaluation.py 22808 C > data/group_ucb_std_data/c_random_seed_22808.out &
-nohup python group_ucb_evaluation.py 19197 C > data/group_ucb_std_data/c_random_seed_19197.out &
-nohup python group_ucb_evaluation.py 69266 C > data/group_ucb_std_data/c_random_seed_69266.out &
-"""
