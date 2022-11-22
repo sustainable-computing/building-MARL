@@ -8,4 +8,3 @@ __pycache__/*
 cobs/__pycache__/*
 policy_library/transfer/newa_*
 PPO_weights/*
-self_backup/*

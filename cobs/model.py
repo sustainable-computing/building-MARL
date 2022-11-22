@@ -593,12 +593,12 @@ class Model:
             raise ValueError("Your IDF files does not specify the run period."
                              "Please manually edit the IDF file or use Model().set_runperiod(...)")
         run_period = self.get_configuration("RunPeriod")[0]
-        start = datetime(year=run_period.Begin_Year if run_period.Begin_Year else 2000,
-                         month=run_period.Begin_Month,
-                         day=run_period.Begin_Day_of_Month)
-        end = datetime(year=run_period.End_Year if run_period.End_Year else start.year,
-                       month=run_period.End_Month,
-                       day=run_period.End_Day_of_Month)
+        start = datetime(year=int(run_period.Begin_Year) if run_period.Begin_Year else 2000,
+                         month=int(run_period.Begin_Month),
+                         day=int(run_period.Begin_Day_of_Month))
+        end = datetime(year=int(run_period.End_Year) if run_period.End_Year else start.year,
+                       month=int(run_period.End_Month),
+                       day=int(run_period.End_Day_of_Month))
         end += timedelta(days=1)
 
         if not self.leap_weather:

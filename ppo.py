@@ -80,6 +80,11 @@ class ActorCritic(nn.Module):
 
     def forward(self):
         raise NotImplementedError
+    
+    def get_mean(self, state):
+        if self.has_continuous_action_space:
+            action_mean = self.actor(state)
+        return action_mean.detach()
 
     def act(self, state):
 
@@ -208,6 +213,12 @@ class PPO:
         else:
             return action.item()
 
+    def get_mean(self, state):
+        with torch.no_grad():
+            state = torch.FloatTensor(state).to(self.device)
+            action = self.policy_old.get_mean(state)
+        return action.detach().cpu().numpy().flatten()
+
     def update(self):
         if len(self.buffer) == 0:
             return
@@ -252,12 +263,11 @@ class PPO:
                 # We want to maximize the distance ratio and make advantage as much as possible
                 other_logprobs, other_state_values, _ = policy.evaluate(old_states, old_actions)
                 other_state_values = torch.squeeze(other_state_values)
-                ratios = torch.exp(logprobs - other_logprobs)
-                advantages = rewards - other_state_values.detach()
-                
-                other_surr1 = ratios * advantages
-                other_surr2 = torch.clamp(ratios, 1 - self.eps_clip, 1 + self.eps_clip) * advantages
-                dipg_loss += torch.min(other_surr1, other_surr2)
+                ratios = torch.exp(torch.abs(logprobs - other_logprobs))
+                ratios = torch.max(ratios, 1 / ratios)
+                ratios = torch.max(ratios, 100)
+                other_advantages = rewards - other_state_values.detach()
+                dipg_loss += ratios / torch.abs(other_advantages)
 
             # final loss of clipped objective PPO
             if len(self.other_policies):
