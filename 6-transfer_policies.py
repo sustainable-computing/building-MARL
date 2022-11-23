@@ -234,7 +234,7 @@ if __name__ == '__main__':
                                                 "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
 
     # Environment setup
-    model.set_runperiod(*(7, 1991, 1, 1))
+    model.set_runperiod(*(30, 2000, 1, 1))
     model.set_timestep(4)
 
     if not args.continue_train:

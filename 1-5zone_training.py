@@ -195,7 +195,7 @@ if __name__ == '__main__':
                                                 "Minimum Air Flow Fraction Schedule Name": f"{zone} VAV Customized Schedule"})
 
     # Environment setup
-    model.set_runperiod(*(7, 1991, args.start_month, 1))
+    model.set_runperiod(*(30, 1991, args.start_month, 1))
     model.set_timestep(4)
     
     all_window = set()
