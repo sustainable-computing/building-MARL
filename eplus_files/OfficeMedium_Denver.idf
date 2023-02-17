@@ -12081,3 +12081,5 @@
   Output:Variable,*,Zone Air Temperature,timestep;
   Output:Variable,*,Zone Air Relative Humidity,timestep;
   Output:Variable,*,Facility Total HVAC Electric Demand Power,hourly;
+  Output:Variable,*,Zone Air System Sensible Heating Rate,timestep;
+  Output:Variable,*,Zone Air System Sensible Cooling Rate,timestep;
