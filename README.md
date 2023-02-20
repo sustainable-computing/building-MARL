@@ -5,7 +5,19 @@ This repository contains the code for [Mitigating an Adoption Barrier of Reinfor
 Aakash Krishna GS, Tianyu Zhang, Omid Ardakanian, and Matthew E. Taylor, "Mitigating an Adoption Barrier of Reinforcement Learning-based Control Strategies in Buildings", under review.
 ```
 ```Bibtex
-Bibtex TBD
+@article{KRISHNAGS2023112878,
+  title = {Mitigating an adoption barrier of reinforcement learning-based control strategies in buildings},
+  journal = {Energy and Buildings},
+  publisher = {Elsevier},
+  volume = {285},
+  pages = {112878},
+  year = {2023},
+  issn = {0378-7788},
+  doi = {https://doi.org/10.1016/j.enbuild.2023.112878},
+  url = {https://www.sciencedirect.com/science/article/pii/S0378778823001081},
+  author = {Aakash Krishna {G.S.} and Tianyu Zhang and Omid Ardakanian and Matthew E. Taylor},
+  keywords = {Multi-agent reinforcement learning, Population diversity, Off-policy policy evaluation, Sim-to-real transfer}
+}
 ```
 
 ## Description
