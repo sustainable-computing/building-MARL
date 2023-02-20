@@ -15,7 +15,7 @@ Aakash Krishna GS, Tianyu Zhang, Omid Ardakanian, and Matthew E. Taylor, "Mitiga
   issn = {0378-7788},
   doi = {https://doi.org/10.1016/j.enbuild.2023.112878},
   url = {https://www.sciencedirect.com/science/article/pii/S0378778823001081},
-  author = {Aakash Krishna {G.S.} and Tianyu Zhang and Omid Ardakanian and Matthew E. Taylor},
+  author = {G.S., Aakash Krishna and Zhang, Tianyu and Ardakanian, Omid and Taylor, Matthew E.},
   keywords = {Multi-agent reinforcement learning, Population diversity, Off-policy policy evaluation, Sim-to-real transfer}
 }
 ```
